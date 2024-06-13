@@ -1,5 +1,6 @@
 from operator import index
 from pathlib import Path
+import datetime
 import os
 import re
 import numpy as np
@@ -14,17 +15,21 @@ import requests
 
 data_dict = Variable.get("data", deserialize_json=True)
 
-
 @task
-def extract_from_combined_csv(file_path: str | Path, drop_columns: List[str]) -> pd.DataFrame:
+def extract_from_combined_csv():
+    file_path: str | Path = data_dict["path"]
+    drop_columns: List[str] = []
     return_df = pd.read_csv(str(file_path))
     return_df.drop(colums=drop_columns, in_place=True)
 
     return return_df
 
 @task
-def extract_from_csv(paths: Iterable[str] | Iterable[Path],
-                     patterns: Iterable[str], extensions: Iterable[str], drop_columns: List[str]) -> pd.DataFrame:
+def extract_from_csv():
+    paths: Iterable[str] | Iterable[Path] = data_dict["path"]
+    patterns: Iterable[str] = data_dict["patterns"]
+    extensions: Iterable[str] = data_dict["extensions"]
+    drop_columns: List[str] = [""]
 
     file_paths = []
     return_df = pd.DataFrame()
@@ -58,12 +63,14 @@ def extract_from_csv(paths: Iterable[str] | Iterable[Path],
 
 
 @task
-def unify_date_format(extracted_data: pd.DataFrame) -> pd.DataFrame:
-    pass
+def unify_date_format(extracted_data):
+    for date in extracted_data["Incident Date"]:
+        datetime.datetime.strptime(date, "%B %d, %Y").strftime("%Y-%m-%d")
+
 
 
 @task
-def get_coordinates(extracted_data: pd.DataFrame) -> pd.DataFrame:
+def get_coordinates(extracted_data):
     locations = extracted_data["Address"]
     coords_lat = np.zeros([len(locations.index), 1])
     coords_lon = np.zeros([len(locations.index), 1])
@@ -89,7 +96,7 @@ def get_coordinates(extracted_data: pd.DataFrame) -> pd.DataFrame:
     return extracted_data
 
 @task(multiple_outputs=True)
-def extract_weather(extracted_data: pd.DataFrame) -> Dict[str, pd.DataFrame]:
+def extract_weather(extracted_data):
     weather_df = pd.DataFrame(columns=["lat", "lon", "tr", "date", "cloud_cover", "humidity", "precipitation", "pressure", "temperature", "wind_speed", "wind_direction"])
     lats = extracted_data["Lat"].values
     lons = extracted_data["Lon"].values
@@ -99,7 +106,7 @@ def extract_weather(extracted_data: pd.DataFrame) -> Dict[str, pd.DataFrame]:
         resp = requests.post(url=weather_url)
 
         if resp.status_code == 200:
-            pass
+            resp.json()
 
     return {"org": extracted_data, "weather": weather_df}
 
