@@ -50,6 +50,7 @@ distro==1.9.0
 dnspython==2.6.1
 docutils==0.16
 email_validator==2.1.1
+et-xmlfile==1.1.0
 filelock==3.13.3
 Flask==2.2.5
 Flask-AppBuilder==4.4.1
@@ -110,6 +111,7 @@ mypy-extensions==1.0.0
 netsnmp-python==1.0a1
 nftables==0.1
 numpy==1.26.4
+openpyxl==3.1.4
 opentelemetry-api==1.24.0
 opentelemetry-exporter-otlp==1.24.0
 opentelemetry-exporter-otlp-proto-common==1.24.0
