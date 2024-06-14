@@ -8,7 +8,7 @@ CREATE TABLE Strzelanina (
 );
 
 CREATE TABLE Pogoda (
-  id INTEGER PRIMARY KEY
+  id INTEGER PRIMARY KEY,
   strzelanina_id INTEGER REFERENCES Strzelanina,
   temperatura DECIMAL(2, 1),
   chmury INTEGER,

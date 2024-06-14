@@ -10,6 +10,7 @@ from airflow.models.dag import DAG
 from airflow.decorators import task
 from airflow.utils.task_group import TaskGroup
 from airflow.models import Variable
+from airflow.providers.postgres.operators.postgres import PostgresOperator
 import pandas as pd
 import requests
 
@@ -34,7 +35,7 @@ def extract_from_combined_csv():
     drop_columns: List[str] = []
     return_df = pd.read_csv(str(file_path))
     return_df.drop(colums=drop_columns, in_place=True)
-
+    
     return return_df
 
 @task
@@ -138,10 +139,9 @@ def extract_weather(extracted_data):
         else:
             temp_weather = weather_requests_cache[weather_url]
 
-    extracted_data.drop(columns=["Lat", "Lon"])
+    # extracted_data.drop(columns=["Lat", "Lon"])
     return {"org": extracted_data, "weather": weather_df}
 
-# TODO(11jolek11): Implement
 @task
 def add_count_or_city(extracted_data):
     # FIXME(11jolek11): Fix column name
@@ -152,7 +152,7 @@ def add_count_or_city(extracted_data):
     cities = list(map(lambda x: x.lower(), cities))
 
     temp_city_list = []
-    temp_cou)nty_list = []
+    temp_county_list = []
 
     for idx in mixed_data.index:
         if mixed_data[idx].lower() in cities:
@@ -167,3 +167,28 @@ def add_count_or_city(extracted_data):
 
     return extracted_data
 
+# TODO(11jolek11): Implementacja usuwania kolumn których nie potrzeba
+# TODO(11jolek11): Złączenie strzelanin i stanu dostępu do broni
+# TODO(11jolek11): Obsługa braków w kolumnie Address
+# TODO(11jolek11): rozważenie stworzenia mapki <-- wymaga przeneisinia Lan i Loc (koordynaty) do któregoś z wymiarów
+# TODO(11jolek11): OpeanWather API obsługa anomalii (patrz docx E2)
+
+# TODO(11jolek11): Weryfikacja w dagu
+
+
+
+
+
+
+
+
+with DAG(
+        dag_id="shootings_dag",
+        schedule="@daily",
+        catchup=False,
+        start_date=datetime.datetime(2023, 3, 5)
+        ) as dag:
+
+
+    # create_table_postgres = PostgresOperator() 
+    # agregacje jako widoki
