@@ -62,6 +62,7 @@ Flask-Login==0.6.3
 Flask-Session==0.5.0
 Flask-SQLAlchemy==2.5.1
 Flask-WTF==1.2.1
+flatdict==4.0.1
 fonttools==4.53.0
 frozenlist==1.4.1
 fsspec==2023.12.2

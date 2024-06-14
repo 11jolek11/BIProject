@@ -1,4 +1,5 @@
 from operator import index
+import flatdict
 from pathlib import Path
 import datetime
 import os
@@ -14,6 +15,18 @@ import requests
 
 
 data_dict = Variable.get("data", deserialize_json=True)
+drop_dict = Variable.get("drop", deserialize_json=True)
+
+cities_list_path = Variable.get("city", deserialize_json=False)
+
+google_requests_cache = dict()
+weather_requests_cache = dict()
+
+
+def is_city(city):
+    cities = pd.read_csv(cities_list_path)['city'].to_list()
+    cities = list(map(lambda x: x.lower(), cities))
+    return city.lower() in cities
 
 @task
 def extract_from_combined_csv():
@@ -64,9 +77,11 @@ def extract_from_csv():
 
 @task
 def unify_date_format(extracted_data):
-    for date in extracted_data["Incident Date"]:
-        datetime.datetime.strptime(date, "%B %d, %Y").strftime("%Y-%m-%d")
-
+    target_format = "%Y %m %d"
+    if "Incident Date" in extracted_data.columns and str(extracted_data["Incident Date"][0][0]).isupper():
+        target_format = "%B %d, %Y"
+    extracted_data["Incident Date"] = pd.to_datetime(extracted_data["Incident Date"], format=target_format)
+    return extracted_data
 
 
 @task
@@ -76,18 +91,23 @@ def get_coordinates(extracted_data):
     coords_lon = np.zeros([len(locations.index), 1])
 
     for location_idx in locations.index:
-        if " and " in locations:
-            continue
- 
+        if " and " in locations[location_idx]:
+            locations[location_idx] = locations[location_idx].split(" and ")[0]
+            # continue
         google_payload = {"textQuery": locations.loc[location_idx]}
         google_url = 'https://places.googleapis.com/v1/places:searchText'
         google_headers = {'Content-Type': 'application/json',
                           # 'X-Goog-FieldMask': 'places.displayName,places.location',
                           'X-Goog-FieldMask': 'places.location',
                           'X-Goog-Api-Key': Variable.get("google_maps_api_key")}
-        resp = requests.post(url=google_url, data=google_payload, headers=google_headers)
-        if resp.status_code == 200:
-            temp_location = resp.json()["places"][0]["location"]
+
+        if google_url not in google_requests_cache.keys():
+            resp = requests.post(url=google_url, data=google_payload, headers=google_headers)
+            if resp.status_code == 200:
+                temp_location = resp.json()["places"][0]["location"]
+                google_requests_cache[google_url] = temp_location
+        else:
+            temp_location = google_requests_cache[google_url]
             coords_lat[location_idx] = [temp_location["latitude"]]
             coords_lon[location_idx] = [temp_location["longitude"]]
     extracted_data["Lat"] = coords_lat
@@ -95,18 +115,55 @@ def get_coordinates(extracted_data):
 
     return extracted_data
 
+
 @task(multiple_outputs=True)
 def extract_weather(extracted_data):
-    weather_df = pd.DataFrame(columns=["lat", "lon", "tr", "date", "cloud_cover", "humidity", "precipitation", "pressure", "temperature", "wind_speed", "wind_direction"])
+    weather_df = pd.DataFrame(columns=["lat", "lon", "tr", "date", "cloud_cover_afternoon", "humidity_afternoon", "precipitation_total", "pressure_afternoon", "temperature", "wind_max_speed", "wind_max_direction"])
     lats = extracted_data["Lat"].values
     lons = extracted_data["Lon"].values
     
     for data_idx in extracted_data.index:
         weather_url = f'https://api.openweathermap.org/data/3.0/onecall/day_summary?lat={lats[data_idx]}&lon={lons[data_idx]}&date={extracted_data["Incident Date"]}&appid={Values.get("openweather_api_key")}'
-        resp = requests.post(url=weather_url)
+        if weather_url not in weather_requests_cache.keys():
+            resp = requests.post(url=weather_url)
 
-        if resp.status_code == 200:
-            resp.json()
+            if resp.status_code == 200:
+                temp_weather = resp.json()
+                # TODO(11jolek11): change implementation
+                temp_weather = dict(flatdict.FlatDict(temp_weather, delimiter="_"))
+                for key in temp_weather.keys():
+                    if key not in weather_df.columns:
+                        del temp_weather[key]
+                weather_requests_cache[weather_url] = temp_weather
+        else:
+            temp_weather = weather_requests_cache[weather_url]
 
+    extracted_data.drop(columns=["Lat", "Lon"])
     return {"org": extracted_data, "weather": weather_df}
+
+# TODO(11jolek11): Implement
+@task
+def add_count_or_city(extracted_data):
+    # FIXME(11jolek11): Fix column name
+    mixed_data = extracted_data["CityorCounty"]
+
+    cities_file = pd.read_csv(cities_list_path)
+    cities = cities_file['city'].to_list()
+    cities = list(map(lambda x: x.lower(), cities))
+
+    temp_city_list = []
+    temp_cou)nty_list = []
+
+    for idx in mixed_data.index:
+        if mixed_data[idx].lower() in cities:
+            temp_city_list.append(mixed_data.loc[idx])
+            temp_county_list.append(cities_file['county_name'])
+        else:
+            temp_city_list.append("")
+            temp_county_list.append(mixed_data[idx])
+
+    extracted_data["City"] = temp_city_list
+    extracted_data["County"] = temp_county_list
+
+    return extracted_data
 
