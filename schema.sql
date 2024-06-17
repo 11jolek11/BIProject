@@ -18,25 +18,14 @@ CREATE TABLE Pogoda (
   wiatr_kierunek INTEGER
 );
 
-
-CREATE TABLE Pogoda (
-  id INTEGER PRIMARY KEY
-  strzelanina_id INTEGER REFERENCES Strzelanina,
-  temperatura DECIMAL(2, 1),
-  chmury INTEGER,
-  opady INTEGER,
-  cisnienie INTEGER,
-  wiatr_predkosc INTEGER,
-  wiatr_kierunek INTEGER
-);
-
-
 CREATE TABLE Lokalizacja (
   id INTEGER PRIMARY KEY,
   strzelanina_id INTEGER REFERENCES Strzelanina,
   state VARCHAR(255),
   city VARCHAR(255),
   address VARCHAR(255),
+  lan INTEGER,
+  lon INTEGER
 );
 
 CREATE TABLE Dostep_do_broni (
@@ -44,7 +33,7 @@ CREATE TABLE Dostep_do_broni (
   strzelanina_id INTEGER REFERENCES Strzelanina,
   lokalizacja VARCHAR(255),
   rok INTEGER,
-  dostep_do_broni BOOLEAN,
+  dostep_do_broni BOOLEAN
 );
 
 CREATE TABLE Czas (
@@ -52,5 +41,6 @@ CREATE TABLE Czas (
   strzelanina_id INTEGER REFERENCES Strzelanina,
   dekada INTEGER,
   miesiac INTEGER,
-  dzien INTEGER,
+  dzien INTEGER
 );
+

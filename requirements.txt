@@ -53,6 +53,7 @@ docutils==0.16
 email_validator==2.1.1
 et-xmlfile==1.1.0
 filelock==3.13.3
+flake8==7.1.0
 Flask==2.2.5
 Flask-AppBuilder==4.4.1
 Flask-Babel==2.0.0
@@ -101,6 +102,7 @@ marshmallow==3.21.2
 marshmallow-oneofschema==3.1.1
 marshmallow-sqlalchemy==0.28.2
 matplotlib==3.8.3
+mccabe==0.7.0
 mdit-py-plugins==0.4.0
 mdurl==0.1.2
 meson==1.4.1
@@ -123,7 +125,7 @@ opentelemetry-proto==1.24.0
 opentelemetry-sdk==1.24.0
 opentelemetry-semantic-conventions==0.45b0
 ordered-set==4.1.0
-orjson==3.10.4
+orjson==3.10.5
 packaging==24.0
 pandas==2.2.2
 pathspec==0.12.1
@@ -142,10 +144,12 @@ ptyprocess==0.7.0
 pyaml==23.12.0
 pycairo==1.26.0
 pycares==4.4.0
+pycodestyle==2.12.0
 pycparser==2.22
 pycups==2.0.4
-pydantic==2.7.3
+pydantic==2.7.4
 pydantic_core==2.18.4
+pyflakes==3.2.0
 Pygments==2.17.2
 PyGObject==3.48.2
 PyJWT==2.8.0
