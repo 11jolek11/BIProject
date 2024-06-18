@@ -13,16 +13,21 @@ from airflow.models import Variable
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 import pandas as pd
 import requests
+from uuid import uuid4
+from random import randint
 
 
 data_dict = Variable.get("data", deserialize_json=True)
 drop_dict = Variable.get("drop", deserialize_json=True)
 
 cities_list_path = Variable.get("city", deserialize_json=False)
+staging_area_path = Variable.get("staging_area")
 
 google_requests_cache = dict()
 weather_requests_cache = dict()
 
+def create_file_id(id):
+    return str(id) + "#" + str(randint(1, 1000))
 
 def is_city(city):
     cities = pd.read_csv(cities_list_path)['city'].to_list()
@@ -32,18 +37,24 @@ def is_city(city):
 @task
 def extract_from_combined_csv():
     file_path: str | Path = data_dict["path"]
+    # TODO(11jolek11): Fill drop_columns param
     drop_columns: List[str] = []
     return_df = pd.read_csv(str(file_path))
     return_df.drop(colums=drop_columns, in_place=True)
-    
-    return return_df
+
+    run_id = create_file_id(str(uuid4()))
+    return_df.to_csv(f"{staging_area_path}/{run_id}.csv")
+    Variable.set(key="run_id", value=run_id)
+
+    return run_id
 
 @task
 def extract_from_csv():
     paths: Iterable[str] | Iterable[Path] = data_dict["path"]
     patterns: Iterable[str] = data_dict["patterns"]
     extensions: Iterable[str] = data_dict["extensions"]
-    drop_columns: List[str] = [""]
+    # TODO(11jolek11): Fill drop_columns param
+    # drop_columns: List[str] = []
 
     file_paths = []
     return_df = pd.DataFrame()
@@ -71,22 +82,31 @@ def extract_from_csv():
             pd.concat([return_df, df])
             continue
 
-    return_df.drop(colums=drop_columns, in_place=True)
+    # return_df.drop(colums=drop_columns, in_place=True)
 
-    return return_df
+    run_id = create_file_id(str(uuid4()))
+    Variable.set(key="run_id", value=run_id)
+    return_df.to_csv(f"{staging_area_path}/{run_id}.csv")
+
+    return run_id
 
 
 @task
-def unify_date_format(extracted_data):
+def unify_date_format(id):
+    extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
+
     target_format = "%Y %m %d"
     if "Incident Date" in extracted_data.columns and str(extracted_data["Incident Date"][0][0]).isupper():
         target_format = "%B %d, %Y"
     extracted_data["Incident Date"] = pd.to_datetime(extracted_data["Incident Date"], format=target_format)
-    return extracted_data
+    extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
+
+    return id
 
 
 @task
-def get_coordinates(extracted_data):
+def get_coordinates(id):
+    extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
     locations = extracted_data["Address"]
     coords_lat = np.zeros([len(locations.index), 1])
     coords_lon = np.zeros([len(locations.index), 1])
@@ -94,11 +114,9 @@ def get_coordinates(extracted_data):
     for location_idx in locations.index:
         if " and " in locations[location_idx]:
             locations[location_idx] = locations[location_idx].split(" and ")[0]
-            # continue
         google_payload = {"textQuery": locations.loc[location_idx]}
         google_url = 'https://places.googleapis.com/v1/places:searchText'
         google_headers = {'Content-Type': 'application/json',
-                          # 'X-Goog-FieldMask': 'places.displayName,places.location',
                           'X-Goog-FieldMask': 'places.location',
                           'X-Goog-Api-Key': Variable.get("google_maps_api_key")}
 
@@ -114,17 +132,20 @@ def get_coordinates(extracted_data):
     extracted_data["Lat"] = coords_lat
     extracted_data["Lon"] = coords_lon
 
-    return extracted_data
+    extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
+    return id
 
 
 @task(multiple_outputs=True)
-def extract_weather(extracted_data):
-    weather_df = pd.DataFrame(columns=["lat", "lon", "tr", "date", "cloud_cover_afternoon", "humidity_afternoon", "precipitation_total", "pressure_afternoon", "temperature", "wind_max_speed", "wind_max_direction"])
+def extract_weather(id):
+    extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
+    weather_df = pd.DataFrame(columns=["lat", "lon", "tr", "date", "cloud_cover_afternoon", "humidity_afternoon",
+                                       "precipitation_total", "pressure_afternoon", "temperature", "wind_max_speed", "wind_max_direction"])
     lats = extracted_data["Lat"].values
     lons = extracted_data["Lon"].values
-    
+
     for data_idx in extracted_data.index:
-        weather_url = f'https://api.openweathermap.org/data/3.0/onecall/day_summary?lat={lats[data_idx]}&lon={lons[data_idx]}&date={extracted_data["Incident Date"]}&appid={Values.get("openweather_api_key")}'
+        weather_url = f'https://api.openweathermap.org/data/3.0/onecall/day_summary?lat={lats[data_idx]}&lon={lons[data_idx]}&date={extracted_data["Incident Date"]}&appid={Variable.get("openweather_api_key")}'
         if weather_url not in weather_requests_cache.keys():
             resp = requests.post(url=weather_url)
 
@@ -139,11 +160,14 @@ def extract_weather(extracted_data):
         else:
             temp_weather = weather_requests_cache[weather_url]
 
-    # extracted_data.drop(columns=["Lat", "Lon"])
-    return {"org": extracted_data, "weather": weather_df}
+    extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
+    weather_id = create_file_id(Variable.get("run_id"))
+    weather_df.to_csv(f"{staging_area_path}/{weather_id}.csv")
+    return {"extracted": id, "weather": weather_id}
 
 @task
-def add_count_or_city(extracted_data):
+def add_count_or_city(id):
+    extracted_data = pd.read_csv(f"{staging_area_path}/{id}")
     # FIXME(11jolek11): Fix column name
     mixed_data = extracted_data["CityorCounty"]
 
@@ -155,7 +179,7 @@ def add_count_or_city(extracted_data):
     temp_county_list = []
 
     for idx in mixed_data.index:
-        if mixed_data[idx].lower() in cities:
+        if str(mixed_data[idx]).lower() in cities:
             temp_city_list.append(mixed_data.loc[idx])
             temp_county_list.append(cities_file['county_name'])
         else:
@@ -165,21 +189,8 @@ def add_count_or_city(extracted_data):
     extracted_data["City"] = temp_city_list
     extracted_data["County"] = temp_county_list
 
-    return extracted_data
-
-# TODO(11jolek11): Implementacja usuwania kolumn których nie potrzeba
-# TODO(11jolek11): Złączenie strzelanin i stanu dostępu do broni
-# TODO(11jolek11): Obsługa braków w kolumnie Address
-# TODO(11jolek11): rozważenie stworzenia mapki <-- wymaga przeneisinia Lan i Loc (koordynaty) do któregoś z wymiarów
-# TODO(11jolek11): OpeanWather API obsługa anomalii (patrz docx E2)
-
-# TODO(11jolek11): Weryfikacja w dagu
-
-
-
-
-
-
+    extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
+    return id
 
 
 with DAG(
@@ -188,7 +199,7 @@ with DAG(
         catchup=False,
         start_date=datetime.datetime(2023, 3, 5)
         ) as dag:
-
-
-    # create_table_postgres = PostgresOperator() 
+    pass
+    # create_table_postgres = PostgresOperator()
     # agregacje jako widoki
+
