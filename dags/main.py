@@ -9,7 +9,7 @@ import re
 import numpy as np
 from typing import Dict, Iterable, List
 from airflow.models.dag import DAG
-from airflow.decorators import task, dag
+from airflow.decorators import task, dag, task_group
 from airflow.utils.task_group import TaskGroup
 from airflow.models import Variable, baseoperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
@@ -85,7 +85,7 @@ def is_city(city):
      start_date=datetime.datetime(2023, 3, 5), schedule_interval="@daily")
 def our_dag():
 
-    @task
+    @task()
     def extract_from_combined_csv():
         file_path: str | Path = data_dict["path"]
         # TODO(11jolek11): Fill drop_columns param
@@ -99,7 +99,7 @@ def our_dag():
 
         return run_id
 
-    @task
+    @task()
     def extract_from_csv():
         paths: Iterable[str] | Iterable[Path] = data_dict["path"]
         patterns: Iterable[str] = data_dict["patterns"]
@@ -141,7 +141,7 @@ def our_dag():
 
         return run_id
 
-    @task
+    @task()
     def unify_date_format(id):
         extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
 
@@ -153,7 +153,7 @@ def our_dag():
 
         return id
 
-    @task
+    @task()
     def get_coordinates(id):
         extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
         locations = extracted_data["Address"]
@@ -184,7 +184,7 @@ def our_dag():
         extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
         return id
 
-    @task
+    @task()
     def extract_weather(id):
         extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
         weather_df = pd.DataFrame(columns=["lat", "lon", "tr", "date", "cloud_cover_afternoon", "humidity_afternoon",
@@ -220,7 +220,7 @@ def our_dag():
         weather_df.to_csv(f"{staging_area_path}/{weather_id}.csv")
         return {"extracted": id, "weather": weather_id}
 
-    @task
+    @task()
     def add_count_or_city(ids_dict):
         id = ids_dict["extracted"]
         extracted_data = pd.read_csv(f"{staging_area_path}/{id}")
@@ -247,21 +247,29 @@ def our_dag():
 
         extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
         return ids_dict
+    @task_group
+    def all_tasks():
+        pass
 
-    baseoperator.chain(extract_from_csv,
-                       unify_date_format,
-                       get_coordinates,
-                       extract_weather,
-                       add_count_or_city)
+    # baseoperator.chain(extract_from_csv,
+    #                    unify_date_format,
+    #                    get_coordinates,
+    #                    extract_weather,
+    #                    add_count_or_city)
+
+    extract_from_csv >> unify_date_format >> get_coordinates >> extract_weather >> add_count_or_city
+
+
+our_dag()
 
 # with DAG(
 #         dag_id="shootings_dag",
-#         schedule="@daily",
+#         schedule_interval="@daily",
 #         catchup=False,
 #         start_date=datetime.datetime(2023, 3, 5)
 #         ) as dag:
 #     pass
-#
+
 
 
 
