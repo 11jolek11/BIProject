@@ -132,4 +132,6 @@ services:
     restart: always
 
 volumes:
-  postgres-db-volume:
+  # local: /home/jolek/Projects/BIProject/data/:/data
+  postgres-db-volume: 
+
