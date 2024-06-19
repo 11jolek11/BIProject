@@ -19,9 +19,25 @@ import json
 from uuid import uuid4
 from random import randint
 
+# AIRFLOW_VAR_PROJECT_HOME='$HOME/Projects/BIProjects'
+
+Variable.set(key="date_format", value="%Y-%m-%d")
+# Variable.set(key="project_home", value=)
+Variable.set(key="staging_area", value='/home/jolek/Projects/BIProject/staging/')
+Variable.set(key="city", value='/home/jolek/Projects/BIProject/data/uscities.csv')
+Variable.set(key="openweather_api_key", value="f50682fc9c765b69ac045a8c267b0759")
+Variable.set(key="google_maps_api_key", value="aizasybzb0oz0re1jjbol0_jyvd4jamrqeo0zvi")
+
+custom_data = {
+                    "path": "/home/jolek/Projects/BIProject/data/",
+                    "extensions": [".csv", ".xlsx"],
+                    "regex": ["([0-9]{2,}).(csv|xlsx)"]
+                }
+
+Variable.set(key="data", value=custom_data, serialize_json=True)
 
 data_dict = Variable.get("data", deserialize_json=True)
-drop_dict = Variable.get("drop", deserialize_json=True)
+# drop_dict = Variable.get("drop", deserialize_json=True)
 
 cities_list_path = Variable.get("city", deserialize_json=False)
 staging_area_path = Variable.get("staging_area")
@@ -36,8 +52,10 @@ if os.path.isfile(save_file_weather):
 else:
     weather_requests_cache = dict()
 
+
 def create_file_id(id):
     return str(id) + "#" + str(randint(1, 1000))
+
 
 def flatten(dictionary, parent_key='', separator='_'):
     items = []
@@ -48,6 +66,7 @@ def flatten(dictionary, parent_key='', separator='_'):
         else:
             items.append((new_key, value))
     return dict(items)
+
 
 def is_city(city):
     cities = pd.read_csv(cities_list_path)['city'].to_list()
@@ -60,8 +79,10 @@ def is_city(city):
 #         start_date=datetime.datetime(2023, 3, 5)
 
 
-@dag(schedule="@daily", catchup=False, dag_id="shootings_dag",
-     start_date=datetime.datetime(2023, 3, 5))
+# @dag(schedule="@daily", catchup=False, dag_id="shootings_dag",
+#      start_date=datetime.datetime(2023, 3, 5))
+@dag(catchup=False, dag_id="shootings_dag",
+     start_date=datetime.datetime(2023, 3, 5), schedule_interval="@daily")
 def our_dag():
 
     @task
@@ -120,7 +141,6 @@ def our_dag():
 
         return run_id
 
-
     @task
     def unify_date_format(id):
         extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
@@ -132,7 +152,6 @@ def our_dag():
         extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
 
         return id
-
 
     @task
     def get_coordinates(id):
@@ -180,7 +199,6 @@ def our_dag():
 
                 if resp.status_code == 200:
                     temp_weather = resp.json()
-                    # TODO(11jolek11): change implementation
                     # temp_weather = dict(flatdict.FlatDict(temp_weather, delimiter="_"))
 
                     temp_weather = flatten(temp_weather)
