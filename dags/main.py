@@ -123,13 +123,13 @@ def extract_from_csv():
         #                 file_paths.append(obj.path)
 
     for file in file_paths:
-        print(file)
+        # print(file)
         # raise RuntimeError("gg")
         if ".csv" in str(file):
             df = pd.read_csv("./data/" + file)
             df_list.append(df)
             # pd.concat([return_df, df], ignore_index=True)
-            print(len(return_df.index))
+            # print(len(return_df.index))
             continue
         if ".xlsx" in str(file):
             df = pd.read_excel("./data/" + file)
@@ -143,20 +143,23 @@ def extract_from_csv():
     global_run_id = run_id
     return_df.to_csv(f"{staging_area_path}//{run_id}.csv")
 
-    print(f"{staging_area_path}//{run_id}.csv")
+    # print(f"{staging_area_path}//{run_id}.csv")
     return run_id
 
 
 def unify_date_format(id):
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
     print(extracted_data.columns)
+    # target_format = "%Y %m %d"
+    for idx in extracted_data.index:
+        target_format = "%Y-%m-%d %H:%M:%S"
+        if str(extracted_data.loc[idx, "Incident Date"][0]).isupper() and str(extracted_data.loc[idx, "Incident Date"][0]).isalpha():
+            target_format = "%B %d, %Y"
 
-    target_format = "%Y %m %d"
-    if "Incident Date" in extracted_data.columns and str(extracted_data["Incident Date"][0][0]).isupper():
-        target_format = "%B %d, %Y"
-    extracted_data["Incident Date"] = pd.to_datetime(extracted_data["Incident Date"], format=target_format)
+        # print(f"{str(extracted_data.loc[idx, "Incident Date"][0])} -- {target_format}")
+        extracted_data.loc[idx, "Incident Date"] = pd.to_datetime(extracted_data.loc[idx, "Incident Date"], format=target_format)
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
-
+    print(f"{staging_area_path}/{id}.csv")
     return id
 
 
@@ -257,5 +260,5 @@ def add_count_or_city(ids_dict):
 
 if __name__ == "__main__":
     # add_count_or_city(extract_weather(get_coordinates(unify_date_format(extract_from_csv()))))
-    extract_from_csv()
+    unify_date_format(extract_from_csv())
 
