@@ -114,14 +114,15 @@ def extract_from_csv():
     urlretrieve("https://github.com/11jolek11/BIProject/raw/main/data.zip", "./data.zip")
     with zipfile.ZipFile("./data.zip", 'r') as zip_ref:
         zip_ref.extractall(".")
-    data_dict = Variable.get("data", deserialize_json=True)
-    paths: Iterable[str] | Iterable[Path] = data_dict["path"]
-    patterns: Iterable[str] = data_dict["regex"]
-    extensions: Iterable[str] = data_dict["extensions"]
+    data_dict = custom_data
+    paths = data_dict["path"]
+    patterns = data_dict["regex"]
+    # extensions = data_dict["extensions"]
     # TODO(11jolek11): Fill drop_columns param
     # drop_columns: List[str] = []
 
     file_paths = []
+    df_list = []
     return_df = pd.DataFrame()
 
     for path in paths:
@@ -139,22 +140,27 @@ def extract_from_csv():
         #                 file_paths.append(obj.path)
 
     for file in file_paths:
+        print(file)
         # raise RuntimeError("gg")
         if ".csv" in str(file):
-            df = pd.read_csv("./data/" + file, encoding="utf-8")
-            pd.concat([return_df, df])
+            df = pd.read_csv("./data/" + file)
+            df_list.append(df)
+            # pd.concat([return_df, df], ignore_index=True)
+            print(len(return_df.index))
             continue
-        if ".excel" in str(file):
-            df = pd.read_excel("./data/" + file, encoding="utf-8")
-            pd.concat([return_df, df])
+        if ".xlsx" in str(file):
+            df = pd.read_excel("./data/" + file)
+            df_list.append(df)
+            # pd.concat([return_df, df], ignore_index=True)
             continue
 
     # return_df.drop(colums=drop_columns, in_place=True)
-
+    return_df = pd.concat(df_list, ignore_index=True)
     run_id = create_file_id(str(uuid4()))
-    Variable.set(key="run_id", value=run_id)
-    return_df.to_csv(f"{staging_area_path}/{run_id}.csv")
+    global_run_id = run_id
+    return_df.to_csv(f"{staging_area_path}//{run_id}.csv")
 
+    print(f"{staging_area_path}//{run_id}.csv")
     return run_id
 
 @task()
