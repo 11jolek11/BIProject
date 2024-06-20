@@ -6,6 +6,8 @@ from pathlib import Path
 import datetime
 import os
 import re
+from urllib.request import urlretrieve
+import zipfile
 import numpy as np
 from typing import Dict, Iterable, List
 from airflow.models.dag import DAG
@@ -21,26 +23,31 @@ from random import randint
 
 # AIRFLOW_VAR_PROJECT_HOME='$HOME/Projects/BIProjects'
 
+download_path = "https://github.com/11jolek11/BIProject/raw/main/data.zip" 
+
 Variable.set(key="date_format", value="%Y-%m-%d")
 # Variable.set(key="project_home", value=)
-Variable.set(key="staging_area", value='/home/jolek/Projects/BIProject/staging/')
-Variable.set(key="city", value='/home/jolek/Projects/BIProject/data/uscities.csv')
+Variable.set(key="staging_area", value='./staging')
+Variable.set(key="city", value='./data/uscities.csv')
 Variable.set(key="openweather_api_key", value="f50682fc9c765b69ac045a8c267b0759")
 Variable.set(key="google_maps_api_key", value="aizasybzb0oz0re1jjbol0_jyvd4jamrqeo0zvi")
 
 custom_data = {
-                    "path": "/home/jolek/Projects/BIProject/data/",
+                    "path": ["./data/"],
                     "extensions": [".csv", ".xlsx"],
                     "regex": ["([0-9]{2,}).(csv|xlsx)"]
                 }
 
 Variable.set(key="data", value=custom_data, serialize_json=True)
 
-data_dict = Variable.get("data", deserialize_json=True)
+# data_dict = Variable.get("data", deserialize_json=True)
 # drop_dict = Variable.get("drop", deserialize_json=True)
 
 cities_list_path = Variable.get("city", deserialize_json=False)
 staging_area_path = Variable.get("staging_area")
+
+if not os.path.exists(staging_area_path):
+    os.makedirs(staging_area_path)
 
 save_file_weather = "./weather_requests_cache.json"
 
@@ -52,6 +59,10 @@ if os.path.isfile(save_file_weather):
 else:
     weather_requests_cache = dict()
 
+
+# urlretrieve("https://github.com/11jolek11/BIProject/raw/main/data.zip", "./data.zip")
+# with zipfile.ZipFile("./data.zip", 'r') as zip_ref:
+#     zip_ref.extractall(".")
 
 def create_file_id(id):
     return str(id) + "#" + str(randint(1, 1000))
@@ -85,6 +96,7 @@ def is_city(city):
 
 @task()
 def extract_from_combined_csv():
+    data_dict = Variable.get("data", deserialize_json=True)
     file_path: str | Path = data_dict["path"]
     # TODO(11jolek11): Fill drop_columns param
     drop_columns: List[str] = []
@@ -99,8 +111,12 @@ def extract_from_combined_csv():
 
 @task()
 def extract_from_csv():
+    urlretrieve("https://github.com/11jolek11/BIProject/raw/main/data.zip", "./data.zip")
+    with zipfile.ZipFile("./data.zip", 'r') as zip_ref:
+        zip_ref.extractall(".")
+    data_dict = Variable.get("data", deserialize_json=True)
     paths: Iterable[str] | Iterable[Path] = data_dict["path"]
-    patterns: Iterable[str] = data_dict["patterns"]
+    patterns: Iterable[str] = data_dict["regex"]
     extensions: Iterable[str] = data_dict["extensions"]
     # TODO(11jolek11): Fill drop_columns param
     # drop_columns: List[str] = []
@@ -109,25 +125,27 @@ def extract_from_csv():
     return_df = pd.DataFrame()
 
     for path in paths:
-        if patterns:
-            for pattern in patterns:
-                file_paths.extend(
-                        filter(re.compile(pattern).match(), os.listdir(str(path)))
-                        )
-        elif extensions:
-            scanned = os.scandir(path)
-            for extension in extensions:
-                for obj in scanned:
-                    if obj.is_file() and extension in obj.name:
-                        file_paths.append(obj.path)
+        # if patterns:
+        for pattern in patterns:
+            file_paths.extend(
+                    filter(re.compile(pattern).match,
+                           os.listdir(str(path)))
+                    )
+        # elif extensions:
+        #     scanned = os.scandir(path)
+        #     for extension in extensions:
+        #         for obj in scanned:
+        #             if obj.is_file() and extension in obj.name:
+        #                 file_paths.append(obj.path)
 
     for file in file_paths:
+        # raise RuntimeError("gg")
         if ".csv" in str(file):
-            df = pd.read_csv(file.path, encoding="utf-8")
+            df = pd.read_csv("./data/" + file, encoding="utf-8")
             pd.concat([return_df, df])
             continue
         if ".excel" in str(file):
-            df = pd.read_excel(file.path, encoding="utf-8")
+            df = pd.read_excel("./data/" + file, encoding="utf-8")
             pd.concat([return_df, df])
             continue
 
@@ -276,4 +294,7 @@ with DAG(
 
     # create_table_postgres = PostgresOperator()
     # agregacje jako widoki
+
+# if __name__ == "__main__":
+#     our_dag.test()
 
