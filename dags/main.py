@@ -10,11 +10,7 @@ from urllib.request import urlretrieve
 import zipfile
 import numpy as np
 from typing import Dict, Iterable, List
-from airflow.models.dag import DAG
-from airflow.decorators import task, dag
-from airflow.utils.task_group import TaskGroup
-from airflow.models import Variable, baseoperator
-from airflow.providers.postgres.operators.postgres import PostgresOperator
+from numpy.lib.function_base import extract
 import pandas as pd
 import requests
 import json
@@ -25,12 +21,12 @@ from random import randint
 
 download_path = "https://github.com/11jolek11/BIProject/raw/main/data.zip" 
 
-Variable.set(key="date_format", value="%Y-%m-%d")
+date_format = "%Y-%m-%d"
 # Variable.set(key="project_home", value=)
-Variable.set(key="staging_area", value='./staging')
-Variable.set(key="city", value='./data/uscities.csv')
-Variable.set(key="openweather_api_key", value="f50682fc9c765b69ac045a8c267b0759")
-Variable.set(key="google_maps_api_key", value="aizasybzb0oz0re1jjbol0_jyvd4jamrqeo0zvi")
+staging_area = './staging'
+city = './data/uscities.csv'
+openweather_api_key = "f50682fc9c765b69ac045a8c267b0759"
+google_maps_api_key = "aizasybzb0oz0re1jjbol0_jyvd4jamrqeo0zvi"
 
 custom_data = {
                     "path": ["./data/"],
@@ -38,13 +34,10 @@ custom_data = {
                     "regex": ["([0-9]{2,}).(csv|xlsx)"]
                 }
 
-Variable.set(key="data", value=custom_data, serialize_json=True)
 
-# data_dict = Variable.get("data", deserialize_json=True)
-# drop_dict = Variable.get("drop", deserialize_json=True)
-
-cities_list_path = Variable.get("city", deserialize_json=False)
-staging_area_path = Variable.get("staging_area")
+global_run_id = 0
+cities_list_path = city
+staging_area_path = staging_area
 
 if not os.path.exists(staging_area_path):
     os.makedirs(staging_area_path)
@@ -65,7 +58,7 @@ else:
 #     zip_ref.extractall(".")
 
 def create_file_id(id):
-    return str(id) + "#" + str(randint(1, 1000))
+    return str(id) + "_" + str(randint(1, 1000))
 
 
 def flatten(dictionary, parent_key='', separator='_'):
@@ -84,44 +77,35 @@ def is_city(city):
     cities = list(map(lambda x: x.lower(), cities))
     return city.lower() in cities
 
-#         dag_id="shootings_dag",
-#         schedule="@daily",
-#         catchup=False,
-#         start_date=datetime.datetime(2023, 3, 5)
 
-
-# @dag(catchup=False, dag_id="shootings_dag",
-#      start_date=datetime.datetime(2023, 3, 5), schedule_interval="@daily")
-# def our_dag():
-
-@task()
 def extract_from_combined_csv():
-    data_dict = Variable.get("data", deserialize_json=True)
-    file_path: str | Path = data_dict["path"]
+    data_dict = custom_data
+    file_path = data_dict["path"]
     # TODO(11jolek11): Fill drop_columns param
-    drop_columns: List[str] = []
+    # drop_columns: List[str] = []
     return_df = pd.read_csv(str(file_path))
-    return_df.drop(colums=drop_columns, in_place=True)
+    # return_df.drop(colums=drop_columns, in_place=True)
 
     run_id = create_file_id(str(uuid4()))
     return_df.to_csv(f"{staging_area_path}/{run_id}.csv")
-    Variable.set(key="run_id", value=run_id)
+    global_run_id = run_id
 
     return run_id
 
-@task()
+
 def extract_from_csv():
     urlretrieve("https://github.com/11jolek11/BIProject/raw/main/data.zip", "./data.zip")
     with zipfile.ZipFile("./data.zip", 'r') as zip_ref:
         zip_ref.extractall(".")
-    data_dict = Variable.get("data", deserialize_json=True)
-    paths: Iterable[str] | Iterable[Path] = data_dict["path"]
-    patterns: Iterable[str] = data_dict["regex"]
-    extensions: Iterable[str] = data_dict["extensions"]
+    data_dict = custom_data
+    paths = data_dict["path"]
+    patterns = data_dict["regex"]
+    # extensions = data_dict["extensions"]
     # TODO(11jolek11): Fill drop_columns param
     # drop_columns: List[str] = []
 
     file_paths = []
+    df_list = []
     return_df = pd.DataFrame()
 
     for path in paths:
@@ -139,27 +123,33 @@ def extract_from_csv():
         #                 file_paths.append(obj.path)
 
     for file in file_paths:
+        print(file)
         # raise RuntimeError("gg")
         if ".csv" in str(file):
-            df = pd.read_csv("./data/" + file, encoding="utf-8")
-            pd.concat([return_df, df])
+            df = pd.read_csv("./data/" + file)
+            df_list.append(df)
+            # pd.concat([return_df, df], ignore_index=True)
+            print(len(return_df.index))
             continue
-        if ".excel" in str(file):
-            df = pd.read_excel("./data/" + file, encoding="utf-8")
-            pd.concat([return_df, df])
+        if ".xlsx" in str(file):
+            df = pd.read_excel("./data/" + file)
+            df_list.append(df)
+            # pd.concat([return_df, df], ignore_index=True)
             continue
 
     # return_df.drop(colums=drop_columns, in_place=True)
-
+    return_df = pd.concat(df_list, ignore_index=True)
     run_id = create_file_id(str(uuid4()))
-    Variable.set(key="run_id", value=run_id)
-    return_df.to_csv(f"{staging_area_path}/{run_id}.csv")
+    global_run_id = run_id
+    return_df.to_csv(f"{staging_area_path}//{run_id}.csv")
 
+    print(f"{staging_area_path}//{run_id}.csv")
     return run_id
 
-@task()
+
 def unify_date_format(id):
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
+    print(extracted_data.columns)
 
     target_format = "%Y %m %d"
     if "Incident Date" in extracted_data.columns and str(extracted_data["Incident Date"][0][0]).isupper():
@@ -169,7 +159,7 @@ def unify_date_format(id):
 
     return id
 
-@task()
+
 def get_coordinates(id):
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
     locations = extracted_data["Address"]
@@ -183,7 +173,7 @@ def get_coordinates(id):
         google_url = 'https://places.googleapis.com/v1/places:searchText'
         google_headers = {'Content-Type': 'application/json',
                           'X-Goog-FieldMask': 'places.location',
-                          'X-Goog-Api-Key': Variable.get("google_maps_api_key")}
+                          'X-Goog-Api-Key': google_maps_api_key}
 
         if google_url not in google_requests_cache.keys():
             resp = requests.post(url=google_url, data=google_payload, headers=google_headers)
@@ -200,7 +190,7 @@ def get_coordinates(id):
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     return id
 
-@task()
+
 def extract_weather(id):
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
     weather_df = pd.DataFrame(columns=["lat", "lon", "tr", "date", "cloud_cover_afternoon", "humidity_afternoon",
@@ -209,7 +199,7 @@ def extract_weather(id):
     lons = extracted_data["Lon"].values
 
     for data_idx in extracted_data.index:
-        weather_url = f'https://api.openweathermap.org/data/3.0/onecall/day_summary?lat={lats[data_idx]}&lon={lons[data_idx]}&date={extracted_data["Incident Date"]}&appid={Variable.get("openweather_api_key")}'
+        weather_url = f'https://api.openweathermap.org/data/3.0/onecall/day_summary?lat={lats[data_idx]}&lon={lons[data_idx]}&date={extracted_data["Incident Date"]}&appid={openweather_api_key}'
         if weather_url not in weather_requests_cache.keys():
             resp = requests.post(url=weather_url)
 
@@ -232,11 +222,11 @@ def extract_weather(id):
             file.write(save)
 
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
-    weather_id = create_file_id(Variable.get("run_id"))
+    weather_id = create_file_id(global_run_id)
     weather_df.to_csv(f"{staging_area_path}/{weather_id}.csv")
     return {"extracted": id, "weather": weather_id}
 
-@task()
+
 def add_count_or_city(ids_dict):
     id = ids_dict["extracted"]
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}")
@@ -263,38 +253,9 @@ def add_count_or_city(ids_dict):
 
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     return ids_dict
-# @task_group
-# def all_tasks():
-#     pass
-
-    # baseoperator.chain(extract_from_csv,
-    #                    unify_date_format,
-    #                    get_coordinates,
-    #                    extract_weather,
-    #                    add_count_or_city)
-
-    # extract_from_csv >> unify_date_format >> get_coordinates >> extract_weather >> add_count_or_city
 
 
-# our_dag()
-
-with DAG(
-        dag_id="shootings_dag",
-        schedule_interval="@daily",
-        catchup=False,
-        start_date=datetime.datetime(2023, 3, 5)
-        ) as our_dag:
-    get_csv = extract_from_csv()
-    dates = unify_date_format(get_csv)
-    coords = get_coordinates(dates)
-    wea = extract_weather(coords)
-    countryd = add_count_or_city(wea)
-
-    get_csv >> dates >> coords >> wea >> countryd
-
-    # create_table_postgres = PostgresOperator()
-    # agregacje jako widoki
-
-# if __name__ == "__main__":
-#     our_dag.test()
+if __name__ == "__main__":
+    # add_count_or_city(extract_weather(get_coordinates(unify_date_format(extract_from_csv()))))
+    extract_from_csv()
 
