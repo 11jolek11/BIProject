@@ -43,8 +43,14 @@ if not os.path.exists(staging_area_path):
     os.makedirs(staging_area_path)
 
 save_file_weather = "./weather_requests_cache.json"
+save_file_google = "./google_requests_cache.json"
 
-google_requests_cache = dict()
+if os.path.isfile(save_file_google):
+    with open(save_file_google, "r") as file:
+       google_requests_cache = json.loads(file.read())
+else:
+    google_requests_cache = dict()
+
 
 if os.path.isfile(save_file_weather):
     with open(save_file_weather, "r") as file:
@@ -166,29 +172,45 @@ def unify_date_format(id):
 def get_coordinates(id):
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
     locations = extracted_data["Address"]
+    # print(locations)
     coords_lat = np.zeros([len(locations.index), 1])
     coords_lon = np.zeros([len(locations.index), 1])
 
     for location_idx in locations.index:
-        if " and " in locations[location_idx]:
-            locations[location_idx] = locations[location_idx].split(" and ")[0]
-        google_payload = {"textQuery": locations.loc[location_idx]}
+        print(f"Getting {location_idx}")
+        if " and " in str(locations[location_idx]):
+            extracted_data.loc[location_idx, "Address"] = extracted_data.loc[location_idx, "Address"].split(" and ")[0]
+        google_payload = {"textQuery": extracted_data.loc[location_idx, "Address"]}
         google_url = 'https://places.googleapis.com/v1/places:searchText'
         google_headers = {'Content-Type': 'application/json',
                           'X-Goog-FieldMask': 'places.location',
                           'X-Goog-Api-Key': google_maps_api_key}
 
         if google_url not in google_requests_cache.keys():
+            print(f"URL: {google_url}")
+            print(f"Headers: {google_headers}")
+            print(f"Payload: {google_payload}")
             resp = requests.post(url=google_url, data=google_payload, headers=google_headers)
             if resp.status_code == 200:
                 temp_location = resp.json()["places"][0]["location"]
                 google_requests_cache[google_url] = temp_location
+                save = json.dumps(google_requests_cache)
+                with open(save_file_google, "w") as file:
+                    file.write(save)
+            else:
+                print(f"REQUEST ERROR: {resp}")
+
         else:
             temp_location = google_requests_cache[google_url]
             coords_lat[location_idx] = [temp_location["latitude"]]
             coords_lon[location_idx] = [temp_location["longitude"]]
     extracted_data["Lat"] = coords_lat
     extracted_data["Lon"] = coords_lon
+ 
+    # if not os.path.isfile(save_file_google):
+        # save = json.dumps(google_requests_cache)
+        # with open(save_file_google, "w") as file:
+        #     file.write(save)
 
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     return id
@@ -216,13 +238,16 @@ def extract_weather(id):
                     if key not in weather_df.columns:
                         del temp_weather[key]
                 weather_requests_cache[weather_url] = temp_weather
+                save = json.dumps(weather_requests_cache)
+                with open(save_file_weather, "w") as file:
+                    file.write(save)
         else:
             temp_weather = weather_requests_cache[weather_url]
 
-    if not os.path.isfile(save_file_weather):
-        save = json.dumps(weather_requests_cache)
-        with open(save_file_weather, "w") as file:
-            file.write(save)
+    # if not os.path.isfile(save_file_weather):
+        # save = json.dumps(weather_requests_cache)
+        # with open(save_file_weather, "w") as file:
+        #     file.write(save)
 
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     weather_id = create_file_id(global_run_id)
@@ -260,5 +285,5 @@ def add_count_or_city(ids_dict):
 
 if __name__ == "__main__":
     # add_count_or_city(extract_weather(get_coordinates(unify_date_format(extract_from_csv()))))
-    unify_date_format(extract_from_csv())
+    get_coordinates(unify_date_format(extract_from_csv()))
 
