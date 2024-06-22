@@ -19,14 +19,14 @@ from random import randint
 
 # AIRFLOW_VAR_PROJECT_HOME='$HOME/Projects/BIProjects'
 
-download_path = "https://github.com/11jolek11/BIProject/raw/main/data.zip" 
+download_path = "https://github.com/11jolek11/BIProject/raw/main/data.zip"
 
 date_format = "%Y-%m-%d"
 # Variable.set(key="project_home", value=)
 staging_area = './staging'
 city = './data/uscities.csv'
 openweather_api_key = "f50682fc9c765b69ac045a8c267b0759"
-google_maps_api_key = "aizasybzb0oz0re1jjbol0_jyvd4jamrqeo0zvi"
+google_maps_api_key = "AIzaSyBZb0OZ0rE1jJbOL0_Jyvd4JAMrqeO0ZvI"
 
 custom_data = {
                     "path": ["./data/"],
@@ -177,23 +177,29 @@ def get_coordinates(id):
     coords_lon = np.zeros([len(locations.index), 1])
 
     for location_idx in locations.index:
+        # location_idx = 815
         print(f"Getting {location_idx}")
         if " and " in str(locations[location_idx]):
             extracted_data.loc[location_idx, "Address"] = extracted_data.loc[location_idx, "Address"].split(" and ")[0]
-        google_payload = {"textQuery": extracted_data.loc[location_idx, "Address"]}
+        google_payload = {"textQuery": str(extracted_data.loc[location_idx, "Address"])}
         google_url = 'https://places.googleapis.com/v1/places:searchText'
         google_headers = {'Content-Type': 'application/json',
                           'X-Goog-FieldMask': 'places.location',
                           'X-Goog-Api-Key': google_maps_api_key}
 
-        if google_url not in google_requests_cache.keys():
-            print(f"URL: {google_url}")
-            print(f"Headers: {google_headers}")
-            print(f"Payload: {google_payload}")
-            resp = requests.post(url=google_url, data=google_payload, headers=google_headers)
+        if str(google_payload) not in google_requests_cache.keys():
+            # print(f"URL: {google_url}")
+            # print(f"Headers: {google_headers}")
+            # print(f"Payload: {google_payload}")
+            # print(f'{pd.api.types.is_float(extracted_data.loc[location_idx, "Address"])} -- {type(extracted_data.loc[location_idx, "Address"])}')
+            resp = requests.post(url=google_url, json=google_payload, headers=google_headers)
+            # print(resp.text)
+            print(resp.json())
             if resp.status_code == 200:
-                temp_location = resp.json()["places"][0]["location"]
-                google_requests_cache[google_url] = temp_location
+                temp_location = {"latitude": 0.0, "longitude": 0.0}
+                if resp.json():
+                    temp_location = resp.json()["places"][0]["location"]
+                google_requests_cache[str(google_payload)] = temp_location
                 save = json.dumps(google_requests_cache)
                 with open(save_file_google, "w") as file:
                     file.write(save)
@@ -201,9 +207,12 @@ def get_coordinates(id):
                 print(f"REQUEST ERROR: {resp}")
 
         else:
-            temp_location = google_requests_cache[google_url]
+            # return 1
+            print("get from cache")
+            temp_location = google_requests_cache[str(google_payload)]
             coords_lat[location_idx] = [temp_location["latitude"]]
             coords_lon[location_idx] = [temp_location["longitude"]]
+            # return 1
     extracted_data["Lat"] = coords_lat
     extracted_data["Lon"] = coords_lon
  
