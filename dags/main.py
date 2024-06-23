@@ -25,7 +25,13 @@ date_format = "%Y-%m-%d"
 # Variable.set(key="project_home", value=)
 staging_area = './staging'
 city = './data/uscities.csv'
+
+global_run_id = 0
+cities_list_path = city
+staging_area_path = staging_area
+
 openweather_api_key = "f50682fc9c765b69ac045a8c267b0759"
+# f"{staging_area_path}/{weather_id}.csv"
 google_maps_api_key = "AIzaSyBZb0OZ0rE1jJbOL0_Jyvd4JAMrqeO0ZvI"
 
 custom_data = {
@@ -35,9 +41,6 @@ custom_data = {
                 }
 
 
-global_run_id = 0
-cities_list_path = city
-staging_area_path = staging_area
 
 if not os.path.exists(staging_area_path):
     os.makedirs(staging_area_path)
@@ -85,6 +88,7 @@ def is_city(city):
 
 
 def extract_from_combined_csv():
+    global global_run_id
     data_dict = custom_data
     file_path = data_dict["path"]
     # TODO(11jolek11): Fill drop_columns param
@@ -92,14 +96,15 @@ def extract_from_combined_csv():
     return_df = pd.read_csv(str(file_path))
     # return_df.drop(colums=drop_columns, in_place=True)
 
-    run_id = create_file_id(str(uuid4()))
-    return_df.to_csv(f"{staging_area_path}/{run_id}.csv")
-    global_run_id = run_id
+    global_run_id = str(uuid4())
+    file_id = create_file_id(global_run_id)
+    return_df.to_csv(f"{staging_area_path}/{file_id}.csv")
 
-    return run_id
+    return file_id
 
 
 def extract_from_csv():
+    global global_run_id
     urlretrieve("https://github.com/11jolek11/BIProject/raw/main/data.zip", "./data.zip")
     with zipfile.ZipFile("./data.zip", 'r') as zip_ref:
         zip_ref.extractall(".")
@@ -145,12 +150,12 @@ def extract_from_csv():
 
     # return_df.drop(colums=drop_columns, in_place=True)
     return_df = pd.concat(df_list, ignore_index=True)
-    run_id = create_file_id(str(uuid4()))
-    global_run_id = run_id
-    return_df.to_csv(f"{staging_area_path}//{run_id}.csv")
+    global_run_id = str(uuid4())
+    file_id = create_file_id(global_run_id)
+    return_df.to_csv(f"{staging_area_path}//{file_id}.csv")
 
     # print(f"{staging_area_path}//{run_id}.csv")
-    return run_id
+    return file_id
 
 
 def unify_date_format(id):
@@ -163,7 +168,11 @@ def unify_date_format(id):
             target_format = "%B %d, %Y"
 
         # print(f"{str(extracted_data.loc[idx, "Incident Date"][0])} -- {target_format}")
-        extracted_data.loc[idx, "Incident Date"] = pd.to_datetime(extracted_data.loc[idx, "Incident Date"], format=target_format)
+        extracted_data.loc[idx, "Incident Date"] = pd.to_datetime(extracted_data.loc[idx, "Incident Date"], format=target_format).strftime("%Y-%m-%d")
+
+        # extracted_data.loc[idx, "Incident Date"].strftime("%Y-%m-%d")
+        # print(extracted_data.loc[idx, "Incident Date"])
+    # extracted_data["Incident Date"] = extracted_data["Incident Date"].dt.strftime()
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     print(f"{staging_area_path}/{id}.csv")
     return id
@@ -199,12 +208,17 @@ def get_coordinates(id):
                 temp_location = {"latitude": 0.0, "longitude": 0.0}
                 if resp.json():
                     temp_location = resp.json()["places"][0]["location"]
+                elif (len(str(extracted_data.loc[location_idx, "City Or County"]))):
+                    google_payload = {"textQuery": str(extracted_data.loc[location_idx, "City Or County"])}
+                    resp = requests.post(url=google_url, json=google_payload, headers=google_headers)
+                    if resp.status_code == 200 and resp.json():
+                        temp_location = resp.json()["places"][0]["location"]
                 google_requests_cache[str(google_payload)] = temp_location
                 save = json.dumps(google_requests_cache)
                 with open(save_file_google, "w") as file:
                     file.write(save)
             else:
-                print(f"REQUEST ERROR: {resp}")
+                print(f"REQUEST ERROR: {resp} - {resp.text}")
 
         else:
             # return 1
@@ -215,7 +229,7 @@ def get_coordinates(id):
             # return 1
     extracted_data["Lat"] = coords_lat
     extracted_data["Lon"] = coords_lon
- 
+
     # if not os.path.isfile(save_file_google):
         # save = json.dumps(google_requests_cache)
         # with open(save_file_google, "w") as file:
@@ -226,41 +240,87 @@ def get_coordinates(id):
 
 
 def extract_weather(id):
+    # TODO(11jolek11): What to do when lon and lat values are missing (when lon and lat == 0.0 ) because of fail in prev node?
+    # TODO(11jolek11): What to do when lon and lat values are missing because of lack data on OpenWeather portal?
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
-    weather_df = pd.DataFrame(columns=["lat", "lon", "tr", "date", "cloud_cover_afternoon", "humidity_afternoon",
-                                       "precipitation_total", "pressure_afternoon", "temperature", "wind_max_speed", "wind_max_direction"])
+    # TODO(11jolek11): Add checks,, if lat and lon in request == lat and lon in response
+    expected_columns = ["lat", "lon", "date", "cloud_cover_afternoon", "humidity_afternoon",
+                                       "precipitation_total", "pressure_afternoon", "temperature", "wind_max_speed", "wind_max_direction"]
+    weather_df = pd.DataFrame(columns=expected_columns)
     lats = extracted_data["Lat"].values
     lons = extracted_data["Lon"].values
+    df_list = []
 
     for data_idx in extracted_data.index:
-        weather_url = f'https://api.openweathermap.org/data/3.0/onecall/day_summary?lat={lats[data_idx]}&lon={lons[data_idx]}&date={extracted_data["Incident Date"]}&appid={openweather_api_key}'
-        if weather_url not in weather_requests_cache.keys():
-            resp = requests.post(url=weather_url)
+        print(f"Getting {data_idx} weather")
+        target_date = extracted_data.loc[data_idx, "Incident Date"]
+        # print(target_date)
+        weather_url = f'https://api.openweathermap.org/data/3.0/onecall/day_summary?lat={lats[data_idx]}&lon={lons[data_idx]}&date={target_date}&appid={openweather_api_key}'
+        default_values = [lats[data_idx], lats[data_idx], extracted_data.loc[data_idx, "Incident Date"], 0, 0, 0, 0, 0.0, 0.0, 0]
+        temp_weather = dict()
 
-            if resp.status_code == 200:
-                temp_weather = resp.json()
-                # temp_weather = dict(flatdict.FlatDict(temp_weather, delimiter="_"))
+        for key, value in zip(expected_columns, default_values):
+            temp_weather[key] = [value]
+        # temp_df = pd.DataFrame(columns=expected_columns)
+        if lats[data_idx] != 0.0 and lons[data_idx] != 0.0:
+            if weather_url not in weather_requests_cache.keys():
+                try:
+                    resp = requests.get(url=weather_url)
+                    if resp.status_code == 200 and resp.json():
+                        # temp_weather = resp.json()
+                        # temp_weather = dict(flatdict.FlatDict(temp_weather, delimiter="_"))
+                        # temp_weather = flatten(temp_weather)
 
-                temp_weather = flatten(temp_weather)
+                        temp_dict = resp.json().copy()
+                        keys_collection = list(temp_dict.keys()).copy()
+                        for key in keys_collection:
+                            if key not in weather_df.columns:
+                                del temp_dict[key]
 
-                for key in temp_weather.keys():
-                    if key not in weather_df.columns:
-                        del temp_weather[key]
-                weather_requests_cache[weather_url] = temp_weather
-                save = json.dumps(weather_requests_cache)
-                with open(save_file_weather, "w") as file:
-                    file.write(save)
+                        for key, value in flatten(temp_dict).items():
+                            temp_weather[key] = [value]
+
+                        # print("{} @@ {}", extracted_data.loc[data_idx, "Incident Date"], temp_weather["date"])
+                        if temp_weather["lat"] != lats[data_idx] or temp_weather["lon"] != lons[data_idx]:
+                            print("Error {} -- {} || {} -- {} ".format(temp_weather["lat"], lats[data_idx], temp_weather["lon"], lons[data_idx]))
+
+                        weather_requests_cache[weather_url] = temp_weather
+                        save = json.dumps(weather_requests_cache)
+                        with open(save_file_weather, "w") as file:
+                            file.write(save)
+                    else:
+                        print(f"Error: {resp} {resp.text} {resp.reason}")
+
+                except requests.exceptions.ConnectionError:
+                    print("Server WAF blocked connection")
+
+            else:
+                print("Get from cache")
+                for key, value in weather_requests_cache[weather_url].items():
+                    if key in expected_columns:
+                        # Adding value as [value]
+                        temp_weather[key] = [value]
+
+        print(temp_weather)
+        if list(temp_weather.keys()) == expected_columns:
+            # FIXME(11jolek11):
+            df_list.append(pd.DataFrame(temp_weather, columns=expected_columns))
         else:
-            temp_weather = weather_requests_cache[weather_url]
+            # {'lat': 34.0055533, 'lon': -81.029541, 'date': '2020-12-26',
+            # 'cloud_cover_afternoon': 1.0, 'humidity_afternoon': 40.0, 'precipitation_total': 0.0, 'pressure_afternoon': 1025.0,
+            # 'wind_max_speed': 5.7, 'wind_max_direction': 270.0}
+            print("Columns error")
 
     # if not os.path.isfile(save_file_weather):
         # save = json.dumps(weather_requests_cache)
         # with open(save_file_weather, "w") as file:
         #     file.write(save)
 
+    weather_df = pd.concat([*df_list, weather_df], ignore_index=True)
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     weather_id = create_file_id(global_run_id)
     weather_df.to_csv(f"{staging_area_path}/{weather_id}.csv")
+    print(f"Path: {staging_area_path}/{weather_id}.csv")
     return {"extracted": id, "weather": weather_id}
 
 
@@ -268,7 +328,7 @@ def add_count_or_city(ids_dict):
     id = ids_dict["extracted"]
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}")
     # FIXME(11jolek11): Fix column name
-    mixed_data = extracted_data["CityorCounty"]
+    mixed_data = extracted_data["City Or County"]
 
     cities_file = pd.read_csv(cities_list_path)
     cities = cities_file['city'].to_list()
@@ -293,6 +353,6 @@ def add_count_or_city(ids_dict):
 
 
 if __name__ == "__main__":
-    # add_count_or_city(extract_weather(get_coordinates(unify_date_format(extract_from_csv()))))
-    get_coordinates(unify_date_format(extract_from_csv()))
+    extract_weather(get_coordinates(unify_date_format(extract_from_csv())))
+    # get_coordinates(unify_date_format(extract_from_csv()))
 
