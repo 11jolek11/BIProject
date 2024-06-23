@@ -1,10 +1,13 @@
 import pandas as pd
 
+def strip_date(date):
+    return pd.to_datetime(date).strftime('%Y-%m-%d')
 
 file_gun_violence = '../data/combined.csv'
 file_gun_ownership = '../data/ownership.csv'
 gun_violence = pd.read_csv(file_gun_violence).drop(columns=["Unnamed: 0", 'Operations'])
 gun_violence['State'] = gun_violence['State'].replace('District of Columbia', 'Washington')
+gun_violence['Incident Date'] = gun_violence['Incident Date'].apply(strip_date)
 dates = gun_violence['Incident Date']
 years = []
 for date in dates:
@@ -29,8 +32,4 @@ gun_ownership['permit'] = gun_ownership.groupby('State')['permit'].ffill().bfill
 
 inner_gun_violence = pd.merge(gun_violence, gun_ownership, left_on=['State', 'Incident_year'], right_on=['State', 'Year'], how="inner")
 
-# nan_rows = inner_gun_violence[inner_gun_violence.isnull().any(axis=1)]
-# for row in nan_rows.iterrows():
-#     print(row)
-print(inner_gun_violence)
-# print(inner_gun_violence.isna().sum())
+# print(inner_gun_violence)
