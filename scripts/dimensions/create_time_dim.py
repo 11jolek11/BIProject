@@ -1,8 +1,8 @@
 import pandas as pd
 import holidays
 
-def get_date_dim():
-    file_gun_violence = '../data/combined.csv'
+def get_date_dim(to_csv=False):
+    file_gun_violence = '../../data/combined.csv'
     gun_violence_dates = pd.read_csv(file_gun_violence)['Incident Date']
     dates = []
     for date in gun_violence_dates.iloc[[0, -1]]:
@@ -27,6 +27,11 @@ def get_date_dim():
     us_holidays = holidays.US()
     df['IsHoliday'] = df['Date'].isin(us_holidays)
 
+    if to_csv:
+        csv_name = 'time_dim.csv'
+        df.to_csv(f'../../data/dimensions/{csv_name}')
+
     return df
 
-print(get_date_dim())
+# print(get_date_dim())
+get_date_dim(to_csv=True)
