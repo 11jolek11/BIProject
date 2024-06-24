@@ -29,7 +29,7 @@ def get_date_dim(to_csv=False):
 
     if to_csv:
         csv_name = 'time_dim.csv'
-        df.to_csv(f'../../data/dimensions/{csv_name}')
+        df.to_csv(f'../../data/dimensions/{csv_name}', index=False)
 
     return df
 

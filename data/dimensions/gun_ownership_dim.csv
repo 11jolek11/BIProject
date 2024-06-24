@@ -1,2251 +1,2251 @@
-,Year,State,permit
-0,1980,Alabama,0.0
-1,1980,Alaska,0.0
-2,1980,Arizona,0.0
-3,1980,Arkansas,0.0
-4,1980,California,0.0
-5,1980,Colorado,0.0
-6,1980,Connecticut,0.0
-7,1980,Delaware,0.0
-8,1980,Florida,0.0
-9,1980,Georgia,0.0
-10,1980,Hawaii,1.0
-11,1980,Idaho,0.0
-12,1980,Illinois,1.0
-13,1980,Indiana,0.0
-14,1980,Iowa,0.0
-15,1980,Kansas,0.0
-16,1980,Kentucky,0.0
-17,1980,Louisiana,0.0
-18,1980,Maine,0.0
-19,1980,Maryland,0.0
-20,1980,Massachusetts,1.0
-21,1980,Michigan,1.0
-22,1980,Minnesota,0.0
-23,1980,Mississippi,0.0
-24,1980,Missouri,0.0
-25,1980,Montana,0.0
-26,1980,Nebraska,0.0
-27,1980,Nevada,0.0
-28,1980,New Hampshire,0.0
-29,1980,New Jersey,1.0
-30,1980,New Mexico,0.0
-31,1980,New York,1.0
-32,1980,North Carolina,0.0
-33,1980,North Dakota,0.0
-34,1980,Ohio,0.0
-35,1980,Oklahoma,0.0
-36,1980,Oregon,0.0
-37,1980,Pennsylvania,0.0
-38,1980,Rhode Island,1.0
-39,1980,South Carolina,0.0
-40,1980,South Dakota,0.0
-41,1980,Tennessee,0.0
-42,1980,Texas,0.0
-43,1980,Utah,0.0
-44,1980,Vermont,0.0
-45,1980,Virginia,0.0
-46,1980,Washington,0.0
-47,1980,West Virginia,0.0
-48,1980,Wisconsin,0.0
-49,1980,Wyoming,0.0
-50,1981,Alabama,0.0
-51,1981,Alaska,0.0
-52,1981,Arizona,0.0
-53,1981,Arkansas,0.0
-54,1981,California,0.0
-55,1981,Colorado,0.0
-56,1981,Connecticut,0.0
-57,1981,Delaware,0.0
-58,1981,Florida,0.0
-59,1981,Georgia,0.0
-60,1981,Hawaii,1.0
-61,1981,Idaho,0.0
-62,1981,Illinois,1.0
-63,1981,Indiana,0.0
-64,1981,Iowa,0.0
-65,1981,Kansas,0.0
-66,1981,Kentucky,0.0
-67,1981,Louisiana,0.0
-68,1981,Maine,0.0
-69,1981,Maryland,0.0
-70,1981,Massachusetts,1.0
-71,1981,Michigan,1.0
-72,1981,Minnesota,0.0
-73,1981,Mississippi,0.0
-74,1981,Missouri,1.0
-75,1981,Montana,0.0
-76,1981,Nebraska,0.0
-77,1981,Nevada,0.0
-78,1981,New Hampshire,0.0
-79,1981,New Jersey,1.0
-80,1981,New Mexico,0.0
-81,1981,New York,1.0
-82,1981,North Carolina,0.0
-83,1981,North Dakota,0.0
-84,1981,Ohio,0.0
-85,1981,Oklahoma,0.0
-86,1981,Oregon,0.0
-87,1981,Pennsylvania,0.0
-88,1981,Rhode Island,1.0
-89,1981,South Carolina,0.0
-90,1981,South Dakota,0.0
-91,1981,Tennessee,0.0
-92,1981,Texas,0.0
-93,1981,Utah,0.0
-94,1981,Vermont,0.0
-95,1981,Virginia,0.0
-96,1981,Washington,0.0
-97,1981,West Virginia,0.0
-98,1981,Wisconsin,0.0
-99,1981,Wyoming,0.0
-100,1982,Alabama,0.0
-101,1982,Alaska,0.0
-102,1982,Arizona,0.0
-103,1982,Arkansas,0.0
-104,1982,California,0.0
-105,1982,Colorado,0.0
-106,1982,Connecticut,0.0
-107,1982,Delaware,0.0
-108,1982,Florida,0.0
-109,1982,Georgia,0.0
-110,1982,Hawaii,1.0
-111,1982,Idaho,0.0
-112,1982,Illinois,1.0
-113,1982,Indiana,0.0
-114,1982,Iowa,0.0
-115,1982,Kansas,0.0
-116,1982,Kentucky,0.0
-117,1982,Louisiana,0.0
-118,1982,Maine,0.0
-119,1982,Maryland,0.0
-120,1982,Massachusetts,1.0
-121,1982,Michigan,1.0
-122,1982,Minnesota,0.0
-123,1982,Mississippi,0.0
-124,1982,Missouri,1.0
-125,1982,Montana,0.0
-126,1982,Nebraska,0.0
-127,1982,Nevada,0.0
-128,1982,New Hampshire,0.0
-129,1982,New Jersey,1.0
-130,1982,New Mexico,0.0
-131,1982,New York,1.0
-132,1982,North Carolina,0.0
-133,1982,North Dakota,0.0
-134,1982,Ohio,0.0
-135,1982,Oklahoma,0.0
-136,1982,Oregon,0.0
-137,1982,Pennsylvania,0.0
-138,1982,Rhode Island,1.0
-139,1982,South Carolina,0.0
-140,1982,South Dakota,0.0
-141,1982,Tennessee,0.0
-142,1982,Texas,0.0
-143,1982,Utah,0.0
-144,1982,Vermont,0.0
-145,1982,Virginia,0.0
-146,1982,Washington,0.0
-147,1982,West Virginia,0.0
-148,1982,Wisconsin,0.0
-149,1982,Wyoming,0.0
-150,1983,Alabama,0.0
-151,1983,Alaska,0.0
-152,1983,Arizona,0.0
-153,1983,Arkansas,0.0
-154,1983,California,0.0
-155,1983,Colorado,0.0
-156,1983,Connecticut,0.0
-157,1983,Delaware,0.0
-158,1983,Florida,0.0
-159,1983,Georgia,0.0
-160,1983,Hawaii,1.0
-161,1983,Idaho,0.0
-162,1983,Illinois,1.0
-163,1983,Indiana,0.0
-164,1983,Iowa,0.0
-165,1983,Kansas,0.0
-166,1983,Kentucky,0.0
-167,1983,Louisiana,0.0
-168,1983,Maine,0.0
-169,1983,Maryland,0.0
-170,1983,Massachusetts,1.0
-171,1983,Michigan,1.0
-172,1983,Minnesota,0.0
-173,1983,Mississippi,0.0
-174,1983,Missouri,1.0
-175,1983,Montana,0.0
-176,1983,Nebraska,0.0
-177,1983,Nevada,0.0
-178,1983,New Hampshire,0.0
-179,1983,New Jersey,1.0
-180,1983,New Mexico,0.0
-181,1983,New York,1.0
-182,1983,North Carolina,0.0
-183,1983,North Dakota,0.0
-184,1983,Ohio,0.0
-185,1983,Oklahoma,0.0
-186,1983,Oregon,0.0
-187,1983,Pennsylvania,0.0
-188,1983,Rhode Island,1.0
-189,1983,South Carolina,0.0
-190,1983,South Dakota,0.0
-191,1983,Tennessee,0.0
-192,1983,Texas,0.0
-193,1983,Utah,0.0
-194,1983,Vermont,0.0
-195,1983,Virginia,0.0
-196,1983,Washington,0.0
-197,1983,West Virginia,0.0
-198,1983,Wisconsin,0.0
-199,1983,Wyoming,0.0
-200,1984,Alabama,0.0
-201,1984,Alaska,0.0
-202,1984,Arizona,0.0
-203,1984,Arkansas,0.0
-204,1984,California,0.0
-205,1984,Colorado,0.0
-206,1984,Connecticut,0.0
-207,1984,Delaware,0.0
-208,1984,Florida,0.0
-209,1984,Georgia,0.0
-210,1984,Hawaii,1.0
-211,1984,Idaho,0.0
-212,1984,Illinois,1.0
-213,1984,Indiana,0.0
-214,1984,Iowa,0.0
-215,1984,Kansas,0.0
-216,1984,Kentucky,0.0
-217,1984,Louisiana,0.0
-218,1984,Maine,0.0
-219,1984,Maryland,0.0
-220,1984,Massachusetts,1.0
-221,1984,Michigan,1.0
-222,1984,Minnesota,0.0
-223,1984,Mississippi,0.0
-224,1984,Missouri,1.0
-225,1984,Montana,0.0
-226,1984,Nebraska,0.0
-227,1984,Nevada,0.0
-228,1984,New Hampshire,0.0
-229,1984,New Jersey,1.0
-230,1984,New Mexico,0.0
-231,1984,New York,1.0
-232,1984,North Carolina,0.0
-233,1984,North Dakota,0.0
-234,1984,Ohio,0.0
-235,1984,Oklahoma,0.0
-236,1984,Oregon,0.0
-237,1984,Pennsylvania,0.0
-238,1984,Rhode Island,1.0
-239,1984,South Carolina,0.0
-240,1984,South Dakota,0.0
-241,1984,Tennessee,0.0
-242,1984,Texas,0.0
-243,1984,Utah,0.0
-244,1984,Vermont,0.0
-245,1984,Virginia,0.0
-246,1984,Washington,0.0
-247,1984,West Virginia,0.0
-248,1984,Wisconsin,0.0
-249,1984,Wyoming,0.0
-250,1985,Alabama,0.0
-251,1985,Alaska,0.0
-252,1985,Arizona,0.0
-253,1985,Arkansas,0.0
-254,1985,California,0.0
-255,1985,Colorado,0.0
-256,1985,Connecticut,0.0
-257,1985,Delaware,0.0
-258,1985,Florida,0.0
-259,1985,Georgia,0.0
-260,1985,Hawaii,1.0
-261,1985,Idaho,0.0
-262,1985,Illinois,1.0
-263,1985,Indiana,0.0
-264,1985,Iowa,0.0
-265,1985,Kansas,0.0
-266,1985,Kentucky,0.0
-267,1985,Louisiana,0.0
-268,1985,Maine,0.0
-269,1985,Maryland,0.0
-270,1985,Massachusetts,1.0
-271,1985,Michigan,1.0
-272,1985,Minnesota,0.0
-273,1985,Mississippi,0.0
-274,1985,Missouri,1.0
-275,1985,Montana,0.0
-276,1985,Nebraska,0.0
-277,1985,Nevada,0.0
-278,1985,New Hampshire,0.0
-279,1985,New Jersey,1.0
-280,1985,New Mexico,0.0
-281,1985,New York,1.0
-282,1985,North Carolina,0.0
-283,1985,North Dakota,0.0
-284,1985,Ohio,0.0
-285,1985,Oklahoma,0.0
-286,1985,Oregon,0.0
-287,1985,Pennsylvania,0.0
-288,1985,Rhode Island,1.0
-289,1985,South Carolina,0.0
-290,1985,South Dakota,0.0
-291,1985,Tennessee,0.0
-292,1985,Texas,0.0
-293,1985,Utah,0.0
-294,1985,Vermont,0.0
-295,1985,Virginia,0.0
-296,1985,Washington,0.0
-297,1985,West Virginia,0.0
-298,1985,Wisconsin,0.0
-299,1985,Wyoming,0.0
-300,1986,Alabama,0.0
-301,1986,Alaska,0.0
-302,1986,Arizona,0.0
-303,1986,Arkansas,0.0
-304,1986,California,0.0
-305,1986,Colorado,0.0
-306,1986,Connecticut,0.0
-307,1986,Delaware,0.0
-308,1986,Florida,0.0
-309,1986,Georgia,0.0
-310,1986,Hawaii,1.0
-311,1986,Idaho,0.0
-312,1986,Illinois,1.0
-313,1986,Indiana,0.0
-314,1986,Iowa,0.0
-315,1986,Kansas,0.0
-316,1986,Kentucky,0.0
-317,1986,Louisiana,0.0
-318,1986,Maine,0.0
-319,1986,Maryland,0.0
-320,1986,Massachusetts,1.0
-321,1986,Michigan,1.0
-322,1986,Minnesota,0.0
-323,1986,Mississippi,0.0
-324,1986,Missouri,1.0
-325,1986,Montana,0.0
-326,1986,Nebraska,0.0
-327,1986,Nevada,0.0
-328,1986,New Hampshire,0.0
-329,1986,New Jersey,1.0
-330,1986,New Mexico,0.0
-331,1986,New York,1.0
-332,1986,North Carolina,0.0
-333,1986,North Dakota,0.0
-334,1986,Ohio,0.0
-335,1986,Oklahoma,0.0
-336,1986,Oregon,0.0
-337,1986,Pennsylvania,0.0
-338,1986,Rhode Island,1.0
-339,1986,South Carolina,0.0
-340,1986,South Dakota,0.0
-341,1986,Tennessee,0.0
-342,1986,Texas,0.0
-343,1986,Utah,0.0
-344,1986,Vermont,0.0
-345,1986,Virginia,0.0
-346,1986,Washington,0.0
-347,1986,West Virginia,0.0
-348,1986,Wisconsin,0.0
-349,1986,Wyoming,0.0
-350,1987,Alabama,0.0
-351,1987,Alaska,0.0
-352,1987,Arizona,0.0
-353,1987,Arkansas,0.0
-354,1987,California,0.0
-355,1987,Colorado,0.0
-356,1987,Connecticut,0.0
-357,1987,Delaware,0.0
-358,1987,Florida,0.0
-359,1987,Georgia,0.0
-360,1987,Hawaii,1.0
-361,1987,Idaho,0.0
-362,1987,Illinois,1.0
-363,1987,Indiana,0.0
-364,1987,Iowa,0.0
-365,1987,Kansas,0.0
-366,1987,Kentucky,0.0
-367,1987,Louisiana,0.0
-368,1987,Maine,0.0
-369,1987,Maryland,0.0
-370,1987,Massachusetts,1.0
-371,1987,Michigan,1.0
-372,1987,Minnesota,0.0
-373,1987,Mississippi,0.0
-374,1987,Missouri,1.0
-375,1987,Montana,0.0
-376,1987,Nebraska,0.0
-377,1987,Nevada,0.0
-378,1987,New Hampshire,0.0
-379,1987,New Jersey,1.0
-380,1987,New Mexico,0.0
-381,1987,New York,1.0
-382,1987,North Carolina,0.0
-383,1987,North Dakota,0.0
-384,1987,Ohio,0.0
-385,1987,Oklahoma,0.0
-386,1987,Oregon,0.0
-387,1987,Pennsylvania,0.0
-388,1987,Rhode Island,1.0
-389,1987,South Carolina,0.0
-390,1987,South Dakota,0.0
-391,1987,Tennessee,0.0
-392,1987,Texas,0.0
-393,1987,Utah,0.0
-394,1987,Vermont,0.0
-395,1987,Virginia,0.0
-396,1987,Washington,0.0
-397,1987,West Virginia,0.0
-398,1987,Wisconsin,0.0
-399,1987,Wyoming,0.0
-400,1988,Alabama,0.0
-401,1988,Alaska,0.0
-402,1988,Arizona,0.0
-403,1988,Arkansas,0.0
-404,1988,California,0.0
-405,1988,Colorado,0.0
-406,1988,Connecticut,0.0
-407,1988,Delaware,0.0
-408,1988,Florida,0.0
-409,1988,Georgia,0.0
-410,1988,Hawaii,1.0
-411,1988,Idaho,0.0
-412,1988,Illinois,1.0
-413,1988,Indiana,0.0
-414,1988,Iowa,0.0
-415,1988,Kansas,0.0
-416,1988,Kentucky,0.0
-417,1988,Louisiana,0.0
-418,1988,Maine,0.0
-419,1988,Maryland,0.0
-420,1988,Massachusetts,1.0
-421,1988,Michigan,1.0
-422,1988,Minnesota,0.0
-423,1988,Mississippi,0.0
-424,1988,Missouri,1.0
-425,1988,Montana,0.0
-426,1988,Nebraska,0.0
-427,1988,Nevada,0.0
-428,1988,New Hampshire,0.0
-429,1988,New Jersey,1.0
-430,1988,New Mexico,0.0
-431,1988,New York,1.0
-432,1988,North Carolina,0.0
-433,1988,North Dakota,0.0
-434,1988,Ohio,0.0
-435,1988,Oklahoma,0.0
-436,1988,Oregon,0.0
-437,1988,Pennsylvania,0.0
-438,1988,Rhode Island,1.0
-439,1988,South Carolina,0.0
-440,1988,South Dakota,0.0
-441,1988,Tennessee,0.0
-442,1988,Texas,0.0
-443,1988,Utah,0.0
-444,1988,Vermont,0.0
-445,1988,Virginia,0.0
-446,1988,Washington,0.0
-447,1988,West Virginia,0.0
-448,1988,Wisconsin,0.0
-449,1988,Wyoming,0.0
-450,1989,Alabama,0.0
-451,1989,Alaska,0.0
-452,1989,Arizona,0.0
-453,1989,Arkansas,0.0
-454,1989,California,0.0
-455,1989,Colorado,0.0
-456,1989,Connecticut,0.0
-457,1989,Delaware,0.0
-458,1989,Florida,0.0
-459,1989,Georgia,0.0
-460,1989,Hawaii,1.0
-461,1989,Idaho,0.0
-462,1989,Illinois,1.0
-463,1989,Indiana,0.0
-464,1989,Iowa,0.0
-465,1989,Kansas,0.0
-466,1989,Kentucky,0.0
-467,1989,Louisiana,0.0
-468,1989,Maine,0.0
-469,1989,Maryland,0.0
-470,1989,Massachusetts,1.0
-471,1989,Michigan,1.0
-472,1989,Minnesota,0.0
-473,1989,Mississippi,0.0
-474,1989,Missouri,1.0
-475,1989,Montana,0.0
-476,1989,Nebraska,0.0
-477,1989,Nevada,0.0
-478,1989,New Hampshire,0.0
-479,1989,New Jersey,1.0
-480,1989,New Mexico,0.0
-481,1989,New York,1.0
-482,1989,North Carolina,0.0
-483,1989,North Dakota,0.0
-484,1989,Ohio,0.0
-485,1989,Oklahoma,0.0
-486,1989,Oregon,0.0
-487,1989,Pennsylvania,0.0
-488,1989,Rhode Island,1.0
-489,1989,South Carolina,0.0
-490,1989,South Dakota,0.0
-491,1989,Tennessee,0.0
-492,1989,Texas,0.0
-493,1989,Utah,0.0
-494,1989,Vermont,0.0
-495,1989,Virginia,0.0
-496,1989,Washington,0.0
-497,1989,West Virginia,0.0
-498,1989,Wisconsin,0.0
-499,1989,Wyoming,0.0
-500,1990,Alabama,0.0
-501,1990,Alaska,0.0
-502,1990,Arizona,0.0
-503,1990,Arkansas,0.0
-504,1990,California,0.0
-505,1990,Colorado,0.0
-506,1990,Connecticut,0.0
-507,1990,Delaware,0.0
-508,1990,Florida,0.0
-509,1990,Georgia,0.0
-510,1990,Hawaii,1.0
-511,1990,Idaho,0.0
-512,1990,Illinois,1.0
-513,1990,Indiana,0.0
-514,1990,Iowa,1.0
-515,1990,Kansas,0.0
-516,1990,Kentucky,0.0
-517,1990,Louisiana,0.0
-518,1990,Maine,0.0
-519,1990,Maryland,0.0
-520,1990,Massachusetts,1.0
-521,1990,Michigan,1.0
-522,1990,Minnesota,0.0
-523,1990,Mississippi,0.0
-524,1990,Missouri,1.0
-525,1990,Montana,0.0
-526,1990,Nebraska,0.0
-527,1990,Nevada,0.0
-528,1990,New Hampshire,0.0
-529,1990,New Jersey,1.0
-530,1990,New Mexico,0.0
-531,1990,New York,1.0
-532,1990,North Carolina,0.0
-533,1990,North Dakota,0.0
-534,1990,Ohio,0.0
-535,1990,Oklahoma,0.0
-536,1990,Oregon,0.0
-537,1990,Pennsylvania,0.0
-538,1990,Rhode Island,1.0
-539,1990,South Carolina,0.0
-540,1990,South Dakota,0.0
-541,1990,Tennessee,0.0
-542,1990,Texas,0.0
-543,1990,Utah,0.0
-544,1990,Vermont,0.0
-545,1990,Virginia,0.0
-546,1990,Washington,0.0
-547,1990,West Virginia,0.0
-548,1990,Wisconsin,0.0
-549,1990,Wyoming,0.0
-550,1991,Alabama,0.0
-551,1991,Alaska,0.0
-552,1991,Arizona,0.0
-553,1991,Arkansas,0.0
-554,1991,California,0.0
-555,1991,Colorado,0.0
-556,1991,Connecticut,0.0
-557,1991,Delaware,0.0
-558,1991,Florida,0.0
-559,1991,Georgia,0.0
-560,1991,Hawaii,1.0
-561,1991,Idaho,0.0
-562,1991,Illinois,1.0
-563,1991,Indiana,0.0
-564,1991,Iowa,1.0
-565,1991,Kansas,0.0
-566,1991,Kentucky,0.0
-567,1991,Louisiana,0.0
-568,1991,Maine,0.0
-569,1991,Maryland,0.0
-570,1991,Massachusetts,1.0
-571,1991,Michigan,1.0
-572,1991,Minnesota,0.0
-573,1991,Mississippi,0.0
-574,1991,Missouri,1.0
-575,1991,Montana,0.0
-576,1991,Nebraska,1.0
-577,1991,Nevada,0.0
-578,1991,New Hampshire,0.0
-579,1991,New Jersey,1.0
-580,1991,New Mexico,0.0
-581,1991,New York,1.0
-582,1991,North Carolina,0.0
-583,1991,North Dakota,0.0
-584,1991,Ohio,0.0
-585,1991,Oklahoma,0.0
-586,1991,Oregon,0.0
-587,1991,Pennsylvania,0.0
-588,1991,Rhode Island,1.0
-589,1991,South Carolina,0.0
-590,1991,South Dakota,0.0
-591,1991,Tennessee,0.0
-592,1991,Texas,0.0
-593,1991,Utah,0.0
-594,1991,Vermont,0.0
-595,1991,Virginia,0.0
-596,1991,Washington,0.0
-597,1991,West Virginia,0.0
-598,1991,Wisconsin,0.0
-599,1991,Wyoming,0.0
-600,1992,Alabama,0.0
-601,1992,Alaska,0.0
-602,1992,Arizona,0.0
-603,1992,Arkansas,0.0
-604,1992,California,0.0
-605,1992,Colorado,0.0
-606,1992,Connecticut,0.0
-607,1992,Delaware,0.0
-608,1992,Florida,0.0
-609,1992,Georgia,0.0
-610,1992,Hawaii,1.0
-611,1992,Idaho,0.0
-612,1992,Illinois,1.0
-613,1992,Indiana,0.0
-614,1992,Iowa,1.0
-615,1992,Kansas,0.0
-616,1992,Kentucky,0.0
-617,1992,Louisiana,0.0
-618,1992,Maine,0.0
-619,1992,Maryland,0.0
-620,1992,Massachusetts,1.0
-621,1992,Michigan,1.0
-622,1992,Minnesota,0.0
-623,1992,Mississippi,0.0
-624,1992,Missouri,1.0
-625,1992,Montana,0.0
-626,1992,Nebraska,1.0
-627,1992,Nevada,0.0
-628,1992,New Hampshire,0.0
-629,1992,New Jersey,1.0
-630,1992,New Mexico,0.0
-631,1992,New York,1.0
-632,1992,North Carolina,0.0
-633,1992,North Dakota,0.0
-634,1992,Ohio,0.0
-635,1992,Oklahoma,0.0
-636,1992,Oregon,0.0
-637,1992,Pennsylvania,0.0
-638,1992,Rhode Island,1.0
-639,1992,South Carolina,0.0
-640,1992,South Dakota,0.0
-641,1992,Tennessee,0.0
-642,1992,Texas,0.0
-643,1992,Utah,0.0
-644,1992,Vermont,0.0
-645,1992,Virginia,0.0
-646,1992,Washington,0.0
-647,1992,West Virginia,0.0
-648,1992,Wisconsin,0.0
-649,1992,Wyoming,0.0
-650,1993,Alabama,0.0
-651,1993,Alaska,0.0
-652,1993,Arizona,0.0
-653,1993,Arkansas,0.0
-654,1993,California,1.0
-655,1993,Colorado,0.0
-656,1993,Connecticut,0.0
-657,1993,Delaware,0.0
-658,1993,Florida,0.0
-659,1993,Georgia,0.0
-660,1993,Hawaii,1.0
-661,1993,Idaho,0.0
-662,1993,Illinois,1.0
-663,1993,Indiana,0.0
-664,1993,Iowa,1.0
-665,1993,Kansas,0.0
-666,1993,Kentucky,0.0
-667,1993,Louisiana,0.0
-668,1993,Maine,0.0
-669,1993,Maryland,0.0
-670,1993,Massachusetts,1.0
-671,1993,Michigan,1.0
-672,1993,Minnesota,0.0
-673,1993,Mississippi,0.0
-674,1993,Missouri,1.0
-675,1993,Montana,0.0
-676,1993,Nebraska,1.0
-677,1993,Nevada,0.0
-678,1993,New Hampshire,0.0
-679,1993,New Jersey,1.0
-680,1993,New Mexico,0.0
-681,1993,New York,1.0
-682,1993,North Carolina,0.0
-683,1993,North Dakota,0.0
-684,1993,Ohio,0.0
-685,1993,Oklahoma,0.0
-686,1993,Oregon,0.0
-687,1993,Pennsylvania,0.0
-688,1993,Rhode Island,1.0
-689,1993,South Carolina,0.0
-690,1993,South Dakota,0.0
-691,1993,Tennessee,0.0
-692,1993,Texas,0.0
-693,1993,Utah,0.0
-694,1993,Vermont,0.0
-695,1993,Virginia,0.0
-696,1993,Washington,0.0
-697,1993,West Virginia,0.0
-698,1993,Wisconsin,0.0
-699,1993,Wyoming,0.0
-700,1994,Alabama,0.0
-701,1994,Alaska,0.0
-702,1994,Arizona,0.0
-703,1994,Arkansas,0.0
-704,1994,California,1.0
-705,1994,Colorado,0.0
-706,1994,Connecticut,0.0
-707,1994,Delaware,0.0
-708,1994,Florida,0.0
-709,1994,Georgia,0.0
-710,1994,Hawaii,1.0
-711,1994,Idaho,0.0
-712,1994,Illinois,1.0
-713,1994,Indiana,0.0
-714,1994,Iowa,1.0
-715,1994,Kansas,0.0
-716,1994,Kentucky,0.0
-717,1994,Louisiana,0.0
-718,1994,Maine,0.0
-719,1994,Maryland,0.0
-720,1994,Massachusetts,1.0
-721,1994,Michigan,1.0
-722,1994,Minnesota,0.0
-723,1994,Mississippi,0.0
-724,1994,Missouri,1.0
-725,1994,Montana,0.0
-726,1994,Nebraska,1.0
-727,1994,Nevada,0.0
-728,1994,New Hampshire,0.0
-729,1994,New Jersey,1.0
-730,1994,New Mexico,0.0
-731,1994,New York,1.0
-732,1994,North Carolina,0.0
-733,1994,North Dakota,0.0
-734,1994,Ohio,0.0
-735,1994,Oklahoma,0.0
-736,1994,Oregon,0.0
-737,1994,Pennsylvania,0.0
-738,1994,Rhode Island,1.0
-739,1994,South Carolina,0.0
-740,1994,South Dakota,0.0
-741,1994,Tennessee,0.0
-742,1994,Texas,0.0
-743,1994,Utah,0.0
-744,1994,Vermont,0.0
-745,1994,Virginia,0.0
-746,1994,Washington,0.0
-747,1994,West Virginia,0.0
-748,1994,Wisconsin,0.0
-749,1994,Wyoming,0.0
-750,1995,Alabama,0.0
-751,1995,Alaska,0.0
-752,1995,Arizona,0.0
-753,1995,Arkansas,0.0
-754,1995,California,1.0
-755,1995,Colorado,0.0
-756,1995,Connecticut,1.0
-757,1995,Delaware,0.0
-758,1995,Florida,0.0
-759,1995,Georgia,0.0
-760,1995,Hawaii,1.0
-761,1995,Idaho,0.0
-762,1995,Illinois,1.0
-763,1995,Indiana,0.0
-764,1995,Iowa,1.0
-765,1995,Kansas,0.0
-766,1995,Kentucky,0.0
-767,1995,Louisiana,0.0
-768,1995,Maine,0.0
-769,1995,Maryland,0.0
-770,1995,Massachusetts,1.0
-771,1995,Michigan,1.0
-772,1995,Minnesota,0.0
-773,1995,Mississippi,0.0
-774,1995,Missouri,1.0
-775,1995,Montana,0.0
-776,1995,Nebraska,1.0
-777,1995,Nevada,0.0
-778,1995,New Hampshire,0.0
-779,1995,New Jersey,1.0
-780,1995,New Mexico,0.0
-781,1995,New York,1.0
-782,1995,North Carolina,1.0
-783,1995,North Dakota,0.0
-784,1995,Ohio,0.0
-785,1995,Oklahoma,0.0
-786,1995,Oregon,0.0
-787,1995,Pennsylvania,0.0
-788,1995,Rhode Island,1.0
-789,1995,South Carolina,0.0
-790,1995,South Dakota,0.0
-791,1995,Tennessee,0.0
-792,1995,Texas,0.0
-793,1995,Utah,0.0
-794,1995,Vermont,0.0
-795,1995,Virginia,0.0
-796,1995,Washington,0.0
-797,1995,West Virginia,0.0
-798,1995,Wisconsin,0.0
-799,1995,Wyoming,0.0
-800,1996,Alabama,0.0
-801,1996,Alaska,0.0
-802,1996,Arizona,0.0
-803,1996,Arkansas,0.0
-804,1996,California,1.0
-805,1996,Colorado,0.0
-806,1996,Connecticut,1.0
-807,1996,Delaware,0.0
-808,1996,Florida,0.0
-809,1996,Georgia,0.0
-810,1996,Hawaii,1.0
-811,1996,Idaho,0.0
-812,1996,Illinois,1.0
-813,1996,Indiana,0.0
-814,1996,Iowa,1.0
-815,1996,Kansas,0.0
-816,1996,Kentucky,0.0
-817,1996,Louisiana,0.0
-818,1996,Maine,0.0
-819,1996,Maryland,0.0
-820,1996,Massachusetts,1.0
-821,1996,Michigan,1.0
-822,1996,Minnesota,0.0
-823,1996,Mississippi,0.0
-824,1996,Missouri,1.0
-825,1996,Montana,0.0
-826,1996,Nebraska,1.0
-827,1996,Nevada,0.0
-828,1996,New Hampshire,0.0
-829,1996,New Jersey,1.0
-830,1996,New Mexico,0.0
-831,1996,New York,1.0
-832,1996,North Carolina,1.0
-833,1996,North Dakota,0.0
-834,1996,Ohio,0.0
-835,1996,Oklahoma,0.0
-836,1996,Oregon,0.0
-837,1996,Pennsylvania,0.0
-838,1996,Rhode Island,1.0
-839,1996,South Carolina,0.0
-840,1996,South Dakota,0.0
-841,1996,Tennessee,0.0
-842,1996,Texas,0.0
-843,1996,Utah,0.0
-844,1996,Vermont,0.0
-845,1996,Virginia,0.0
-846,1996,Washington,0.0
-847,1996,West Virginia,0.0
-848,1996,Wisconsin,0.0
-849,1996,Wyoming,0.0
-850,1997,Alabama,0.0
-851,1997,Alaska,0.0
-852,1997,Arizona,0.0
-853,1997,Arkansas,0.0
-854,1997,California,1.0
-855,1997,Colorado,0.0
-856,1997,Connecticut,1.0
-857,1997,Delaware,0.0
-858,1997,Florida,0.0
-859,1997,Georgia,0.0
-860,1997,Hawaii,1.0
-861,1997,Idaho,0.0
-862,1997,Illinois,1.0
-863,1997,Indiana,0.0
-864,1997,Iowa,1.0
-865,1997,Kansas,0.0
-866,1997,Kentucky,0.0
-867,1997,Louisiana,0.0
-868,1997,Maine,0.0
-869,1997,Maryland,0.0
-870,1997,Massachusetts,1.0
-871,1997,Michigan,1.0
-872,1997,Minnesota,0.0
-873,1997,Mississippi,0.0
-874,1997,Missouri,1.0
-875,1997,Montana,0.0
-876,1997,Nebraska,1.0
-877,1997,Nevada,0.0
-878,1997,New Hampshire,0.0
-879,1997,New Jersey,1.0
-880,1997,New Mexico,0.0
-881,1997,New York,1.0
-882,1997,North Carolina,1.0
-883,1997,North Dakota,0.0
-884,1997,Ohio,0.0
-885,1997,Oklahoma,0.0
-886,1997,Oregon,0.0
-887,1997,Pennsylvania,0.0
-888,1997,Rhode Island,1.0
-889,1997,South Carolina,0.0
-890,1997,South Dakota,0.0
-891,1997,Tennessee,0.0
-892,1997,Texas,0.0
-893,1997,Utah,0.0
-894,1997,Vermont,0.0
-895,1997,Virginia,0.0
-896,1997,Washington,0.0
-897,1997,West Virginia,0.0
-898,1997,Wisconsin,0.0
-899,1997,Wyoming,0.0
-900,1998,Alabama,0.0
-901,1998,Alaska,0.0
-902,1998,Arizona,0.0
-903,1998,Arkansas,0.0
-904,1998,California,1.0
-905,1998,Colorado,0.0
-906,1998,Connecticut,1.0
-907,1998,Delaware,0.0
-908,1998,Florida,0.0
-909,1998,Georgia,0.0
-910,1998,Hawaii,1.0
-911,1998,Idaho,0.0
-912,1998,Illinois,1.0
-913,1998,Indiana,0.0
-914,1998,Iowa,1.0
-915,1998,Kansas,0.0
-916,1998,Kentucky,0.0
-917,1998,Louisiana,0.0
-918,1998,Maine,0.0
-919,1998,Maryland,0.0
-920,1998,Massachusetts,1.0
-921,1998,Michigan,1.0
-922,1998,Minnesota,0.0
-923,1998,Mississippi,0.0
-924,1998,Missouri,1.0
-925,1998,Montana,0.0
-926,1998,Nebraska,1.0
-927,1998,Nevada,0.0
-928,1998,New Hampshire,0.0
-929,1998,New Jersey,1.0
-930,1998,New Mexico,0.0
-931,1998,New York,1.0
-932,1998,North Carolina,1.0
-933,1998,North Dakota,0.0
-934,1998,Ohio,0.0
-935,1998,Oklahoma,0.0
-936,1998,Oregon,0.0
-937,1998,Pennsylvania,0.0
-938,1998,Rhode Island,1.0
-939,1998,South Carolina,0.0
-940,1998,South Dakota,0.0
-941,1998,Tennessee,0.0
-942,1998,Texas,0.0
-943,1998,Utah,0.0
-944,1998,Vermont,0.0
-945,1998,Virginia,0.0
-946,1998,Washington,0.0
-947,1998,West Virginia,0.0
-948,1998,Wisconsin,0.0
-949,1998,Wyoming,0.0
-950,1999,Alabama,0.0
-951,1999,Alaska,0.0
-952,1999,Arizona,0.0
-953,1999,Arkansas,0.0
-954,1999,California,1.0
-955,1999,Colorado,0.0
-956,1999,Connecticut,1.0
-957,1999,Delaware,0.0
-958,1999,Florida,0.0
-959,1999,Georgia,0.0
-960,1999,Hawaii,1.0
-961,1999,Idaho,0.0
-962,1999,Illinois,1.0
-963,1999,Indiana,0.0
-964,1999,Iowa,1.0
-965,1999,Kansas,0.0
-966,1999,Kentucky,0.0
-967,1999,Louisiana,0.0
-968,1999,Maine,0.0
-969,1999,Maryland,0.0
-970,1999,Massachusetts,1.0
-971,1999,Michigan,1.0
-972,1999,Minnesota,0.0
-973,1999,Mississippi,0.0
-974,1999,Missouri,1.0
-975,1999,Montana,0.0
-976,1999,Nebraska,1.0
-977,1999,Nevada,0.0
-978,1999,New Hampshire,0.0
-979,1999,New Jersey,1.0
-980,1999,New Mexico,0.0
-981,1999,New York,1.0
-982,1999,North Carolina,1.0
-983,1999,North Dakota,0.0
-984,1999,Ohio,0.0
-985,1999,Oklahoma,0.0
-986,1999,Oregon,0.0
-987,1999,Pennsylvania,0.0
-988,1999,Rhode Island,1.0
-989,1999,South Carolina,0.0
-990,1999,South Dakota,0.0
-991,1999,Tennessee,0.0
-992,1999,Texas,0.0
-993,1999,Utah,0.0
-994,1999,Vermont,0.0
-995,1999,Virginia,0.0
-996,1999,Washington,0.0
-997,1999,West Virginia,0.0
-998,1999,Wisconsin,0.0
-999,1999,Wyoming,0.0
-1000,2000,Alabama,0.0
-1001,2000,Alaska,0.0
-1002,2000,Arizona,0.0
-1003,2000,Arkansas,0.0
-1004,2000,California,1.0
-1005,2000,Colorado,0.0
-1006,2000,Connecticut,1.0
-1007,2000,Delaware,0.0
-1008,2000,Florida,0.0
-1009,2000,Georgia,0.0
-1010,2000,Hawaii,1.0
-1011,2000,Idaho,0.0
-1012,2000,Illinois,1.0
-1013,2000,Indiana,0.0
-1014,2000,Iowa,1.0
-1015,2000,Kansas,0.0
-1016,2000,Kentucky,0.0
-1017,2000,Louisiana,0.0
-1018,2000,Maine,0.0
-1019,2000,Maryland,0.0
-1020,2000,Massachusetts,1.0
-1021,2000,Michigan,1.0
-1022,2000,Minnesota,0.0
-1023,2000,Mississippi,0.0
-1024,2000,Missouri,1.0
-1025,2000,Montana,0.0
-1026,2000,Nebraska,1.0
-1027,2000,Nevada,0.0
-1028,2000,New Hampshire,0.0
-1029,2000,New Jersey,1.0
-1030,2000,New Mexico,0.0
-1031,2000,New York,1.0
-1032,2000,North Carolina,1.0
-1033,2000,North Dakota,0.0
-1034,2000,Ohio,0.0
-1035,2000,Oklahoma,0.0
-1036,2000,Oregon,0.0
-1037,2000,Pennsylvania,0.0
-1038,2000,Rhode Island,1.0
-1039,2000,South Carolina,0.0
-1040,2000,South Dakota,0.0
-1041,2000,Tennessee,0.0
-1042,2000,Texas,0.0
-1043,2000,Utah,0.0
-1044,2000,Vermont,0.0
-1045,2000,Virginia,0.0
-1046,2000,Washington,0.0
-1047,2000,West Virginia,0.0
-1048,2000,Wisconsin,0.0
-1049,2000,Wyoming,0.0
-1050,2001,Alabama,0.0
-1051,2001,Alaska,0.0
-1052,2001,Arizona,0.0
-1053,2001,Arkansas,0.0
-1054,2001,California,1.0
-1055,2001,Colorado,0.0
-1056,2001,Connecticut,1.0
-1057,2001,Delaware,0.0
-1058,2001,Florida,0.0
-1059,2001,Georgia,0.0
-1060,2001,Hawaii,1.0
-1061,2001,Idaho,0.0
-1062,2001,Illinois,1.0
-1063,2001,Indiana,0.0
-1064,2001,Iowa,1.0
-1065,2001,Kansas,0.0
-1066,2001,Kentucky,0.0
-1067,2001,Louisiana,0.0
-1068,2001,Maine,0.0
-1069,2001,Maryland,0.0
-1070,2001,Massachusetts,1.0
-1071,2001,Michigan,1.0
-1072,2001,Minnesota,0.0
-1073,2001,Mississippi,0.0
-1074,2001,Missouri,1.0
-1075,2001,Montana,0.0
-1076,2001,Nebraska,1.0
-1077,2001,Nevada,0.0
-1078,2001,New Hampshire,0.0
-1079,2001,New Jersey,1.0
-1080,2001,New Mexico,0.0
-1081,2001,New York,1.0
-1082,2001,North Carolina,1.0
-1083,2001,North Dakota,0.0
-1084,2001,Ohio,0.0
-1085,2001,Oklahoma,0.0
-1086,2001,Oregon,0.0
-1087,2001,Pennsylvania,0.0
-1088,2001,Rhode Island,1.0
-1089,2001,South Carolina,0.0
-1090,2001,South Dakota,0.0
-1091,2001,Tennessee,0.0
-1092,2001,Texas,0.0
-1093,2001,Utah,0.0
-1094,2001,Vermont,0.0
-1095,2001,Virginia,0.0
-1096,2001,Washington,0.0
-1097,2001,West Virginia,0.0
-1098,2001,Wisconsin,0.0
-1099,2001,Wyoming,0.0
-1100,2002,Alabama,0.0
-1101,2002,Alaska,0.0
-1102,2002,Arizona,0.0
-1103,2002,Arkansas,0.0
-1104,2002,California,1.0
-1105,2002,Colorado,0.0
-1106,2002,Connecticut,1.0
-1107,2002,Delaware,0.0
-1108,2002,Florida,0.0
-1109,2002,Georgia,0.0
-1110,2002,Hawaii,1.0
-1111,2002,Idaho,0.0
-1112,2002,Illinois,1.0
-1113,2002,Indiana,0.0
-1114,2002,Iowa,1.0
-1115,2002,Kansas,0.0
-1116,2002,Kentucky,0.0
-1117,2002,Louisiana,0.0
-1118,2002,Maine,0.0
-1119,2002,Maryland,0.0
-1120,2002,Massachusetts,1.0
-1121,2002,Michigan,1.0
-1122,2002,Minnesota,0.0
-1123,2002,Mississippi,0.0
-1124,2002,Missouri,1.0
-1125,2002,Montana,0.0
-1126,2002,Nebraska,1.0
-1127,2002,Nevada,0.0
-1128,2002,New Hampshire,0.0
-1129,2002,New Jersey,1.0
-1130,2002,New Mexico,0.0
-1131,2002,New York,1.0
-1132,2002,North Carolina,1.0
-1133,2002,North Dakota,0.0
-1134,2002,Ohio,0.0
-1135,2002,Oklahoma,0.0
-1136,2002,Oregon,0.0
-1137,2002,Pennsylvania,0.0
-1138,2002,Rhode Island,1.0
-1139,2002,South Carolina,0.0
-1140,2002,South Dakota,0.0
-1141,2002,Tennessee,0.0
-1142,2002,Texas,0.0
-1143,2002,Utah,0.0
-1144,2002,Vermont,0.0
-1145,2002,Virginia,0.0
-1146,2002,Washington,0.0
-1147,2002,West Virginia,0.0
-1148,2002,Wisconsin,0.0
-1149,2002,Wyoming,0.0
-1150,2003,Alabama,0.0
-1151,2003,Alaska,0.0
-1152,2003,Arizona,0.0
-1153,2003,Arkansas,0.0
-1154,2003,California,1.0
-1155,2003,Colorado,0.0
-1156,2003,Connecticut,1.0
-1157,2003,Delaware,0.0
-1158,2003,Florida,0.0
-1159,2003,Georgia,0.0
-1160,2003,Hawaii,1.0
-1161,2003,Idaho,0.0
-1162,2003,Illinois,1.0
-1163,2003,Indiana,0.0
-1164,2003,Iowa,1.0
-1165,2003,Kansas,0.0
-1166,2003,Kentucky,0.0
-1167,2003,Louisiana,0.0
-1168,2003,Maine,0.0
-1169,2003,Maryland,0.0
-1170,2003,Massachusetts,1.0
-1171,2003,Michigan,1.0
-1172,2003,Minnesota,0.0
-1173,2003,Mississippi,0.0
-1174,2003,Missouri,1.0
-1175,2003,Montana,0.0
-1176,2003,Nebraska,1.0
-1177,2003,Nevada,0.0
-1178,2003,New Hampshire,0.0
-1179,2003,New Jersey,1.0
-1180,2003,New Mexico,0.0
-1181,2003,New York,1.0
-1182,2003,North Carolina,1.0
-1183,2003,North Dakota,0.0
-1184,2003,Ohio,0.0
-1185,2003,Oklahoma,0.0
-1186,2003,Oregon,0.0
-1187,2003,Pennsylvania,0.0
-1188,2003,Rhode Island,1.0
-1189,2003,South Carolina,0.0
-1190,2003,South Dakota,0.0
-1191,2003,Tennessee,0.0
-1192,2003,Texas,0.0
-1193,2003,Utah,0.0
-1194,2003,Vermont,0.0
-1195,2003,Virginia,0.0
-1196,2003,Washington,0.0
-1197,2003,West Virginia,0.0
-1198,2003,Wisconsin,0.0
-1199,2003,Wyoming,0.0
-1200,2004,Alabama,0.0
-1201,2004,Alaska,0.0
-1202,2004,Arizona,0.0
-1203,2004,Arkansas,0.0
-1204,2004,California,1.0
-1205,2004,Colorado,0.0
-1206,2004,Connecticut,1.0
-1207,2004,Delaware,0.0
-1208,2004,Florida,0.0
-1209,2004,Georgia,0.0
-1210,2004,Hawaii,1.0
-1211,2004,Idaho,0.0
-1212,2004,Illinois,1.0
-1213,2004,Indiana,0.0
-1214,2004,Iowa,1.0
-1215,2004,Kansas,0.0
-1216,2004,Kentucky,0.0
-1217,2004,Louisiana,0.0
-1218,2004,Maine,0.0
-1219,2004,Maryland,0.0
-1220,2004,Massachusetts,1.0
-1221,2004,Michigan,1.0
-1222,2004,Minnesota,0.0
-1223,2004,Mississippi,0.0
-1224,2004,Missouri,1.0
-1225,2004,Montana,0.0
-1226,2004,Nebraska,1.0
-1227,2004,Nevada,0.0
-1228,2004,New Hampshire,0.0
-1229,2004,New Jersey,1.0
-1230,2004,New Mexico,0.0
-1231,2004,New York,1.0
-1232,2004,North Carolina,1.0
-1233,2004,North Dakota,0.0
-1234,2004,Ohio,0.0
-1235,2004,Oklahoma,0.0
-1236,2004,Oregon,0.0
-1237,2004,Pennsylvania,0.0
-1238,2004,Rhode Island,1.0
-1239,2004,South Carolina,0.0
-1240,2004,South Dakota,0.0
-1241,2004,Tennessee,0.0
-1242,2004,Texas,0.0
-1243,2004,Utah,0.0
-1244,2004,Vermont,0.0
-1245,2004,Virginia,0.0
-1246,2004,Washington,0.0
-1247,2004,West Virginia,0.0
-1248,2004,Wisconsin,0.0
-1249,2004,Wyoming,0.0
-1250,2005,Alabama,0.0
-1251,2005,Alaska,0.0
-1252,2005,Arizona,0.0
-1253,2005,Arkansas,0.0
-1254,2005,California,1.0
-1255,2005,Colorado,0.0
-1256,2005,Connecticut,1.0
-1257,2005,Delaware,0.0
-1258,2005,Florida,0.0
-1259,2005,Georgia,0.0
-1260,2005,Hawaii,1.0
-1261,2005,Idaho,0.0
-1262,2005,Illinois,1.0
-1263,2005,Indiana,0.0
-1264,2005,Iowa,1.0
-1265,2005,Kansas,0.0
-1266,2005,Kentucky,0.0
-1267,2005,Louisiana,0.0
-1268,2005,Maine,0.0
-1269,2005,Maryland,0.0
-1270,2005,Massachusetts,1.0
-1271,2005,Michigan,1.0
-1272,2005,Minnesota,0.0
-1273,2005,Mississippi,0.0
-1274,2005,Missouri,1.0
-1275,2005,Montana,0.0
-1276,2005,Nebraska,1.0
-1277,2005,Nevada,0.0
-1278,2005,New Hampshire,0.0
-1279,2005,New Jersey,1.0
-1280,2005,New Mexico,0.0
-1281,2005,New York,1.0
-1282,2005,North Carolina,1.0
-1283,2005,North Dakota,0.0
-1284,2005,Ohio,0.0
-1285,2005,Oklahoma,0.0
-1286,2005,Oregon,0.0
-1287,2005,Pennsylvania,0.0
-1288,2005,Rhode Island,1.0
-1289,2005,South Carolina,0.0
-1290,2005,South Dakota,0.0
-1291,2005,Tennessee,0.0
-1292,2005,Texas,0.0
-1293,2005,Utah,0.0
-1294,2005,Vermont,0.0
-1295,2005,Virginia,0.0
-1296,2005,Washington,0.0
-1297,2005,West Virginia,0.0
-1298,2005,Wisconsin,0.0
-1299,2005,Wyoming,0.0
-1300,2006,Alabama,0.0
-1301,2006,Alaska,0.0
-1302,2006,Arizona,0.0
-1303,2006,Arkansas,0.0
-1304,2006,California,1.0
-1305,2006,Colorado,0.0
-1306,2006,Connecticut,1.0
-1307,2006,Delaware,0.0
-1308,2006,Florida,0.0
-1309,2006,Georgia,0.0
-1310,2006,Hawaii,1.0
-1311,2006,Idaho,0.0
-1312,2006,Illinois,1.0
-1313,2006,Indiana,0.0
-1314,2006,Iowa,1.0
-1315,2006,Kansas,0.0
-1316,2006,Kentucky,0.0
-1317,2006,Louisiana,0.0
-1318,2006,Maine,0.0
-1319,2006,Maryland,0.0
-1320,2006,Massachusetts,1.0
-1321,2006,Michigan,1.0
-1322,2006,Minnesota,0.0
-1323,2006,Mississippi,0.0
-1324,2006,Missouri,1.0
-1325,2006,Montana,0.0
-1326,2006,Nebraska,1.0
-1327,2006,Nevada,0.0
-1328,2006,New Hampshire,0.0
-1329,2006,New Jersey,1.0
-1330,2006,New Mexico,0.0
-1331,2006,New York,1.0
-1332,2006,North Carolina,1.0
-1333,2006,North Dakota,0.0
-1334,2006,Ohio,0.0
-1335,2006,Oklahoma,0.0
-1336,2006,Oregon,0.0
-1337,2006,Pennsylvania,0.0
-1338,2006,Rhode Island,1.0
-1339,2006,South Carolina,0.0
-1340,2006,South Dakota,0.0
-1341,2006,Tennessee,0.0
-1342,2006,Texas,0.0
-1343,2006,Utah,0.0
-1344,2006,Vermont,0.0
-1345,2006,Virginia,0.0
-1346,2006,Washington,0.0
-1347,2006,West Virginia,0.0
-1348,2006,Wisconsin,0.0
-1349,2006,Wyoming,0.0
-1350,2007,Alabama,0.0
-1351,2007,Alaska,0.0
-1352,2007,Arizona,0.0
-1353,2007,Arkansas,0.0
-1354,2007,California,1.0
-1355,2007,Colorado,0.0
-1356,2007,Connecticut,1.0
-1357,2007,Delaware,0.0
-1358,2007,Florida,0.0
-1359,2007,Georgia,0.0
-1360,2007,Hawaii,1.0
-1361,2007,Idaho,0.0
-1362,2007,Illinois,1.0
-1363,2007,Indiana,0.0
-1364,2007,Iowa,1.0
-1365,2007,Kansas,0.0
-1366,2007,Kentucky,0.0
-1367,2007,Louisiana,0.0
-1368,2007,Maine,0.0
-1369,2007,Maryland,0.0
-1370,2007,Massachusetts,1.0
-1371,2007,Michigan,1.0
-1372,2007,Minnesota,0.0
-1373,2007,Mississippi,0.0
-1374,2007,Missouri,0.0
-1375,2007,Montana,0.0
-1376,2007,Nebraska,1.0
-1377,2007,Nevada,0.0
-1378,2007,New Hampshire,0.0
-1379,2007,New Jersey,1.0
-1380,2007,New Mexico,0.0
-1381,2007,New York,1.0
-1382,2007,North Carolina,1.0
-1383,2007,North Dakota,0.0
-1384,2007,Ohio,0.0
-1385,2007,Oklahoma,0.0
-1386,2007,Oregon,0.0
-1387,2007,Pennsylvania,0.0
-1388,2007,Rhode Island,1.0
-1389,2007,South Carolina,0.0
-1390,2007,South Dakota,0.0
-1391,2007,Tennessee,0.0
-1392,2007,Texas,0.0
-1393,2007,Utah,0.0
-1394,2007,Vermont,0.0
-1395,2007,Virginia,0.0
-1396,2007,Washington,0.0
-1397,2007,West Virginia,0.0
-1398,2007,Wisconsin,0.0
-1399,2007,Wyoming,0.0
-1400,2008,Alabama,0.0
-1401,2008,Alaska,0.0
-1402,2008,Arizona,0.0
-1403,2008,Arkansas,0.0
-1404,2008,California,1.0
-1405,2008,Colorado,0.0
-1406,2008,Connecticut,1.0
-1407,2008,Delaware,0.0
-1408,2008,Florida,0.0
-1409,2008,Georgia,0.0
-1410,2008,Hawaii,1.0
-1411,2008,Idaho,0.0
-1412,2008,Illinois,1.0
-1413,2008,Indiana,0.0
-1414,2008,Iowa,1.0
-1415,2008,Kansas,0.0
-1416,2008,Kentucky,0.0
-1417,2008,Louisiana,0.0
-1418,2008,Maine,0.0
-1419,2008,Maryland,0.0
-1420,2008,Massachusetts,1.0
-1421,2008,Michigan,1.0
-1422,2008,Minnesota,0.0
-1423,2008,Mississippi,0.0
-1424,2008,Missouri,0.0
-1425,2008,Montana,0.0
-1426,2008,Nebraska,1.0
-1427,2008,Nevada,0.0
-1428,2008,New Hampshire,0.0
-1429,2008,New Jersey,1.0
-1430,2008,New Mexico,0.0
-1431,2008,New York,1.0
-1432,2008,North Carolina,1.0
-1433,2008,North Dakota,0.0
-1434,2008,Ohio,0.0
-1435,2008,Oklahoma,0.0
-1436,2008,Oregon,0.0
-1437,2008,Pennsylvania,0.0
-1438,2008,Rhode Island,1.0
-1439,2008,South Carolina,0.0
-1440,2008,South Dakota,0.0
-1441,2008,Tennessee,0.0
-1442,2008,Texas,0.0
-1443,2008,Utah,0.0
-1444,2008,Vermont,0.0
-1445,2008,Virginia,0.0
-1446,2008,Washington,0.0
-1447,2008,West Virginia,0.0
-1448,2008,Wisconsin,0.0
-1449,2008,Wyoming,0.0
-1450,2009,Alabama,0.0
-1451,2009,Alaska,0.0
-1452,2009,Arizona,0.0
-1453,2009,Arkansas,0.0
-1454,2009,California,1.0
-1455,2009,Colorado,0.0
-1456,2009,Connecticut,1.0
-1457,2009,Delaware,0.0
-1458,2009,Florida,0.0
-1459,2009,Georgia,0.0
-1460,2009,Hawaii,1.0
-1461,2009,Idaho,0.0
-1462,2009,Illinois,1.0
-1463,2009,Indiana,0.0
-1464,2009,Iowa,1.0
-1465,2009,Kansas,0.0
-1466,2009,Kentucky,0.0
-1467,2009,Louisiana,0.0
-1468,2009,Maine,0.0
-1469,2009,Maryland,0.0
-1470,2009,Massachusetts,1.0
-1471,2009,Michigan,1.0
-1472,2009,Minnesota,0.0
-1473,2009,Mississippi,0.0
-1474,2009,Missouri,0.0
-1475,2009,Montana,0.0
-1476,2009,Nebraska,1.0
-1477,2009,Nevada,0.0
-1478,2009,New Hampshire,0.0
-1479,2009,New Jersey,1.0
-1480,2009,New Mexico,0.0
-1481,2009,New York,1.0
-1482,2009,North Carolina,1.0
-1483,2009,North Dakota,0.0
-1484,2009,Ohio,0.0
-1485,2009,Oklahoma,0.0
-1486,2009,Oregon,0.0
-1487,2009,Pennsylvania,0.0
-1488,2009,Rhode Island,1.0
-1489,2009,South Carolina,0.0
-1490,2009,South Dakota,0.0
-1491,2009,Tennessee,0.0
-1492,2009,Texas,0.0
-1493,2009,Utah,0.0
-1494,2009,Vermont,0.0
-1495,2009,Virginia,0.0
-1496,2009,Washington,0.0
-1497,2009,West Virginia,0.0
-1498,2009,Wisconsin,0.0
-1499,2009,Wyoming,0.0
-1500,2010,Alabama,0.0
-1501,2010,Alaska,0.0
-1502,2010,Arizona,0.0
-1503,2010,Arkansas,0.0
-1504,2010,California,1.0
-1505,2010,Colorado,0.0
-1506,2010,Connecticut,1.0
-1507,2010,Delaware,0.0
-1508,2010,Florida,0.0
-1509,2010,Georgia,0.0
-1510,2010,Hawaii,1.0
-1511,2010,Idaho,0.0
-1512,2010,Illinois,1.0
-1513,2010,Indiana,0.0
-1514,2010,Iowa,1.0
-1515,2010,Kansas,0.0
-1516,2010,Kentucky,0.0
-1517,2010,Louisiana,0.0
-1518,2010,Maine,0.0
-1519,2010,Maryland,0.0
-1520,2010,Massachusetts,1.0
-1521,2010,Michigan,1.0
-1522,2010,Minnesota,0.0
-1523,2010,Mississippi,0.0
-1524,2010,Missouri,0.0
-1525,2010,Montana,0.0
-1526,2010,Nebraska,1.0
-1527,2010,Nevada,0.0
-1528,2010,New Hampshire,0.0
-1529,2010,New Jersey,1.0
-1530,2010,New Mexico,0.0
-1531,2010,New York,1.0
-1532,2010,North Carolina,1.0
-1533,2010,North Dakota,0.0
-1534,2010,Ohio,0.0
-1535,2010,Oklahoma,0.0
-1536,2010,Oregon,0.0
-1537,2010,Pennsylvania,0.0
-1538,2010,Rhode Island,1.0
-1539,2010,South Carolina,0.0
-1540,2010,South Dakota,0.0
-1541,2010,Tennessee,0.0
-1542,2010,Texas,0.0
-1543,2010,Utah,0.0
-1544,2010,Vermont,0.0
-1545,2010,Virginia,0.0
-1546,2010,Washington,0.0
-1547,2010,West Virginia,0.0
-1548,2010,Wisconsin,0.0
-1549,2010,Wyoming,0.0
-1550,2011,Alabama,0.0
-1551,2011,Alaska,0.0
-1552,2011,Arizona,0.0
-1553,2011,Arkansas,0.0
-1554,2011,California,1.0
-1555,2011,Colorado,0.0
-1556,2011,Connecticut,1.0
-1557,2011,Delaware,0.0
-1558,2011,Florida,0.0
-1559,2011,Georgia,0.0
-1560,2011,Hawaii,1.0
-1561,2011,Idaho,0.0
-1562,2011,Illinois,1.0
-1563,2011,Indiana,0.0
-1564,2011,Iowa,1.0
-1565,2011,Kansas,0.0
-1566,2011,Kentucky,0.0
-1567,2011,Louisiana,0.0
-1568,2011,Maine,0.0
-1569,2011,Maryland,0.0
-1570,2011,Massachusetts,1.0
-1571,2011,Michigan,1.0
-1572,2011,Minnesota,0.0
-1573,2011,Mississippi,0.0
-1574,2011,Missouri,0.0
-1575,2011,Montana,0.0
-1576,2011,Nebraska,1.0
-1577,2011,Nevada,0.0
-1578,2011,New Hampshire,0.0
-1579,2011,New Jersey,1.0
-1580,2011,New Mexico,0.0
-1581,2011,New York,1.0
-1582,2011,North Carolina,1.0
-1583,2011,North Dakota,0.0
-1584,2011,Ohio,0.0
-1585,2011,Oklahoma,0.0
-1586,2011,Oregon,0.0
-1587,2011,Pennsylvania,0.0
-1588,2011,Rhode Island,1.0
-1589,2011,South Carolina,0.0
-1590,2011,South Dakota,0.0
-1591,2011,Tennessee,0.0
-1592,2011,Texas,0.0
-1593,2011,Utah,0.0
-1594,2011,Vermont,0.0
-1595,2011,Virginia,0.0
-1596,2011,Washington,0.0
-1597,2011,West Virginia,0.0
-1598,2011,Wisconsin,0.0
-1599,2011,Wyoming,0.0
-1600,2012,Alabama,0.0
-1601,2012,Alaska,0.0
-1602,2012,Arizona,0.0
-1603,2012,Arkansas,0.0
-1604,2012,California,1.0
-1605,2012,Colorado,0.0
-1606,2012,Connecticut,1.0
-1607,2012,Delaware,0.0
-1608,2012,Florida,0.0
-1609,2012,Georgia,0.0
-1610,2012,Hawaii,1.0
-1611,2012,Idaho,0.0
-1612,2012,Illinois,1.0
-1613,2012,Indiana,0.0
-1614,2012,Iowa,1.0
-1615,2012,Kansas,0.0
-1616,2012,Kentucky,0.0
-1617,2012,Louisiana,0.0
-1618,2012,Maine,0.0
-1619,2012,Maryland,0.0
-1620,2012,Massachusetts,1.0
-1621,2012,Michigan,1.0
-1622,2012,Minnesota,0.0
-1623,2012,Mississippi,0.0
-1624,2012,Missouri,0.0
-1625,2012,Montana,0.0
-1626,2012,Nebraska,1.0
-1627,2012,Nevada,0.0
-1628,2012,New Hampshire,0.0
-1629,2012,New Jersey,1.0
-1630,2012,New Mexico,0.0
-1631,2012,New York,1.0
-1632,2012,North Carolina,1.0
-1633,2012,North Dakota,0.0
-1634,2012,Ohio,0.0
-1635,2012,Oklahoma,0.0
-1636,2012,Oregon,0.0
-1637,2012,Pennsylvania,0.0
-1638,2012,Rhode Island,1.0
-1639,2012,South Carolina,0.0
-1640,2012,South Dakota,0.0
-1641,2012,Tennessee,0.0
-1642,2012,Texas,0.0
-1643,2012,Utah,0.0
-1644,2012,Vermont,0.0
-1645,2012,Virginia,0.0
-1646,2012,Washington,0.0
-1647,2012,West Virginia,0.0
-1648,2012,Wisconsin,0.0
-1649,2012,Wyoming,0.0
-1650,2013,Alabama,0.0
-1651,2013,Alaska,0.0
-1652,2013,Arizona,0.0
-1653,2013,Arkansas,0.0
-1654,2013,California,1.0
-1655,2013,Colorado,0.0
-1656,2013,Connecticut,1.0
-1657,2013,Delaware,0.0
-1658,2013,Florida,0.0
-1659,2013,Georgia,0.0
-1660,2013,Hawaii,1.0
-1661,2013,Idaho,0.0
-1662,2013,Illinois,1.0
-1663,2013,Indiana,0.0
-1664,2013,Iowa,1.0
-1665,2013,Kansas,0.0
-1666,2013,Kentucky,0.0
-1667,2013,Louisiana,0.0
-1668,2013,Maine,0.0
-1669,2013,Maryland,1.0
-1670,2013,Massachusetts,1.0
-1671,2013,Michigan,1.0
-1672,2013,Minnesota,0.0
-1673,2013,Mississippi,0.0
-1674,2013,Missouri,0.0
-1675,2013,Montana,0.0
-1676,2013,Nebraska,1.0
-1677,2013,Nevada,0.0
-1678,2013,New Hampshire,0.0
-1679,2013,New Jersey,1.0
-1680,2013,New Mexico,0.0
-1681,2013,New York,1.0
-1682,2013,North Carolina,1.0
-1683,2013,North Dakota,0.0
-1684,2013,Ohio,0.0
-1685,2013,Oklahoma,0.0
-1686,2013,Oregon,0.0
-1687,2013,Pennsylvania,0.0
-1688,2013,Rhode Island,1.0
-1689,2013,South Carolina,0.0
-1690,2013,South Dakota,0.0
-1691,2013,Tennessee,0.0
-1692,2013,Texas,0.0
-1693,2013,Utah,0.0
-1694,2013,Vermont,0.0
-1695,2013,Virginia,0.0
-1696,2013,Washington,0.0
-1697,2013,West Virginia,0.0
-1698,2013,Wisconsin,0.0
-1699,2013,Wyoming,0.0
-1700,2014,Alabama,0.0
-1701,2014,Alaska,0.0
-1702,2014,Arizona,0.0
-1703,2014,Arkansas,0.0
-1704,2014,California,1.0
-1705,2014,Colorado,0.0
-1706,2014,Connecticut,1.0
-1707,2014,Delaware,0.0
-1708,2014,Florida,0.0
-1709,2014,Georgia,0.0
-1710,2014,Hawaii,1.0
-1711,2014,Idaho,0.0
-1712,2014,Illinois,1.0
-1713,2014,Indiana,0.0
-1714,2014,Iowa,1.0
-1715,2014,Kansas,0.0
-1716,2014,Kentucky,0.0
-1717,2014,Louisiana,0.0
-1718,2014,Maine,0.0
-1719,2014,Maryland,1.0
-1720,2014,Massachusetts,1.0
-1721,2014,Michigan,1.0
-1722,2014,Minnesota,0.0
-1723,2014,Mississippi,0.0
-1724,2014,Missouri,0.0
-1725,2014,Montana,0.0
-1726,2014,Nebraska,1.0
-1727,2014,Nevada,0.0
-1728,2014,New Hampshire,0.0
-1729,2014,New Jersey,1.0
-1730,2014,New Mexico,0.0
-1731,2014,New York,1.0
-1732,2014,North Carolina,1.0
-1733,2014,North Dakota,0.0
-1734,2014,Ohio,0.0
-1735,2014,Oklahoma,0.0
-1736,2014,Oregon,0.0
-1737,2014,Pennsylvania,0.0
-1738,2014,Rhode Island,1.0
-1739,2014,South Carolina,0.0
-1740,2014,South Dakota,0.0
-1741,2014,Tennessee,0.0
-1742,2014,Texas,0.0
-1743,2014,Utah,0.0
-1744,2014,Vermont,0.0
-1745,2014,Virginia,0.0
-1746,2014,Washington,0.0
-1747,2014,West Virginia,0.0
-1748,2014,Wisconsin,0.0
-1749,2014,Wyoming,0.0
-1750,2015,Alabama,0.0
-1751,2015,Alaska,0.0
-1752,2015,Arizona,0.0
-1753,2015,Arkansas,0.0
-1754,2015,California,1.0
-1755,2015,Colorado,0.0
-1756,2015,Connecticut,1.0
-1757,2015,Delaware,0.0
-1758,2015,Florida,0.0
-1759,2015,Georgia,0.0
-1760,2015,Hawaii,1.0
-1761,2015,Idaho,0.0
-1762,2015,Illinois,1.0
-1763,2015,Indiana,0.0
-1764,2015,Iowa,1.0
-1765,2015,Kansas,0.0
-1766,2015,Kentucky,0.0
-1767,2015,Louisiana,0.0
-1768,2015,Maine,0.0
-1769,2015,Maryland,1.0
-1770,2015,Massachusetts,1.0
-1771,2015,Michigan,1.0
-1772,2015,Minnesota,0.0
-1773,2015,Mississippi,0.0
-1774,2015,Missouri,0.0
-1775,2015,Montana,0.0
-1776,2015,Nebraska,1.0
-1777,2015,Nevada,0.0
-1778,2015,New Hampshire,0.0
-1779,2015,New Jersey,1.0
-1780,2015,New Mexico,0.0
-1781,2015,New York,1.0
-1782,2015,North Carolina,1.0
-1783,2015,North Dakota,0.0
-1784,2015,Ohio,0.0
-1785,2015,Oklahoma,0.0
-1786,2015,Oregon,0.0
-1787,2015,Pennsylvania,0.0
-1788,2015,Rhode Island,1.0
-1789,2015,South Carolina,0.0
-1790,2015,South Dakota,0.0
-1791,2015,Tennessee,0.0
-1792,2015,Texas,0.0
-1793,2015,Utah,0.0
-1794,2015,Vermont,0.0
-1795,2015,Virginia,0.0
-1796,2015,Washington,0.0
-1797,2015,West Virginia,0.0
-1798,2015,Wisconsin,0.0
-1799,2015,Wyoming,0.0
-1800,2016,Alabama,0.0
-1801,2016,Alaska,0.0
-1802,2016,Arizona,0.0
-1803,2016,Arkansas,0.0
-1804,2016,California,1.0
-1805,2016,Colorado,0.0
-1806,2016,Connecticut,1.0
-1807,2016,Delaware,0.0
-1808,2016,Florida,0.0
-1809,2016,Georgia,0.0
-1810,2016,Hawaii,1.0
-1811,2016,Idaho,0.0
-1812,2016,Illinois,1.0
-1813,2016,Indiana,0.0
-1814,2016,Iowa,1.0
-1815,2016,Kansas,0.0
-1816,2016,Kentucky,0.0
-1817,2016,Louisiana,0.0
-1818,2016,Maine,0.0
-1819,2016,Maryland,1.0
-1820,2016,Massachusetts,1.0
-1821,2016,Michigan,1.0
-1822,2016,Minnesota,0.0
-1823,2016,Mississippi,0.0
-1824,2016,Missouri,0.0
-1825,2016,Montana,0.0
-1826,2016,Nebraska,1.0
-1827,2016,Nevada,0.0
-1828,2016,New Hampshire,0.0
-1829,2016,New Jersey,1.0
-1830,2016,New Mexico,0.0
-1831,2016,New York,1.0
-1832,2016,North Carolina,1.0
-1833,2016,North Dakota,0.0
-1834,2016,Ohio,0.0
-1835,2016,Oklahoma,0.0
-1836,2016,Oregon,0.0
-1837,2016,Pennsylvania,0.0
-1838,2016,Rhode Island,1.0
-1839,2016,South Carolina,0.0
-1840,2016,South Dakota,0.0
-1841,2016,Tennessee,0.0
-1842,2016,Texas,0.0
-1843,2016,Utah,0.0
-1844,2016,Vermont,0.0
-1845,2016,Virginia,0.0
-1846,2016,Washington,0.0
-1847,2016,West Virginia,0.0
-1848,2016,Wisconsin,0.0
-1849,2016,Wyoming,0.0
-1850,2017,Alabama,0.0
-1851,2017,Alaska,0.0
-1852,2017,Arizona,0.0
-1853,2017,Arkansas,0.0
-1854,2017,California,1.0
-1855,2017,Colorado,0.0
-1856,2017,Connecticut,1.0
-1857,2017,Delaware,0.0
-1858,2017,Florida,0.0
-1859,2017,Georgia,0.0
-1860,2017,Hawaii,1.0
-1861,2017,Idaho,0.0
-1862,2017,Illinois,1.0
-1863,2017,Indiana,0.0
-1864,2017,Iowa,1.0
-1865,2017,Kansas,0.0
-1866,2017,Kentucky,0.0
-1867,2017,Louisiana,0.0
-1868,2017,Maine,0.0
-1869,2017,Maryland,1.0
-1870,2017,Massachusetts,1.0
-1871,2017,Michigan,1.0
-1872,2017,Minnesota,0.0
-1873,2017,Mississippi,0.0
-1874,2017,Missouri,0.0
-1875,2017,Montana,0.0
-1876,2017,Nebraska,1.0
-1877,2017,Nevada,0.0
-1878,2017,New Hampshire,0.0
-1879,2017,New Jersey,1.0
-1880,2017,New Mexico,0.0
-1881,2017,New York,1.0
-1882,2017,North Carolina,1.0
-1883,2017,North Dakota,0.0
-1884,2017,Ohio,0.0
-1885,2017,Oklahoma,0.0
-1886,2017,Oregon,0.0
-1887,2017,Pennsylvania,0.0
-1888,2017,Rhode Island,1.0
-1889,2017,South Carolina,0.0
-1890,2017,South Dakota,0.0
-1891,2017,Tennessee,0.0
-1892,2017,Texas,0.0
-1893,2017,Utah,0.0
-1894,2017,Vermont,0.0
-1895,2017,Virginia,0.0
-1896,2017,Washington,0.0
-1897,2017,West Virginia,0.0
-1898,2017,Wisconsin,0.0
-1899,2017,Wyoming,0.0
-1900,2018,Alabama,0.0
-1901,2018,Alaska,0.0
-1902,2018,Arizona,0.0
-1903,2018,Arkansas,0.0
-1904,2018,California,1.0
-1905,2018,Colorado,0.0
-1906,2018,Connecticut,1.0
-1907,2018,Delaware,0.0
-1908,2018,Florida,0.0
-1909,2018,Georgia,0.0
-1910,2018,Hawaii,1.0
-1911,2018,Idaho,0.0
-1912,2018,Illinois,1.0
-1913,2018,Indiana,0.0
-1914,2018,Iowa,1.0
-1915,2018,Kansas,0.0
-1916,2018,Kentucky,0.0
-1917,2018,Louisiana,0.0
-1918,2018,Maine,0.0
-1919,2018,Maryland,1.0
-1920,2018,Massachusetts,1.0
-1921,2018,Michigan,1.0
-1922,2018,Minnesota,0.0
-1923,2018,Mississippi,0.0
-1924,2018,Missouri,0.0
-1925,2018,Montana,0.0
-1926,2018,Nebraska,1.0
-1927,2018,Nevada,0.0
-1928,2018,New Hampshire,0.0
-1929,2018,New Jersey,1.0
-1930,2018,New Mexico,0.0
-1931,2018,New York,1.0
-1932,2018,North Carolina,1.0
-1933,2018,North Dakota,0.0
-1934,2018,Ohio,0.0
-1935,2018,Oklahoma,0.0
-1936,2018,Oregon,0.0
-1937,2018,Pennsylvania,0.0
-1938,2018,Rhode Island,1.0
-1939,2018,South Carolina,0.0
-1940,2018,South Dakota,0.0
-1941,2018,Tennessee,0.0
-1942,2018,Texas,0.0
-1943,2018,Utah,0.0
-1944,2018,Vermont,0.0
-1945,2018,Virginia,0.0
-1946,2018,Washington,0.0
-1947,2018,West Virginia,0.0
-1948,2018,Wisconsin,0.0
-1949,2018,Wyoming,0.0
-1950,2019,Alabama,0.0
-1951,2019,Alaska,0.0
-1952,2019,Arizona,0.0
-1953,2019,Arkansas,0.0
-1954,2019,California,1.0
-1955,2019,Colorado,0.0
-1956,2019,Connecticut,1.0
-1957,2019,Delaware,0.0
-1958,2019,Florida,0.0
-1959,2019,Georgia,0.0
-1960,2019,Hawaii,1.0
-1961,2019,Idaho,0.0
-1962,2019,Illinois,1.0
-1963,2019,Indiana,0.0
-1964,2019,Iowa,1.0
-1965,2019,Kansas,0.0
-1966,2019,Kentucky,0.0
-1967,2019,Louisiana,0.0
-1968,2019,Maine,0.0
-1969,2019,Maryland,1.0
-1970,2019,Massachusetts,1.0
-1971,2019,Michigan,1.0
-1972,2019,Minnesota,0.0
-1973,2019,Mississippi,0.0
-1974,2019,Missouri,0.0
-1975,2019,Montana,0.0
-1976,2019,Nebraska,1.0
-1977,2019,Nevada,0.0
-1978,2019,New Hampshire,0.0
-1979,2019,New Jersey,1.0
-1980,2019,New Mexico,0.0
-1981,2019,New York,1.0
-1982,2019,North Carolina,1.0
-1983,2019,North Dakota,0.0
-1984,2019,Ohio,0.0
-1985,2019,Oklahoma,0.0
-1986,2019,Oregon,0.0
-1987,2019,Pennsylvania,0.0
-1988,2019,Rhode Island,1.0
-1989,2019,South Carolina,0.0
-1990,2019,South Dakota,0.0
-1991,2019,Tennessee,0.0
-1992,2019,Texas,0.0
-1993,2019,Utah,0.0
-1994,2019,Vermont,0.0
-1995,2019,Virginia,0.0
-1996,2019,Washington,0.0
-1997,2019,West Virginia,0.0
-1998,2019,Wisconsin,0.0
-1999,2019,Wyoming,0.0
-2000,2020,Alabama,0.0
-2001,2020,Alaska,0.0
-2002,2020,Arizona,0.0
-2003,2020,Arkansas,0.0
-2004,2020,California,1.0
-2005,2020,Colorado,0.0
-2006,2020,Connecticut,1.0
-2007,2020,Delaware,0.0
-2008,2020,Florida,0.0
-2009,2020,Georgia,0.0
-2010,2020,Hawaii,1.0
-2011,2020,Idaho,0.0
-2012,2020,Illinois,1.0
-2013,2020,Indiana,0.0
-2014,2020,Iowa,1.0
-2015,2020,Kansas,0.0
-2016,2020,Kentucky,0.0
-2017,2020,Louisiana,0.0
-2018,2020,Maine,0.0
-2019,2020,Maryland,1.0
-2020,2020,Massachusetts,1.0
-2021,2020,Michigan,1.0
-2022,2020,Minnesota,0.0
-2023,2020,Mississippi,0.0
-2024,2020,Missouri,0.0
-2025,2020,Montana,0.0
-2026,2020,Nebraska,1.0
-2027,2020,Nevada,0.0
-2028,2020,New Hampshire,0.0
-2029,2020,New Jersey,1.0
-2030,2020,New Mexico,0.0
-2031,2020,New York,1.0
-2032,2020,North Carolina,1.0
-2033,2020,North Dakota,0.0
-2034,2020,Ohio,0.0
-2035,2020,Oklahoma,0.0
-2036,2020,Oregon,0.0
-2037,2020,Pennsylvania,0.0
-2038,2020,Rhode Island,1.0
-2039,2020,South Carolina,0.0
-2040,2020,South Dakota,0.0
-2041,2020,Tennessee,0.0
-2042,2020,Texas,0.0
-2043,2020,Utah,0.0
-2044,2020,Vermont,0.0
-2045,2020,Virginia,0.0
-2046,2020,Washington,0.0
-2047,2020,West Virginia,0.0
-2048,2020,Wisconsin,0.0
-2049,2020,Wyoming,0.0
-2050,2021,Alabama,0.0
-2051,2021,Alaska,0.0
-2052,2021,Arizona,0.0
-2053,2021,Arkansas,0.0
-2054,2021,California,1.0
-2055,2021,Colorado,0.0
-2056,2021,Connecticut,1.0
-2057,2021,Delaware,0.0
-2058,2021,Florida,0.0
-2059,2021,Georgia,0.0
-2060,2021,Hawaii,1.0
-2061,2021,Idaho,0.0
-2062,2021,Illinois,1.0
-2063,2021,Indiana,0.0
-2064,2021,Iowa,1.0
-2065,2021,Kansas,0.0
-2066,2021,Kentucky,0.0
-2067,2021,Louisiana,0.0
-2068,2021,Maine,0.0
-2069,2021,Maryland,1.0
-2070,2021,Massachusetts,1.0
-2071,2021,Michigan,1.0
-2072,2021,Minnesota,0.0
-2073,2021,Mississippi,0.0
-2074,2021,Missouri,0.0
-2075,2021,Montana,0.0
-2076,2021,Nebraska,1.0
-2077,2021,Nevada,0.0
-2078,2021,New Hampshire,0.0
-2079,2021,New Jersey,1.0
-2080,2021,New Mexico,0.0
-2081,2021,New York,1.0
-2082,2021,North Carolina,1.0
-2083,2021,North Dakota,0.0
-2084,2021,Ohio,0.0
-2085,2021,Oklahoma,0.0
-2086,2021,Oregon,0.0
-2087,2021,Pennsylvania,0.0
-2088,2021,Rhode Island,1.0
-2089,2021,South Carolina,0.0
-2090,2021,South Dakota,0.0
-2091,2021,Tennessee,0.0
-2092,2021,Texas,0.0
-2093,2021,Utah,0.0
-2094,2021,Vermont,0.0
-2095,2021,Virginia,0.0
-2096,2021,Washington,0.0
-2097,2021,West Virginia,0.0
-2098,2021,Wisconsin,0.0
-2099,2021,Wyoming,0.0
-2100,2022,Alabama,0.0
-2101,2022,Alaska,0.0
-2102,2022,Arizona,0.0
-2103,2022,Arkansas,0.0
-2104,2022,California,1.0
-2105,2022,Colorado,0.0
-2106,2022,Connecticut,1.0
-2107,2022,Delaware,0.0
-2108,2022,Florida,0.0
-2109,2022,Georgia,0.0
-2110,2022,Hawaii,1.0
-2111,2022,Idaho,0.0
-2112,2022,Illinois,1.0
-2113,2022,Indiana,0.0
-2114,2022,Iowa,1.0
-2115,2022,Kansas,0.0
-2116,2022,Kentucky,0.0
-2117,2022,Louisiana,0.0
-2118,2022,Maine,0.0
-2119,2022,Maryland,1.0
-2120,2022,Massachusetts,1.0
-2121,2022,Michigan,1.0
-2122,2022,Minnesota,0.0
-2123,2022,Mississippi,0.0
-2124,2022,Missouri,0.0
-2125,2022,Montana,0.0
-2126,2022,Nebraska,1.0
-2127,2022,Nevada,0.0
-2128,2022,New Hampshire,0.0
-2129,2022,New Jersey,1.0
-2130,2022,New Mexico,0.0
-2131,2022,New York,1.0
-2132,2022,North Carolina,1.0
-2133,2022,North Dakota,0.0
-2134,2022,Ohio,0.0
-2135,2022,Oklahoma,0.0
-2136,2022,Oregon,0.0
-2137,2022,Pennsylvania,0.0
-2138,2022,Rhode Island,1.0
-2139,2022,South Carolina,0.0
-2140,2022,South Dakota,0.0
-2141,2022,Tennessee,0.0
-2142,2022,Texas,0.0
-2143,2022,Utah,0.0
-2144,2022,Vermont,0.0
-2145,2022,Virginia,0.0
-2146,2022,Washington,0.0
-2147,2022,West Virginia,0.0
-2148,2022,Wisconsin,0.0
-2149,2022,Wyoming,0.0
-2150,2023,Alabama,0.0
-2151,2023,Alaska,0.0
-2152,2023,Arizona,0.0
-2153,2023,Arkansas,0.0
-2154,2023,California,1.0
-2155,2023,Colorado,0.0
-2156,2023,Connecticut,1.0
-2157,2023,Delaware,0.0
-2158,2023,Florida,0.0
-2159,2023,Georgia,0.0
-2160,2023,Hawaii,1.0
-2161,2023,Idaho,0.0
-2162,2023,Illinois,1.0
-2163,2023,Indiana,0.0
-2164,2023,Iowa,1.0
-2165,2023,Kansas,0.0
-2166,2023,Kentucky,0.0
-2167,2023,Louisiana,0.0
-2168,2023,Maine,0.0
-2169,2023,Maryland,1.0
-2170,2023,Massachusetts,1.0
-2171,2023,Michigan,1.0
-2172,2023,Minnesota,0.0
-2173,2023,Mississippi,0.0
-2174,2023,Missouri,0.0
-2175,2023,Montana,0.0
-2176,2023,Nebraska,1.0
-2177,2023,Nevada,0.0
-2178,2023,New Hampshire,0.0
-2179,2023,New Jersey,1.0
-2180,2023,New Mexico,0.0
-2181,2023,New York,1.0
-2182,2023,North Carolina,1.0
-2183,2023,North Dakota,0.0
-2184,2023,Ohio,0.0
-2185,2023,Oklahoma,0.0
-2186,2023,Oregon,0.0
-2187,2023,Pennsylvania,0.0
-2188,2023,Rhode Island,1.0
-2189,2023,South Carolina,0.0
-2190,2023,South Dakota,0.0
-2191,2023,Tennessee,0.0
-2192,2023,Texas,0.0
-2193,2023,Utah,0.0
-2194,2023,Vermont,0.0
-2195,2023,Virginia,0.0
-2196,2023,Washington,0.0
-2197,2023,West Virginia,0.0
-2198,2023,Wisconsin,0.0
-2199,2023,Wyoming,0.0
-2200,2024,Alabama,0.0
-2201,2024,Alaska,0.0
-2202,2024,Arizona,0.0
-2203,2024,Arkansas,0.0
-2204,2024,California,1.0
-2205,2024,Colorado,0.0
-2206,2024,Connecticut,1.0
-2207,2024,Delaware,0.0
-2208,2024,Florida,0.0
-2209,2024,Georgia,0.0
-2210,2024,Hawaii,1.0
-2211,2024,Idaho,0.0
-2212,2024,Illinois,1.0
-2213,2024,Indiana,0.0
-2214,2024,Iowa,1.0
-2215,2024,Kansas,0.0
-2216,2024,Kentucky,0.0
-2217,2024,Louisiana,0.0
-2218,2024,Maine,0.0
-2219,2024,Maryland,1.0
-2220,2024,Massachusetts,1.0
-2221,2024,Michigan,1.0
-2222,2024,Minnesota,0.0
-2223,2024,Mississippi,0.0
-2224,2024,Missouri,0.0
-2225,2024,Montana,0.0
-2226,2024,Nebraska,1.0
-2227,2024,Nevada,0.0
-2228,2024,New Hampshire,0.0
-2229,2024,New Jersey,1.0
-2230,2024,New Mexico,0.0
-2231,2024,New York,1.0
-2232,2024,North Carolina,1.0
-2233,2024,North Dakota,0.0
-2234,2024,Ohio,0.0
-2235,2024,Oklahoma,0.0
-2236,2024,Oregon,0.0
-2237,2024,Pennsylvania,0.0
-2238,2024,Rhode Island,1.0
-2239,2024,South Carolina,0.0
-2240,2024,South Dakota,0.0
-2241,2024,Tennessee,0.0
-2242,2024,Texas,0.0
-2243,2024,Utah,0.0
-2244,2024,Vermont,0.0
-2245,2024,Virginia,0.0
-2246,2024,Washington,0.0
-2247,2024,West Virginia,0.0
-2248,2024,Wisconsin,0.0
-2249,2024,Wyoming,0.0
+Year,State,permit
+1980,Alabama,0.0
+1980,Alaska,0.0
+1980,Arizona,0.0
+1980,Arkansas,0.0
+1980,California,0.0
+1980,Colorado,0.0
+1980,Connecticut,0.0
+1980,Delaware,0.0
+1980,Florida,0.0
+1980,Georgia,0.0
+1980,Hawaii,1.0
+1980,Idaho,0.0
+1980,Illinois,1.0
+1980,Indiana,0.0
+1980,Iowa,0.0
+1980,Kansas,0.0
+1980,Kentucky,0.0
+1980,Louisiana,0.0
+1980,Maine,0.0
+1980,Maryland,0.0
+1980,Massachusetts,1.0
+1980,Michigan,1.0
+1980,Minnesota,0.0
+1980,Mississippi,0.0
+1980,Missouri,0.0
+1980,Montana,0.0
+1980,Nebraska,0.0
+1980,Nevada,0.0
+1980,New Hampshire,0.0
+1980,New Jersey,1.0
+1980,New Mexico,0.0
+1980,New York,1.0
+1980,North Carolina,0.0
+1980,North Dakota,0.0
+1980,Ohio,0.0
+1980,Oklahoma,0.0
+1980,Oregon,0.0
+1980,Pennsylvania,0.0
+1980,Rhode Island,1.0
+1980,South Carolina,0.0
+1980,South Dakota,0.0
+1980,Tennessee,0.0
+1980,Texas,0.0
+1980,Utah,0.0
+1980,Vermont,0.0
+1980,Virginia,0.0
+1980,Washington,0.0
+1980,West Virginia,0.0
+1980,Wisconsin,0.0
+1980,Wyoming,0.0
+1981,Alabama,0.0
+1981,Alaska,0.0
+1981,Arizona,0.0
+1981,Arkansas,0.0
+1981,California,0.0
+1981,Colorado,0.0
+1981,Connecticut,0.0
+1981,Delaware,0.0
+1981,Florida,0.0
+1981,Georgia,0.0
+1981,Hawaii,1.0
+1981,Idaho,0.0
+1981,Illinois,1.0
+1981,Indiana,0.0
+1981,Iowa,0.0
+1981,Kansas,0.0
+1981,Kentucky,0.0
+1981,Louisiana,0.0
+1981,Maine,0.0
+1981,Maryland,0.0
+1981,Massachusetts,1.0
+1981,Michigan,1.0
+1981,Minnesota,0.0
+1981,Mississippi,0.0
+1981,Missouri,1.0
+1981,Montana,0.0
+1981,Nebraska,0.0
+1981,Nevada,0.0
+1981,New Hampshire,0.0
+1981,New Jersey,1.0
+1981,New Mexico,0.0
+1981,New York,1.0
+1981,North Carolina,0.0
+1981,North Dakota,0.0
+1981,Ohio,0.0
+1981,Oklahoma,0.0
+1981,Oregon,0.0
+1981,Pennsylvania,0.0
+1981,Rhode Island,1.0
+1981,South Carolina,0.0
+1981,South Dakota,0.0
+1981,Tennessee,0.0
+1981,Texas,0.0
+1981,Utah,0.0
+1981,Vermont,0.0
+1981,Virginia,0.0
+1981,Washington,0.0
+1981,West Virginia,0.0
+1981,Wisconsin,0.0
+1981,Wyoming,0.0
+1982,Alabama,0.0
+1982,Alaska,0.0
+1982,Arizona,0.0
+1982,Arkansas,0.0
+1982,California,0.0
+1982,Colorado,0.0
+1982,Connecticut,0.0
+1982,Delaware,0.0
+1982,Florida,0.0
+1982,Georgia,0.0
+1982,Hawaii,1.0
+1982,Idaho,0.0
+1982,Illinois,1.0
+1982,Indiana,0.0
+1982,Iowa,0.0
+1982,Kansas,0.0
+1982,Kentucky,0.0
+1982,Louisiana,0.0
+1982,Maine,0.0
+1982,Maryland,0.0
+1982,Massachusetts,1.0
+1982,Michigan,1.0
+1982,Minnesota,0.0
+1982,Mississippi,0.0
+1982,Missouri,1.0
+1982,Montana,0.0
+1982,Nebraska,0.0
+1982,Nevada,0.0
+1982,New Hampshire,0.0
+1982,New Jersey,1.0
+1982,New Mexico,0.0
+1982,New York,1.0
+1982,North Carolina,0.0
+1982,North Dakota,0.0
+1982,Ohio,0.0
+1982,Oklahoma,0.0
+1982,Oregon,0.0
+1982,Pennsylvania,0.0
+1982,Rhode Island,1.0
+1982,South Carolina,0.0
+1982,South Dakota,0.0
+1982,Tennessee,0.0
+1982,Texas,0.0
+1982,Utah,0.0
+1982,Vermont,0.0
+1982,Virginia,0.0
+1982,Washington,0.0
+1982,West Virginia,0.0
+1982,Wisconsin,0.0
+1982,Wyoming,0.0
+1983,Alabama,0.0
+1983,Alaska,0.0
+1983,Arizona,0.0
+1983,Arkansas,0.0
+1983,California,0.0
+1983,Colorado,0.0
+1983,Connecticut,0.0
+1983,Delaware,0.0
+1983,Florida,0.0
+1983,Georgia,0.0
+1983,Hawaii,1.0
+1983,Idaho,0.0
+1983,Illinois,1.0
+1983,Indiana,0.0
+1983,Iowa,0.0
+1983,Kansas,0.0
+1983,Kentucky,0.0
+1983,Louisiana,0.0
+1983,Maine,0.0
+1983,Maryland,0.0
+1983,Massachusetts,1.0
+1983,Michigan,1.0
+1983,Minnesota,0.0
+1983,Mississippi,0.0
+1983,Missouri,1.0
+1983,Montana,0.0
+1983,Nebraska,0.0
+1983,Nevada,0.0
+1983,New Hampshire,0.0
+1983,New Jersey,1.0
+1983,New Mexico,0.0
+1983,New York,1.0
+1983,North Carolina,0.0
+1983,North Dakota,0.0
+1983,Ohio,0.0
+1983,Oklahoma,0.0
+1983,Oregon,0.0
+1983,Pennsylvania,0.0
+1983,Rhode Island,1.0
+1983,South Carolina,0.0
+1983,South Dakota,0.0
+1983,Tennessee,0.0
+1983,Texas,0.0
+1983,Utah,0.0
+1983,Vermont,0.0
+1983,Virginia,0.0
+1983,Washington,0.0
+1983,West Virginia,0.0
+1983,Wisconsin,0.0
+1983,Wyoming,0.0
+1984,Alabama,0.0
+1984,Alaska,0.0
+1984,Arizona,0.0
+1984,Arkansas,0.0
+1984,California,0.0
+1984,Colorado,0.0
+1984,Connecticut,0.0
+1984,Delaware,0.0
+1984,Florida,0.0
+1984,Georgia,0.0
+1984,Hawaii,1.0
+1984,Idaho,0.0
+1984,Illinois,1.0
+1984,Indiana,0.0
+1984,Iowa,0.0
+1984,Kansas,0.0
+1984,Kentucky,0.0
+1984,Louisiana,0.0
+1984,Maine,0.0
+1984,Maryland,0.0
+1984,Massachusetts,1.0
+1984,Michigan,1.0
+1984,Minnesota,0.0
+1984,Mississippi,0.0
+1984,Missouri,1.0
+1984,Montana,0.0
+1984,Nebraska,0.0
+1984,Nevada,0.0
+1984,New Hampshire,0.0
+1984,New Jersey,1.0
+1984,New Mexico,0.0
+1984,New York,1.0
+1984,North Carolina,0.0
+1984,North Dakota,0.0
+1984,Ohio,0.0
+1984,Oklahoma,0.0
+1984,Oregon,0.0
+1984,Pennsylvania,0.0
+1984,Rhode Island,1.0
+1984,South Carolina,0.0
+1984,South Dakota,0.0
+1984,Tennessee,0.0
+1984,Texas,0.0
+1984,Utah,0.0
+1984,Vermont,0.0
+1984,Virginia,0.0
+1984,Washington,0.0
+1984,West Virginia,0.0
+1984,Wisconsin,0.0
+1984,Wyoming,0.0
+1985,Alabama,0.0
+1985,Alaska,0.0
+1985,Arizona,0.0
+1985,Arkansas,0.0
+1985,California,0.0
+1985,Colorado,0.0
+1985,Connecticut,0.0
+1985,Delaware,0.0
+1985,Florida,0.0
+1985,Georgia,0.0
+1985,Hawaii,1.0
+1985,Idaho,0.0
+1985,Illinois,1.0
+1985,Indiana,0.0
+1985,Iowa,0.0
+1985,Kansas,0.0
+1985,Kentucky,0.0
+1985,Louisiana,0.0
+1985,Maine,0.0
+1985,Maryland,0.0
+1985,Massachusetts,1.0
+1985,Michigan,1.0
+1985,Minnesota,0.0
+1985,Mississippi,0.0
+1985,Missouri,1.0
+1985,Montana,0.0
+1985,Nebraska,0.0
+1985,Nevada,0.0
+1985,New Hampshire,0.0
+1985,New Jersey,1.0
+1985,New Mexico,0.0
+1985,New York,1.0
+1985,North Carolina,0.0
+1985,North Dakota,0.0
+1985,Ohio,0.0
+1985,Oklahoma,0.0
+1985,Oregon,0.0
+1985,Pennsylvania,0.0
+1985,Rhode Island,1.0
+1985,South Carolina,0.0
+1985,South Dakota,0.0
+1985,Tennessee,0.0
+1985,Texas,0.0
+1985,Utah,0.0
+1985,Vermont,0.0
+1985,Virginia,0.0
+1985,Washington,0.0
+1985,West Virginia,0.0
+1985,Wisconsin,0.0
+1985,Wyoming,0.0
+1986,Alabama,0.0
+1986,Alaska,0.0
+1986,Arizona,0.0
+1986,Arkansas,0.0
+1986,California,0.0
+1986,Colorado,0.0
+1986,Connecticut,0.0
+1986,Delaware,0.0
+1986,Florida,0.0
+1986,Georgia,0.0
+1986,Hawaii,1.0
+1986,Idaho,0.0
+1986,Illinois,1.0
+1986,Indiana,0.0
+1986,Iowa,0.0
+1986,Kansas,0.0
+1986,Kentucky,0.0
+1986,Louisiana,0.0
+1986,Maine,0.0
+1986,Maryland,0.0
+1986,Massachusetts,1.0
+1986,Michigan,1.0
+1986,Minnesota,0.0
+1986,Mississippi,0.0
+1986,Missouri,1.0
+1986,Montana,0.0
+1986,Nebraska,0.0
+1986,Nevada,0.0
+1986,New Hampshire,0.0
+1986,New Jersey,1.0
+1986,New Mexico,0.0
+1986,New York,1.0
+1986,North Carolina,0.0
+1986,North Dakota,0.0
+1986,Ohio,0.0
+1986,Oklahoma,0.0
+1986,Oregon,0.0
+1986,Pennsylvania,0.0
+1986,Rhode Island,1.0
+1986,South Carolina,0.0
+1986,South Dakota,0.0
+1986,Tennessee,0.0
+1986,Texas,0.0
+1986,Utah,0.0
+1986,Vermont,0.0
+1986,Virginia,0.0
+1986,Washington,0.0
+1986,West Virginia,0.0
+1986,Wisconsin,0.0
+1986,Wyoming,0.0
+1987,Alabama,0.0
+1987,Alaska,0.0
+1987,Arizona,0.0
+1987,Arkansas,0.0
+1987,California,0.0
+1987,Colorado,0.0
+1987,Connecticut,0.0
+1987,Delaware,0.0
+1987,Florida,0.0
+1987,Georgia,0.0
+1987,Hawaii,1.0
+1987,Idaho,0.0
+1987,Illinois,1.0
+1987,Indiana,0.0
+1987,Iowa,0.0
+1987,Kansas,0.0
+1987,Kentucky,0.0
+1987,Louisiana,0.0
+1987,Maine,0.0
+1987,Maryland,0.0
+1987,Massachusetts,1.0
+1987,Michigan,1.0
+1987,Minnesota,0.0
+1987,Mississippi,0.0
+1987,Missouri,1.0
+1987,Montana,0.0
+1987,Nebraska,0.0
+1987,Nevada,0.0
+1987,New Hampshire,0.0
+1987,New Jersey,1.0
+1987,New Mexico,0.0
+1987,New York,1.0
+1987,North Carolina,0.0
+1987,North Dakota,0.0
+1987,Ohio,0.0
+1987,Oklahoma,0.0
+1987,Oregon,0.0
+1987,Pennsylvania,0.0
+1987,Rhode Island,1.0
+1987,South Carolina,0.0
+1987,South Dakota,0.0
+1987,Tennessee,0.0
+1987,Texas,0.0
+1987,Utah,0.0
+1987,Vermont,0.0
+1987,Virginia,0.0
+1987,Washington,0.0
+1987,West Virginia,0.0
+1987,Wisconsin,0.0
+1987,Wyoming,0.0
+1988,Alabama,0.0
+1988,Alaska,0.0
+1988,Arizona,0.0
+1988,Arkansas,0.0
+1988,California,0.0
+1988,Colorado,0.0
+1988,Connecticut,0.0
+1988,Delaware,0.0
+1988,Florida,0.0
+1988,Georgia,0.0
+1988,Hawaii,1.0
+1988,Idaho,0.0
+1988,Illinois,1.0
+1988,Indiana,0.0
+1988,Iowa,0.0
+1988,Kansas,0.0
+1988,Kentucky,0.0
+1988,Louisiana,0.0
+1988,Maine,0.0
+1988,Maryland,0.0
+1988,Massachusetts,1.0
+1988,Michigan,1.0
+1988,Minnesota,0.0
+1988,Mississippi,0.0
+1988,Missouri,1.0
+1988,Montana,0.0
+1988,Nebraska,0.0
+1988,Nevada,0.0
+1988,New Hampshire,0.0
+1988,New Jersey,1.0
+1988,New Mexico,0.0
+1988,New York,1.0
+1988,North Carolina,0.0
+1988,North Dakota,0.0
+1988,Ohio,0.0
+1988,Oklahoma,0.0
+1988,Oregon,0.0
+1988,Pennsylvania,0.0
+1988,Rhode Island,1.0
+1988,South Carolina,0.0
+1988,South Dakota,0.0
+1988,Tennessee,0.0
+1988,Texas,0.0
+1988,Utah,0.0
+1988,Vermont,0.0
+1988,Virginia,0.0
+1988,Washington,0.0
+1988,West Virginia,0.0
+1988,Wisconsin,0.0
+1988,Wyoming,0.0
+1989,Alabama,0.0
+1989,Alaska,0.0
+1989,Arizona,0.0
+1989,Arkansas,0.0
+1989,California,0.0
+1989,Colorado,0.0
+1989,Connecticut,0.0
+1989,Delaware,0.0
+1989,Florida,0.0
+1989,Georgia,0.0
+1989,Hawaii,1.0
+1989,Idaho,0.0
+1989,Illinois,1.0
+1989,Indiana,0.0
+1989,Iowa,0.0
+1989,Kansas,0.0
+1989,Kentucky,0.0
+1989,Louisiana,0.0
+1989,Maine,0.0
+1989,Maryland,0.0
+1989,Massachusetts,1.0
+1989,Michigan,1.0
+1989,Minnesota,0.0
+1989,Mississippi,0.0
+1989,Missouri,1.0
+1989,Montana,0.0
+1989,Nebraska,0.0
+1989,Nevada,0.0
+1989,New Hampshire,0.0
+1989,New Jersey,1.0
+1989,New Mexico,0.0
+1989,New York,1.0
+1989,North Carolina,0.0
+1989,North Dakota,0.0
+1989,Ohio,0.0
+1989,Oklahoma,0.0
+1989,Oregon,0.0
+1989,Pennsylvania,0.0
+1989,Rhode Island,1.0
+1989,South Carolina,0.0
+1989,South Dakota,0.0
+1989,Tennessee,0.0
+1989,Texas,0.0
+1989,Utah,0.0
+1989,Vermont,0.0
+1989,Virginia,0.0
+1989,Washington,0.0
+1989,West Virginia,0.0
+1989,Wisconsin,0.0
+1989,Wyoming,0.0
+1990,Alabama,0.0
+1990,Alaska,0.0
+1990,Arizona,0.0
+1990,Arkansas,0.0
+1990,California,0.0
+1990,Colorado,0.0
+1990,Connecticut,0.0
+1990,Delaware,0.0
+1990,Florida,0.0
+1990,Georgia,0.0
+1990,Hawaii,1.0
+1990,Idaho,0.0
+1990,Illinois,1.0
+1990,Indiana,0.0
+1990,Iowa,1.0
+1990,Kansas,0.0
+1990,Kentucky,0.0
+1990,Louisiana,0.0
+1990,Maine,0.0
+1990,Maryland,0.0
+1990,Massachusetts,1.0
+1990,Michigan,1.0
+1990,Minnesota,0.0
+1990,Mississippi,0.0
+1990,Missouri,1.0
+1990,Montana,0.0
+1990,Nebraska,0.0
+1990,Nevada,0.0
+1990,New Hampshire,0.0
+1990,New Jersey,1.0
+1990,New Mexico,0.0
+1990,New York,1.0
+1990,North Carolina,0.0
+1990,North Dakota,0.0
+1990,Ohio,0.0
+1990,Oklahoma,0.0
+1990,Oregon,0.0
+1990,Pennsylvania,0.0
+1990,Rhode Island,1.0
+1990,South Carolina,0.0
+1990,South Dakota,0.0
+1990,Tennessee,0.0
+1990,Texas,0.0
+1990,Utah,0.0
+1990,Vermont,0.0
+1990,Virginia,0.0
+1990,Washington,0.0
+1990,West Virginia,0.0
+1990,Wisconsin,0.0
+1990,Wyoming,0.0
+1991,Alabama,0.0
+1991,Alaska,0.0
+1991,Arizona,0.0
+1991,Arkansas,0.0
+1991,California,0.0
+1991,Colorado,0.0
+1991,Connecticut,0.0
+1991,Delaware,0.0
+1991,Florida,0.0
+1991,Georgia,0.0
+1991,Hawaii,1.0
+1991,Idaho,0.0
+1991,Illinois,1.0
+1991,Indiana,0.0
+1991,Iowa,1.0
+1991,Kansas,0.0
+1991,Kentucky,0.0
+1991,Louisiana,0.0
+1991,Maine,0.0
+1991,Maryland,0.0
+1991,Massachusetts,1.0
+1991,Michigan,1.0
+1991,Minnesota,0.0
+1991,Mississippi,0.0
+1991,Missouri,1.0
+1991,Montana,0.0
+1991,Nebraska,1.0
+1991,Nevada,0.0
+1991,New Hampshire,0.0
+1991,New Jersey,1.0
+1991,New Mexico,0.0
+1991,New York,1.0
+1991,North Carolina,0.0
+1991,North Dakota,0.0
+1991,Ohio,0.0
+1991,Oklahoma,0.0
+1991,Oregon,0.0
+1991,Pennsylvania,0.0
+1991,Rhode Island,1.0
+1991,South Carolina,0.0
+1991,South Dakota,0.0
+1991,Tennessee,0.0
+1991,Texas,0.0
+1991,Utah,0.0
+1991,Vermont,0.0
+1991,Virginia,0.0
+1991,Washington,0.0
+1991,West Virginia,0.0
+1991,Wisconsin,0.0
+1991,Wyoming,0.0
+1992,Alabama,0.0
+1992,Alaska,0.0
+1992,Arizona,0.0
+1992,Arkansas,0.0
+1992,California,0.0
+1992,Colorado,0.0
+1992,Connecticut,0.0
+1992,Delaware,0.0
+1992,Florida,0.0
+1992,Georgia,0.0
+1992,Hawaii,1.0
+1992,Idaho,0.0
+1992,Illinois,1.0
+1992,Indiana,0.0
+1992,Iowa,1.0
+1992,Kansas,0.0
+1992,Kentucky,0.0
+1992,Louisiana,0.0
+1992,Maine,0.0
+1992,Maryland,0.0
+1992,Massachusetts,1.0
+1992,Michigan,1.0
+1992,Minnesota,0.0
+1992,Mississippi,0.0
+1992,Missouri,1.0
+1992,Montana,0.0
+1992,Nebraska,1.0
+1992,Nevada,0.0
+1992,New Hampshire,0.0
+1992,New Jersey,1.0
+1992,New Mexico,0.0
+1992,New York,1.0
+1992,North Carolina,0.0
+1992,North Dakota,0.0
+1992,Ohio,0.0
+1992,Oklahoma,0.0
+1992,Oregon,0.0
+1992,Pennsylvania,0.0
+1992,Rhode Island,1.0
+1992,South Carolina,0.0
+1992,South Dakota,0.0
+1992,Tennessee,0.0
+1992,Texas,0.0
+1992,Utah,0.0
+1992,Vermont,0.0
+1992,Virginia,0.0
+1992,Washington,0.0
+1992,West Virginia,0.0
+1992,Wisconsin,0.0
+1992,Wyoming,0.0
+1993,Alabama,0.0
+1993,Alaska,0.0
+1993,Arizona,0.0
+1993,Arkansas,0.0
+1993,California,1.0
+1993,Colorado,0.0
+1993,Connecticut,0.0
+1993,Delaware,0.0
+1993,Florida,0.0
+1993,Georgia,0.0
+1993,Hawaii,1.0
+1993,Idaho,0.0
+1993,Illinois,1.0
+1993,Indiana,0.0
+1993,Iowa,1.0
+1993,Kansas,0.0
+1993,Kentucky,0.0
+1993,Louisiana,0.0
+1993,Maine,0.0
+1993,Maryland,0.0
+1993,Massachusetts,1.0
+1993,Michigan,1.0
+1993,Minnesota,0.0
+1993,Mississippi,0.0
+1993,Missouri,1.0
+1993,Montana,0.0
+1993,Nebraska,1.0
+1993,Nevada,0.0
+1993,New Hampshire,0.0
+1993,New Jersey,1.0
+1993,New Mexico,0.0
+1993,New York,1.0
+1993,North Carolina,0.0
+1993,North Dakota,0.0
+1993,Ohio,0.0
+1993,Oklahoma,0.0
+1993,Oregon,0.0
+1993,Pennsylvania,0.0
+1993,Rhode Island,1.0
+1993,South Carolina,0.0
+1993,South Dakota,0.0
+1993,Tennessee,0.0
+1993,Texas,0.0
+1993,Utah,0.0
+1993,Vermont,0.0
+1993,Virginia,0.0
+1993,Washington,0.0
+1993,West Virginia,0.0
+1993,Wisconsin,0.0
+1993,Wyoming,0.0
+1994,Alabama,0.0
+1994,Alaska,0.0
+1994,Arizona,0.0
+1994,Arkansas,0.0
+1994,California,1.0
+1994,Colorado,0.0
+1994,Connecticut,0.0
+1994,Delaware,0.0
+1994,Florida,0.0
+1994,Georgia,0.0
+1994,Hawaii,1.0
+1994,Idaho,0.0
+1994,Illinois,1.0
+1994,Indiana,0.0
+1994,Iowa,1.0
+1994,Kansas,0.0
+1994,Kentucky,0.0
+1994,Louisiana,0.0
+1994,Maine,0.0
+1994,Maryland,0.0
+1994,Massachusetts,1.0
+1994,Michigan,1.0
+1994,Minnesota,0.0
+1994,Mississippi,0.0
+1994,Missouri,1.0
+1994,Montana,0.0
+1994,Nebraska,1.0
+1994,Nevada,0.0
+1994,New Hampshire,0.0
+1994,New Jersey,1.0
+1994,New Mexico,0.0
+1994,New York,1.0
+1994,North Carolina,0.0
+1994,North Dakota,0.0
+1994,Ohio,0.0
+1994,Oklahoma,0.0
+1994,Oregon,0.0
+1994,Pennsylvania,0.0
+1994,Rhode Island,1.0
+1994,South Carolina,0.0
+1994,South Dakota,0.0
+1994,Tennessee,0.0
+1994,Texas,0.0
+1994,Utah,0.0
+1994,Vermont,0.0
+1994,Virginia,0.0
+1994,Washington,0.0
+1994,West Virginia,0.0
+1994,Wisconsin,0.0
+1994,Wyoming,0.0
+1995,Alabama,0.0
+1995,Alaska,0.0
+1995,Arizona,0.0
+1995,Arkansas,0.0
+1995,California,1.0
+1995,Colorado,0.0
+1995,Connecticut,1.0
+1995,Delaware,0.0
+1995,Florida,0.0
+1995,Georgia,0.0
+1995,Hawaii,1.0
+1995,Idaho,0.0
+1995,Illinois,1.0
+1995,Indiana,0.0
+1995,Iowa,1.0
+1995,Kansas,0.0
+1995,Kentucky,0.0
+1995,Louisiana,0.0
+1995,Maine,0.0
+1995,Maryland,0.0
+1995,Massachusetts,1.0
+1995,Michigan,1.0
+1995,Minnesota,0.0
+1995,Mississippi,0.0
+1995,Missouri,1.0
+1995,Montana,0.0
+1995,Nebraska,1.0
+1995,Nevada,0.0
+1995,New Hampshire,0.0
+1995,New Jersey,1.0
+1995,New Mexico,0.0
+1995,New York,1.0
+1995,North Carolina,1.0
+1995,North Dakota,0.0
+1995,Ohio,0.0
+1995,Oklahoma,0.0
+1995,Oregon,0.0
+1995,Pennsylvania,0.0
+1995,Rhode Island,1.0
+1995,South Carolina,0.0
+1995,South Dakota,0.0
+1995,Tennessee,0.0
+1995,Texas,0.0
+1995,Utah,0.0
+1995,Vermont,0.0
+1995,Virginia,0.0
+1995,Washington,0.0
+1995,West Virginia,0.0
+1995,Wisconsin,0.0
+1995,Wyoming,0.0
+1996,Alabama,0.0
+1996,Alaska,0.0
+1996,Arizona,0.0
+1996,Arkansas,0.0
+1996,California,1.0
+1996,Colorado,0.0
+1996,Connecticut,1.0
+1996,Delaware,0.0
+1996,Florida,0.0
+1996,Georgia,0.0
+1996,Hawaii,1.0
+1996,Idaho,0.0
+1996,Illinois,1.0
+1996,Indiana,0.0
+1996,Iowa,1.0
+1996,Kansas,0.0
+1996,Kentucky,0.0
+1996,Louisiana,0.0
+1996,Maine,0.0
+1996,Maryland,0.0
+1996,Massachusetts,1.0
+1996,Michigan,1.0
+1996,Minnesota,0.0
+1996,Mississippi,0.0
+1996,Missouri,1.0
+1996,Montana,0.0
+1996,Nebraska,1.0
+1996,Nevada,0.0
+1996,New Hampshire,0.0
+1996,New Jersey,1.0
+1996,New Mexico,0.0
+1996,New York,1.0
+1996,North Carolina,1.0
+1996,North Dakota,0.0
+1996,Ohio,0.0
+1996,Oklahoma,0.0
+1996,Oregon,0.0
+1996,Pennsylvania,0.0
+1996,Rhode Island,1.0
+1996,South Carolina,0.0
+1996,South Dakota,0.0
+1996,Tennessee,0.0
+1996,Texas,0.0
+1996,Utah,0.0
+1996,Vermont,0.0
+1996,Virginia,0.0
+1996,Washington,0.0
+1996,West Virginia,0.0
+1996,Wisconsin,0.0
+1996,Wyoming,0.0
+1997,Alabama,0.0
+1997,Alaska,0.0
+1997,Arizona,0.0
+1997,Arkansas,0.0
+1997,California,1.0
+1997,Colorado,0.0
+1997,Connecticut,1.0
+1997,Delaware,0.0
+1997,Florida,0.0
+1997,Georgia,0.0
+1997,Hawaii,1.0
+1997,Idaho,0.0
+1997,Illinois,1.0
+1997,Indiana,0.0
+1997,Iowa,1.0
+1997,Kansas,0.0
+1997,Kentucky,0.0
+1997,Louisiana,0.0
+1997,Maine,0.0
+1997,Maryland,0.0
+1997,Massachusetts,1.0
+1997,Michigan,1.0
+1997,Minnesota,0.0
+1997,Mississippi,0.0
+1997,Missouri,1.0
+1997,Montana,0.0
+1997,Nebraska,1.0
+1997,Nevada,0.0
+1997,New Hampshire,0.0
+1997,New Jersey,1.0
+1997,New Mexico,0.0
+1997,New York,1.0
+1997,North Carolina,1.0
+1997,North Dakota,0.0
+1997,Ohio,0.0
+1997,Oklahoma,0.0
+1997,Oregon,0.0
+1997,Pennsylvania,0.0
+1997,Rhode Island,1.0
+1997,South Carolina,0.0
+1997,South Dakota,0.0
+1997,Tennessee,0.0
+1997,Texas,0.0
+1997,Utah,0.0
+1997,Vermont,0.0
+1997,Virginia,0.0
+1997,Washington,0.0
+1997,West Virginia,0.0
+1997,Wisconsin,0.0
+1997,Wyoming,0.0
+1998,Alabama,0.0
+1998,Alaska,0.0
+1998,Arizona,0.0
+1998,Arkansas,0.0
+1998,California,1.0
+1998,Colorado,0.0
+1998,Connecticut,1.0
+1998,Delaware,0.0
+1998,Florida,0.0
+1998,Georgia,0.0
+1998,Hawaii,1.0
+1998,Idaho,0.0
+1998,Illinois,1.0
+1998,Indiana,0.0
+1998,Iowa,1.0
+1998,Kansas,0.0
+1998,Kentucky,0.0
+1998,Louisiana,0.0
+1998,Maine,0.0
+1998,Maryland,0.0
+1998,Massachusetts,1.0
+1998,Michigan,1.0
+1998,Minnesota,0.0
+1998,Mississippi,0.0
+1998,Missouri,1.0
+1998,Montana,0.0
+1998,Nebraska,1.0
+1998,Nevada,0.0
+1998,New Hampshire,0.0
+1998,New Jersey,1.0
+1998,New Mexico,0.0
+1998,New York,1.0
+1998,North Carolina,1.0
+1998,North Dakota,0.0
+1998,Ohio,0.0
+1998,Oklahoma,0.0
+1998,Oregon,0.0
+1998,Pennsylvania,0.0
+1998,Rhode Island,1.0
+1998,South Carolina,0.0
+1998,South Dakota,0.0
+1998,Tennessee,0.0
+1998,Texas,0.0
+1998,Utah,0.0
+1998,Vermont,0.0
+1998,Virginia,0.0
+1998,Washington,0.0
+1998,West Virginia,0.0
+1998,Wisconsin,0.0
+1998,Wyoming,0.0
+1999,Alabama,0.0
+1999,Alaska,0.0
+1999,Arizona,0.0
+1999,Arkansas,0.0
+1999,California,1.0
+1999,Colorado,0.0
+1999,Connecticut,1.0
+1999,Delaware,0.0
+1999,Florida,0.0
+1999,Georgia,0.0
+1999,Hawaii,1.0
+1999,Idaho,0.0
+1999,Illinois,1.0
+1999,Indiana,0.0
+1999,Iowa,1.0
+1999,Kansas,0.0
+1999,Kentucky,0.0
+1999,Louisiana,0.0
+1999,Maine,0.0
+1999,Maryland,0.0
+1999,Massachusetts,1.0
+1999,Michigan,1.0
+1999,Minnesota,0.0
+1999,Mississippi,0.0
+1999,Missouri,1.0
+1999,Montana,0.0
+1999,Nebraska,1.0
+1999,Nevada,0.0
+1999,New Hampshire,0.0
+1999,New Jersey,1.0
+1999,New Mexico,0.0
+1999,New York,1.0
+1999,North Carolina,1.0
+1999,North Dakota,0.0
+1999,Ohio,0.0
+1999,Oklahoma,0.0
+1999,Oregon,0.0
+1999,Pennsylvania,0.0
+1999,Rhode Island,1.0
+1999,South Carolina,0.0
+1999,South Dakota,0.0
+1999,Tennessee,0.0
+1999,Texas,0.0
+1999,Utah,0.0
+1999,Vermont,0.0
+1999,Virginia,0.0
+1999,Washington,0.0
+1999,West Virginia,0.0
+1999,Wisconsin,0.0
+1999,Wyoming,0.0
+2000,Alabama,0.0
+2000,Alaska,0.0
+2000,Arizona,0.0
+2000,Arkansas,0.0
+2000,California,1.0
+2000,Colorado,0.0
+2000,Connecticut,1.0
+2000,Delaware,0.0
+2000,Florida,0.0
+2000,Georgia,0.0
+2000,Hawaii,1.0
+2000,Idaho,0.0
+2000,Illinois,1.0
+2000,Indiana,0.0
+2000,Iowa,1.0
+2000,Kansas,0.0
+2000,Kentucky,0.0
+2000,Louisiana,0.0
+2000,Maine,0.0
+2000,Maryland,0.0
+2000,Massachusetts,1.0
+2000,Michigan,1.0
+2000,Minnesota,0.0
+2000,Mississippi,0.0
+2000,Missouri,1.0
+2000,Montana,0.0
+2000,Nebraska,1.0
+2000,Nevada,0.0
+2000,New Hampshire,0.0
+2000,New Jersey,1.0
+2000,New Mexico,0.0
+2000,New York,1.0
+2000,North Carolina,1.0
+2000,North Dakota,0.0
+2000,Ohio,0.0
+2000,Oklahoma,0.0
+2000,Oregon,0.0
+2000,Pennsylvania,0.0
+2000,Rhode Island,1.0
+2000,South Carolina,0.0
+2000,South Dakota,0.0
+2000,Tennessee,0.0
+2000,Texas,0.0
+2000,Utah,0.0
+2000,Vermont,0.0
+2000,Virginia,0.0
+2000,Washington,0.0
+2000,West Virginia,0.0
+2000,Wisconsin,0.0
+2000,Wyoming,0.0
+2001,Alabama,0.0
+2001,Alaska,0.0
+2001,Arizona,0.0
+2001,Arkansas,0.0
+2001,California,1.0
+2001,Colorado,0.0
+2001,Connecticut,1.0
+2001,Delaware,0.0
+2001,Florida,0.0
+2001,Georgia,0.0
+2001,Hawaii,1.0
+2001,Idaho,0.0
+2001,Illinois,1.0
+2001,Indiana,0.0
+2001,Iowa,1.0
+2001,Kansas,0.0
+2001,Kentucky,0.0
+2001,Louisiana,0.0
+2001,Maine,0.0
+2001,Maryland,0.0
+2001,Massachusetts,1.0
+2001,Michigan,1.0
+2001,Minnesota,0.0
+2001,Mississippi,0.0
+2001,Missouri,1.0
+2001,Montana,0.0
+2001,Nebraska,1.0
+2001,Nevada,0.0
+2001,New Hampshire,0.0
+2001,New Jersey,1.0
+2001,New Mexico,0.0
+2001,New York,1.0
+2001,North Carolina,1.0
+2001,North Dakota,0.0
+2001,Ohio,0.0
+2001,Oklahoma,0.0
+2001,Oregon,0.0
+2001,Pennsylvania,0.0
+2001,Rhode Island,1.0
+2001,South Carolina,0.0
+2001,South Dakota,0.0
+2001,Tennessee,0.0
+2001,Texas,0.0
+2001,Utah,0.0
+2001,Vermont,0.0
+2001,Virginia,0.0
+2001,Washington,0.0
+2001,West Virginia,0.0
+2001,Wisconsin,0.0
+2001,Wyoming,0.0
+2002,Alabama,0.0
+2002,Alaska,0.0
+2002,Arizona,0.0
+2002,Arkansas,0.0
+2002,California,1.0
+2002,Colorado,0.0
+2002,Connecticut,1.0
+2002,Delaware,0.0
+2002,Florida,0.0
+2002,Georgia,0.0
+2002,Hawaii,1.0
+2002,Idaho,0.0
+2002,Illinois,1.0
+2002,Indiana,0.0
+2002,Iowa,1.0
+2002,Kansas,0.0
+2002,Kentucky,0.0
+2002,Louisiana,0.0
+2002,Maine,0.0
+2002,Maryland,0.0
+2002,Massachusetts,1.0
+2002,Michigan,1.0
+2002,Minnesota,0.0
+2002,Mississippi,0.0
+2002,Missouri,1.0
+2002,Montana,0.0
+2002,Nebraska,1.0
+2002,Nevada,0.0
+2002,New Hampshire,0.0
+2002,New Jersey,1.0
+2002,New Mexico,0.0
+2002,New York,1.0
+2002,North Carolina,1.0
+2002,North Dakota,0.0
+2002,Ohio,0.0
+2002,Oklahoma,0.0
+2002,Oregon,0.0
+2002,Pennsylvania,0.0
+2002,Rhode Island,1.0
+2002,South Carolina,0.0
+2002,South Dakota,0.0
+2002,Tennessee,0.0
+2002,Texas,0.0
+2002,Utah,0.0
+2002,Vermont,0.0
+2002,Virginia,0.0
+2002,Washington,0.0
+2002,West Virginia,0.0
+2002,Wisconsin,0.0
+2002,Wyoming,0.0
+2003,Alabama,0.0
+2003,Alaska,0.0
+2003,Arizona,0.0
+2003,Arkansas,0.0
+2003,California,1.0
+2003,Colorado,0.0
+2003,Connecticut,1.0
+2003,Delaware,0.0
+2003,Florida,0.0
+2003,Georgia,0.0
+2003,Hawaii,1.0
+2003,Idaho,0.0
+2003,Illinois,1.0
+2003,Indiana,0.0
+2003,Iowa,1.0
+2003,Kansas,0.0
+2003,Kentucky,0.0
+2003,Louisiana,0.0
+2003,Maine,0.0
+2003,Maryland,0.0
+2003,Massachusetts,1.0
+2003,Michigan,1.0
+2003,Minnesota,0.0
+2003,Mississippi,0.0
+2003,Missouri,1.0
+2003,Montana,0.0
+2003,Nebraska,1.0
+2003,Nevada,0.0
+2003,New Hampshire,0.0
+2003,New Jersey,1.0
+2003,New Mexico,0.0
+2003,New York,1.0
+2003,North Carolina,1.0
+2003,North Dakota,0.0
+2003,Ohio,0.0
+2003,Oklahoma,0.0
+2003,Oregon,0.0
+2003,Pennsylvania,0.0
+2003,Rhode Island,1.0
+2003,South Carolina,0.0
+2003,South Dakota,0.0
+2003,Tennessee,0.0
+2003,Texas,0.0
+2003,Utah,0.0
+2003,Vermont,0.0
+2003,Virginia,0.0
+2003,Washington,0.0
+2003,West Virginia,0.0
+2003,Wisconsin,0.0
+2003,Wyoming,0.0
+2004,Alabama,0.0
+2004,Alaska,0.0
+2004,Arizona,0.0
+2004,Arkansas,0.0
+2004,California,1.0
+2004,Colorado,0.0
+2004,Connecticut,1.0
+2004,Delaware,0.0
+2004,Florida,0.0
+2004,Georgia,0.0
+2004,Hawaii,1.0
+2004,Idaho,0.0
+2004,Illinois,1.0
+2004,Indiana,0.0
+2004,Iowa,1.0
+2004,Kansas,0.0
+2004,Kentucky,0.0
+2004,Louisiana,0.0
+2004,Maine,0.0
+2004,Maryland,0.0
+2004,Massachusetts,1.0
+2004,Michigan,1.0
+2004,Minnesota,0.0
+2004,Mississippi,0.0
+2004,Missouri,1.0
+2004,Montana,0.0
+2004,Nebraska,1.0
+2004,Nevada,0.0
+2004,New Hampshire,0.0
+2004,New Jersey,1.0
+2004,New Mexico,0.0
+2004,New York,1.0
+2004,North Carolina,1.0
+2004,North Dakota,0.0
+2004,Ohio,0.0
+2004,Oklahoma,0.0
+2004,Oregon,0.0
+2004,Pennsylvania,0.0
+2004,Rhode Island,1.0
+2004,South Carolina,0.0
+2004,South Dakota,0.0
+2004,Tennessee,0.0
+2004,Texas,0.0
+2004,Utah,0.0
+2004,Vermont,0.0
+2004,Virginia,0.0
+2004,Washington,0.0
+2004,West Virginia,0.0
+2004,Wisconsin,0.0
+2004,Wyoming,0.0
+2005,Alabama,0.0
+2005,Alaska,0.0
+2005,Arizona,0.0
+2005,Arkansas,0.0
+2005,California,1.0
+2005,Colorado,0.0
+2005,Connecticut,1.0
+2005,Delaware,0.0
+2005,Florida,0.0
+2005,Georgia,0.0
+2005,Hawaii,1.0
+2005,Idaho,0.0
+2005,Illinois,1.0
+2005,Indiana,0.0
+2005,Iowa,1.0
+2005,Kansas,0.0
+2005,Kentucky,0.0
+2005,Louisiana,0.0
+2005,Maine,0.0
+2005,Maryland,0.0
+2005,Massachusetts,1.0
+2005,Michigan,1.0
+2005,Minnesota,0.0
+2005,Mississippi,0.0
+2005,Missouri,1.0
+2005,Montana,0.0
+2005,Nebraska,1.0
+2005,Nevada,0.0
+2005,New Hampshire,0.0
+2005,New Jersey,1.0
+2005,New Mexico,0.0
+2005,New York,1.0
+2005,North Carolina,1.0
+2005,North Dakota,0.0
+2005,Ohio,0.0
+2005,Oklahoma,0.0
+2005,Oregon,0.0
+2005,Pennsylvania,0.0
+2005,Rhode Island,1.0
+2005,South Carolina,0.0
+2005,South Dakota,0.0
+2005,Tennessee,0.0
+2005,Texas,0.0
+2005,Utah,0.0
+2005,Vermont,0.0
+2005,Virginia,0.0
+2005,Washington,0.0
+2005,West Virginia,0.0
+2005,Wisconsin,0.0
+2005,Wyoming,0.0
+2006,Alabama,0.0
+2006,Alaska,0.0
+2006,Arizona,0.0
+2006,Arkansas,0.0
+2006,California,1.0
+2006,Colorado,0.0
+2006,Connecticut,1.0
+2006,Delaware,0.0
+2006,Florida,0.0
+2006,Georgia,0.0
+2006,Hawaii,1.0
+2006,Idaho,0.0
+2006,Illinois,1.0
+2006,Indiana,0.0
+2006,Iowa,1.0
+2006,Kansas,0.0
+2006,Kentucky,0.0
+2006,Louisiana,0.0
+2006,Maine,0.0
+2006,Maryland,0.0
+2006,Massachusetts,1.0
+2006,Michigan,1.0
+2006,Minnesota,0.0
+2006,Mississippi,0.0
+2006,Missouri,1.0
+2006,Montana,0.0
+2006,Nebraska,1.0
+2006,Nevada,0.0
+2006,New Hampshire,0.0
+2006,New Jersey,1.0
+2006,New Mexico,0.0
+2006,New York,1.0
+2006,North Carolina,1.0
+2006,North Dakota,0.0
+2006,Ohio,0.0
+2006,Oklahoma,0.0
+2006,Oregon,0.0
+2006,Pennsylvania,0.0
+2006,Rhode Island,1.0
+2006,South Carolina,0.0
+2006,South Dakota,0.0
+2006,Tennessee,0.0
+2006,Texas,0.0
+2006,Utah,0.0
+2006,Vermont,0.0
+2006,Virginia,0.0
+2006,Washington,0.0
+2006,West Virginia,0.0
+2006,Wisconsin,0.0
+2006,Wyoming,0.0
+2007,Alabama,0.0
+2007,Alaska,0.0
+2007,Arizona,0.0
+2007,Arkansas,0.0
+2007,California,1.0
+2007,Colorado,0.0
+2007,Connecticut,1.0
+2007,Delaware,0.0
+2007,Florida,0.0
+2007,Georgia,0.0
+2007,Hawaii,1.0
+2007,Idaho,0.0
+2007,Illinois,1.0
+2007,Indiana,0.0
+2007,Iowa,1.0
+2007,Kansas,0.0
+2007,Kentucky,0.0
+2007,Louisiana,0.0
+2007,Maine,0.0
+2007,Maryland,0.0
+2007,Massachusetts,1.0
+2007,Michigan,1.0
+2007,Minnesota,0.0
+2007,Mississippi,0.0
+2007,Missouri,0.0
+2007,Montana,0.0
+2007,Nebraska,1.0
+2007,Nevada,0.0
+2007,New Hampshire,0.0
+2007,New Jersey,1.0
+2007,New Mexico,0.0
+2007,New York,1.0
+2007,North Carolina,1.0
+2007,North Dakota,0.0
+2007,Ohio,0.0
+2007,Oklahoma,0.0
+2007,Oregon,0.0
+2007,Pennsylvania,0.0
+2007,Rhode Island,1.0
+2007,South Carolina,0.0
+2007,South Dakota,0.0
+2007,Tennessee,0.0
+2007,Texas,0.0
+2007,Utah,0.0
+2007,Vermont,0.0
+2007,Virginia,0.0
+2007,Washington,0.0
+2007,West Virginia,0.0
+2007,Wisconsin,0.0
+2007,Wyoming,0.0
+2008,Alabama,0.0
+2008,Alaska,0.0
+2008,Arizona,0.0
+2008,Arkansas,0.0
+2008,California,1.0
+2008,Colorado,0.0
+2008,Connecticut,1.0
+2008,Delaware,0.0
+2008,Florida,0.0
+2008,Georgia,0.0
+2008,Hawaii,1.0
+2008,Idaho,0.0
+2008,Illinois,1.0
+2008,Indiana,0.0
+2008,Iowa,1.0
+2008,Kansas,0.0
+2008,Kentucky,0.0
+2008,Louisiana,0.0
+2008,Maine,0.0
+2008,Maryland,0.0
+2008,Massachusetts,1.0
+2008,Michigan,1.0
+2008,Minnesota,0.0
+2008,Mississippi,0.0
+2008,Missouri,0.0
+2008,Montana,0.0
+2008,Nebraska,1.0
+2008,Nevada,0.0
+2008,New Hampshire,0.0
+2008,New Jersey,1.0
+2008,New Mexico,0.0
+2008,New York,1.0
+2008,North Carolina,1.0
+2008,North Dakota,0.0
+2008,Ohio,0.0
+2008,Oklahoma,0.0
+2008,Oregon,0.0
+2008,Pennsylvania,0.0
+2008,Rhode Island,1.0
+2008,South Carolina,0.0
+2008,South Dakota,0.0
+2008,Tennessee,0.0
+2008,Texas,0.0
+2008,Utah,0.0
+2008,Vermont,0.0
+2008,Virginia,0.0
+2008,Washington,0.0
+2008,West Virginia,0.0
+2008,Wisconsin,0.0
+2008,Wyoming,0.0
+2009,Alabama,0.0
+2009,Alaska,0.0
+2009,Arizona,0.0
+2009,Arkansas,0.0
+2009,California,1.0
+2009,Colorado,0.0
+2009,Connecticut,1.0
+2009,Delaware,0.0
+2009,Florida,0.0
+2009,Georgia,0.0
+2009,Hawaii,1.0
+2009,Idaho,0.0
+2009,Illinois,1.0
+2009,Indiana,0.0
+2009,Iowa,1.0
+2009,Kansas,0.0
+2009,Kentucky,0.0
+2009,Louisiana,0.0
+2009,Maine,0.0
+2009,Maryland,0.0
+2009,Massachusetts,1.0
+2009,Michigan,1.0
+2009,Minnesota,0.0
+2009,Mississippi,0.0
+2009,Missouri,0.0
+2009,Montana,0.0
+2009,Nebraska,1.0
+2009,Nevada,0.0
+2009,New Hampshire,0.0
+2009,New Jersey,1.0
+2009,New Mexico,0.0
+2009,New York,1.0
+2009,North Carolina,1.0
+2009,North Dakota,0.0
+2009,Ohio,0.0
+2009,Oklahoma,0.0
+2009,Oregon,0.0
+2009,Pennsylvania,0.0
+2009,Rhode Island,1.0
+2009,South Carolina,0.0
+2009,South Dakota,0.0
+2009,Tennessee,0.0
+2009,Texas,0.0
+2009,Utah,0.0
+2009,Vermont,0.0
+2009,Virginia,0.0
+2009,Washington,0.0
+2009,West Virginia,0.0
+2009,Wisconsin,0.0
+2009,Wyoming,0.0
+2010,Alabama,0.0
+2010,Alaska,0.0
+2010,Arizona,0.0
+2010,Arkansas,0.0
+2010,California,1.0
+2010,Colorado,0.0
+2010,Connecticut,1.0
+2010,Delaware,0.0
+2010,Florida,0.0
+2010,Georgia,0.0
+2010,Hawaii,1.0
+2010,Idaho,0.0
+2010,Illinois,1.0
+2010,Indiana,0.0
+2010,Iowa,1.0
+2010,Kansas,0.0
+2010,Kentucky,0.0
+2010,Louisiana,0.0
+2010,Maine,0.0
+2010,Maryland,0.0
+2010,Massachusetts,1.0
+2010,Michigan,1.0
+2010,Minnesota,0.0
+2010,Mississippi,0.0
+2010,Missouri,0.0
+2010,Montana,0.0
+2010,Nebraska,1.0
+2010,Nevada,0.0
+2010,New Hampshire,0.0
+2010,New Jersey,1.0
+2010,New Mexico,0.0
+2010,New York,1.0
+2010,North Carolina,1.0
+2010,North Dakota,0.0
+2010,Ohio,0.0
+2010,Oklahoma,0.0
+2010,Oregon,0.0
+2010,Pennsylvania,0.0
+2010,Rhode Island,1.0
+2010,South Carolina,0.0
+2010,South Dakota,0.0
+2010,Tennessee,0.0
+2010,Texas,0.0
+2010,Utah,0.0
+2010,Vermont,0.0
+2010,Virginia,0.0
+2010,Washington,0.0
+2010,West Virginia,0.0
+2010,Wisconsin,0.0
+2010,Wyoming,0.0
+2011,Alabama,0.0
+2011,Alaska,0.0
+2011,Arizona,0.0
+2011,Arkansas,0.0
+2011,California,1.0
+2011,Colorado,0.0
+2011,Connecticut,1.0
+2011,Delaware,0.0
+2011,Florida,0.0
+2011,Georgia,0.0
+2011,Hawaii,1.0
+2011,Idaho,0.0
+2011,Illinois,1.0
+2011,Indiana,0.0
+2011,Iowa,1.0
+2011,Kansas,0.0
+2011,Kentucky,0.0
+2011,Louisiana,0.0
+2011,Maine,0.0
+2011,Maryland,0.0
+2011,Massachusetts,1.0
+2011,Michigan,1.0
+2011,Minnesota,0.0
+2011,Mississippi,0.0
+2011,Missouri,0.0
+2011,Montana,0.0
+2011,Nebraska,1.0
+2011,Nevada,0.0
+2011,New Hampshire,0.0
+2011,New Jersey,1.0
+2011,New Mexico,0.0
+2011,New York,1.0
+2011,North Carolina,1.0
+2011,North Dakota,0.0
+2011,Ohio,0.0
+2011,Oklahoma,0.0
+2011,Oregon,0.0
+2011,Pennsylvania,0.0
+2011,Rhode Island,1.0
+2011,South Carolina,0.0
+2011,South Dakota,0.0
+2011,Tennessee,0.0
+2011,Texas,0.0
+2011,Utah,0.0
+2011,Vermont,0.0
+2011,Virginia,0.0
+2011,Washington,0.0
+2011,West Virginia,0.0
+2011,Wisconsin,0.0
+2011,Wyoming,0.0
+2012,Alabama,0.0
+2012,Alaska,0.0
+2012,Arizona,0.0
+2012,Arkansas,0.0
+2012,California,1.0
+2012,Colorado,0.0
+2012,Connecticut,1.0
+2012,Delaware,0.0
+2012,Florida,0.0
+2012,Georgia,0.0
+2012,Hawaii,1.0
+2012,Idaho,0.0
+2012,Illinois,1.0
+2012,Indiana,0.0
+2012,Iowa,1.0
+2012,Kansas,0.0
+2012,Kentucky,0.0
+2012,Louisiana,0.0
+2012,Maine,0.0
+2012,Maryland,0.0
+2012,Massachusetts,1.0
+2012,Michigan,1.0
+2012,Minnesota,0.0
+2012,Mississippi,0.0
+2012,Missouri,0.0
+2012,Montana,0.0
+2012,Nebraska,1.0
+2012,Nevada,0.0
+2012,New Hampshire,0.0
+2012,New Jersey,1.0
+2012,New Mexico,0.0
+2012,New York,1.0
+2012,North Carolina,1.0
+2012,North Dakota,0.0
+2012,Ohio,0.0
+2012,Oklahoma,0.0
+2012,Oregon,0.0
+2012,Pennsylvania,0.0
+2012,Rhode Island,1.0
+2012,South Carolina,0.0
+2012,South Dakota,0.0
+2012,Tennessee,0.0
+2012,Texas,0.0
+2012,Utah,0.0
+2012,Vermont,0.0
+2012,Virginia,0.0
+2012,Washington,0.0
+2012,West Virginia,0.0
+2012,Wisconsin,0.0
+2012,Wyoming,0.0
+2013,Alabama,0.0
+2013,Alaska,0.0
+2013,Arizona,0.0
+2013,Arkansas,0.0
+2013,California,1.0
+2013,Colorado,0.0
+2013,Connecticut,1.0
+2013,Delaware,0.0
+2013,Florida,0.0
+2013,Georgia,0.0
+2013,Hawaii,1.0
+2013,Idaho,0.0
+2013,Illinois,1.0
+2013,Indiana,0.0
+2013,Iowa,1.0
+2013,Kansas,0.0
+2013,Kentucky,0.0
+2013,Louisiana,0.0
+2013,Maine,0.0
+2013,Maryland,1.0
+2013,Massachusetts,1.0
+2013,Michigan,1.0
+2013,Minnesota,0.0
+2013,Mississippi,0.0
+2013,Missouri,0.0
+2013,Montana,0.0
+2013,Nebraska,1.0
+2013,Nevada,0.0
+2013,New Hampshire,0.0
+2013,New Jersey,1.0
+2013,New Mexico,0.0
+2013,New York,1.0
+2013,North Carolina,1.0
+2013,North Dakota,0.0
+2013,Ohio,0.0
+2013,Oklahoma,0.0
+2013,Oregon,0.0
+2013,Pennsylvania,0.0
+2013,Rhode Island,1.0
+2013,South Carolina,0.0
+2013,South Dakota,0.0
+2013,Tennessee,0.0
+2013,Texas,0.0
+2013,Utah,0.0
+2013,Vermont,0.0
+2013,Virginia,0.0
+2013,Washington,0.0
+2013,West Virginia,0.0
+2013,Wisconsin,0.0
+2013,Wyoming,0.0
+2014,Alabama,0.0
+2014,Alaska,0.0
+2014,Arizona,0.0
+2014,Arkansas,0.0
+2014,California,1.0
+2014,Colorado,0.0
+2014,Connecticut,1.0
+2014,Delaware,0.0
+2014,Florida,0.0
+2014,Georgia,0.0
+2014,Hawaii,1.0
+2014,Idaho,0.0
+2014,Illinois,1.0
+2014,Indiana,0.0
+2014,Iowa,1.0
+2014,Kansas,0.0
+2014,Kentucky,0.0
+2014,Louisiana,0.0
+2014,Maine,0.0
+2014,Maryland,1.0
+2014,Massachusetts,1.0
+2014,Michigan,1.0
+2014,Minnesota,0.0
+2014,Mississippi,0.0
+2014,Missouri,0.0
+2014,Montana,0.0
+2014,Nebraska,1.0
+2014,Nevada,0.0
+2014,New Hampshire,0.0
+2014,New Jersey,1.0
+2014,New Mexico,0.0
+2014,New York,1.0
+2014,North Carolina,1.0
+2014,North Dakota,0.0
+2014,Ohio,0.0
+2014,Oklahoma,0.0
+2014,Oregon,0.0
+2014,Pennsylvania,0.0
+2014,Rhode Island,1.0
+2014,South Carolina,0.0
+2014,South Dakota,0.0
+2014,Tennessee,0.0
+2014,Texas,0.0
+2014,Utah,0.0
+2014,Vermont,0.0
+2014,Virginia,0.0
+2014,Washington,0.0
+2014,West Virginia,0.0
+2014,Wisconsin,0.0
+2014,Wyoming,0.0
+2015,Alabama,0.0
+2015,Alaska,0.0
+2015,Arizona,0.0
+2015,Arkansas,0.0
+2015,California,1.0
+2015,Colorado,0.0
+2015,Connecticut,1.0
+2015,Delaware,0.0
+2015,Florida,0.0
+2015,Georgia,0.0
+2015,Hawaii,1.0
+2015,Idaho,0.0
+2015,Illinois,1.0
+2015,Indiana,0.0
+2015,Iowa,1.0
+2015,Kansas,0.0
+2015,Kentucky,0.0
+2015,Louisiana,0.0
+2015,Maine,0.0
+2015,Maryland,1.0
+2015,Massachusetts,1.0
+2015,Michigan,1.0
+2015,Minnesota,0.0
+2015,Mississippi,0.0
+2015,Missouri,0.0
+2015,Montana,0.0
+2015,Nebraska,1.0
+2015,Nevada,0.0
+2015,New Hampshire,0.0
+2015,New Jersey,1.0
+2015,New Mexico,0.0
+2015,New York,1.0
+2015,North Carolina,1.0
+2015,North Dakota,0.0
+2015,Ohio,0.0
+2015,Oklahoma,0.0
+2015,Oregon,0.0
+2015,Pennsylvania,0.0
+2015,Rhode Island,1.0
+2015,South Carolina,0.0
+2015,South Dakota,0.0
+2015,Tennessee,0.0
+2015,Texas,0.0
+2015,Utah,0.0
+2015,Vermont,0.0
+2015,Virginia,0.0
+2015,Washington,0.0
+2015,West Virginia,0.0
+2015,Wisconsin,0.0
+2015,Wyoming,0.0
+2016,Alabama,0.0
+2016,Alaska,0.0
+2016,Arizona,0.0
+2016,Arkansas,0.0
+2016,California,1.0
+2016,Colorado,0.0
+2016,Connecticut,1.0
+2016,Delaware,0.0
+2016,Florida,0.0
+2016,Georgia,0.0
+2016,Hawaii,1.0
+2016,Idaho,0.0
+2016,Illinois,1.0
+2016,Indiana,0.0
+2016,Iowa,1.0
+2016,Kansas,0.0
+2016,Kentucky,0.0
+2016,Louisiana,0.0
+2016,Maine,0.0
+2016,Maryland,1.0
+2016,Massachusetts,1.0
+2016,Michigan,1.0
+2016,Minnesota,0.0
+2016,Mississippi,0.0
+2016,Missouri,0.0
+2016,Montana,0.0
+2016,Nebraska,1.0
+2016,Nevada,0.0
+2016,New Hampshire,0.0
+2016,New Jersey,1.0
+2016,New Mexico,0.0
+2016,New York,1.0
+2016,North Carolina,1.0
+2016,North Dakota,0.0
+2016,Ohio,0.0
+2016,Oklahoma,0.0
+2016,Oregon,0.0
+2016,Pennsylvania,0.0
+2016,Rhode Island,1.0
+2016,South Carolina,0.0
+2016,South Dakota,0.0
+2016,Tennessee,0.0
+2016,Texas,0.0
+2016,Utah,0.0
+2016,Vermont,0.0
+2016,Virginia,0.0
+2016,Washington,0.0
+2016,West Virginia,0.0
+2016,Wisconsin,0.0
+2016,Wyoming,0.0
+2017,Alabama,0.0
+2017,Alaska,0.0
+2017,Arizona,0.0
+2017,Arkansas,0.0
+2017,California,1.0
+2017,Colorado,0.0
+2017,Connecticut,1.0
+2017,Delaware,0.0
+2017,Florida,0.0
+2017,Georgia,0.0
+2017,Hawaii,1.0
+2017,Idaho,0.0
+2017,Illinois,1.0
+2017,Indiana,0.0
+2017,Iowa,1.0
+2017,Kansas,0.0
+2017,Kentucky,0.0
+2017,Louisiana,0.0
+2017,Maine,0.0
+2017,Maryland,1.0
+2017,Massachusetts,1.0
+2017,Michigan,1.0
+2017,Minnesota,0.0
+2017,Mississippi,0.0
+2017,Missouri,0.0
+2017,Montana,0.0
+2017,Nebraska,1.0
+2017,Nevada,0.0
+2017,New Hampshire,0.0
+2017,New Jersey,1.0
+2017,New Mexico,0.0
+2017,New York,1.0
+2017,North Carolina,1.0
+2017,North Dakota,0.0
+2017,Ohio,0.0
+2017,Oklahoma,0.0
+2017,Oregon,0.0
+2017,Pennsylvania,0.0
+2017,Rhode Island,1.0
+2017,South Carolina,0.0
+2017,South Dakota,0.0
+2017,Tennessee,0.0
+2017,Texas,0.0
+2017,Utah,0.0
+2017,Vermont,0.0
+2017,Virginia,0.0
+2017,Washington,0.0
+2017,West Virginia,0.0
+2017,Wisconsin,0.0
+2017,Wyoming,0.0
+2018,Alabama,0.0
+2018,Alaska,0.0
+2018,Arizona,0.0
+2018,Arkansas,0.0
+2018,California,1.0
+2018,Colorado,0.0
+2018,Connecticut,1.0
+2018,Delaware,0.0
+2018,Florida,0.0
+2018,Georgia,0.0
+2018,Hawaii,1.0
+2018,Idaho,0.0
+2018,Illinois,1.0
+2018,Indiana,0.0
+2018,Iowa,1.0
+2018,Kansas,0.0
+2018,Kentucky,0.0
+2018,Louisiana,0.0
+2018,Maine,0.0
+2018,Maryland,1.0
+2018,Massachusetts,1.0
+2018,Michigan,1.0
+2018,Minnesota,0.0
+2018,Mississippi,0.0
+2018,Missouri,0.0
+2018,Montana,0.0
+2018,Nebraska,1.0
+2018,Nevada,0.0
+2018,New Hampshire,0.0
+2018,New Jersey,1.0
+2018,New Mexico,0.0
+2018,New York,1.0
+2018,North Carolina,1.0
+2018,North Dakota,0.0
+2018,Ohio,0.0
+2018,Oklahoma,0.0
+2018,Oregon,0.0
+2018,Pennsylvania,0.0
+2018,Rhode Island,1.0
+2018,South Carolina,0.0
+2018,South Dakota,0.0
+2018,Tennessee,0.0
+2018,Texas,0.0
+2018,Utah,0.0
+2018,Vermont,0.0
+2018,Virginia,0.0
+2018,Washington,0.0
+2018,West Virginia,0.0
+2018,Wisconsin,0.0
+2018,Wyoming,0.0
+2019,Alabama,0.0
+2019,Alaska,0.0
+2019,Arizona,0.0
+2019,Arkansas,0.0
+2019,California,1.0
+2019,Colorado,0.0
+2019,Connecticut,1.0
+2019,Delaware,0.0
+2019,Florida,0.0
+2019,Georgia,0.0
+2019,Hawaii,1.0
+2019,Idaho,0.0
+2019,Illinois,1.0
+2019,Indiana,0.0
+2019,Iowa,1.0
+2019,Kansas,0.0
+2019,Kentucky,0.0
+2019,Louisiana,0.0
+2019,Maine,0.0
+2019,Maryland,1.0
+2019,Massachusetts,1.0
+2019,Michigan,1.0
+2019,Minnesota,0.0
+2019,Mississippi,0.0
+2019,Missouri,0.0
+2019,Montana,0.0
+2019,Nebraska,1.0
+2019,Nevada,0.0
+2019,New Hampshire,0.0
+2019,New Jersey,1.0
+2019,New Mexico,0.0
+2019,New York,1.0
+2019,North Carolina,1.0
+2019,North Dakota,0.0
+2019,Ohio,0.0
+2019,Oklahoma,0.0
+2019,Oregon,0.0
+2019,Pennsylvania,0.0
+2019,Rhode Island,1.0
+2019,South Carolina,0.0
+2019,South Dakota,0.0
+2019,Tennessee,0.0
+2019,Texas,0.0
+2019,Utah,0.0
+2019,Vermont,0.0
+2019,Virginia,0.0
+2019,Washington,0.0
+2019,West Virginia,0.0
+2019,Wisconsin,0.0
+2019,Wyoming,0.0
+2020,Alabama,0.0
+2020,Alaska,0.0
+2020,Arizona,0.0
+2020,Arkansas,0.0
+2020,California,1.0
+2020,Colorado,0.0
+2020,Connecticut,1.0
+2020,Delaware,0.0
+2020,Florida,0.0
+2020,Georgia,0.0
+2020,Hawaii,1.0
+2020,Idaho,0.0
+2020,Illinois,1.0
+2020,Indiana,0.0
+2020,Iowa,1.0
+2020,Kansas,0.0
+2020,Kentucky,0.0
+2020,Louisiana,0.0
+2020,Maine,0.0
+2020,Maryland,1.0
+2020,Massachusetts,1.0
+2020,Michigan,1.0
+2020,Minnesota,0.0
+2020,Mississippi,0.0
+2020,Missouri,0.0
+2020,Montana,0.0
+2020,Nebraska,1.0
+2020,Nevada,0.0
+2020,New Hampshire,0.0
+2020,New Jersey,1.0
+2020,New Mexico,0.0
+2020,New York,1.0
+2020,North Carolina,1.0
+2020,North Dakota,0.0
+2020,Ohio,0.0
+2020,Oklahoma,0.0
+2020,Oregon,0.0
+2020,Pennsylvania,0.0
+2020,Rhode Island,1.0
+2020,South Carolina,0.0
+2020,South Dakota,0.0
+2020,Tennessee,0.0
+2020,Texas,0.0
+2020,Utah,0.0
+2020,Vermont,0.0
+2020,Virginia,0.0
+2020,Washington,0.0
+2020,West Virginia,0.0
+2020,Wisconsin,0.0
+2020,Wyoming,0.0
+2021,Alabama,0.0
+2021,Alaska,0.0
+2021,Arizona,0.0
+2021,Arkansas,0.0
+2021,California,1.0
+2021,Colorado,0.0
+2021,Connecticut,1.0
+2021,Delaware,0.0
+2021,Florida,0.0
+2021,Georgia,0.0
+2021,Hawaii,1.0
+2021,Idaho,0.0
+2021,Illinois,1.0
+2021,Indiana,0.0
+2021,Iowa,1.0
+2021,Kansas,0.0
+2021,Kentucky,0.0
+2021,Louisiana,0.0
+2021,Maine,0.0
+2021,Maryland,1.0
+2021,Massachusetts,1.0
+2021,Michigan,1.0
+2021,Minnesota,0.0
+2021,Mississippi,0.0
+2021,Missouri,0.0
+2021,Montana,0.0
+2021,Nebraska,1.0
+2021,Nevada,0.0
+2021,New Hampshire,0.0
+2021,New Jersey,1.0
+2021,New Mexico,0.0
+2021,New York,1.0
+2021,North Carolina,1.0
+2021,North Dakota,0.0
+2021,Ohio,0.0
+2021,Oklahoma,0.0
+2021,Oregon,0.0
+2021,Pennsylvania,0.0
+2021,Rhode Island,1.0
+2021,South Carolina,0.0
+2021,South Dakota,0.0
+2021,Tennessee,0.0
+2021,Texas,0.0
+2021,Utah,0.0
+2021,Vermont,0.0
+2021,Virginia,0.0
+2021,Washington,0.0
+2021,West Virginia,0.0
+2021,Wisconsin,0.0
+2021,Wyoming,0.0
+2022,Alabama,0.0
+2022,Alaska,0.0
+2022,Arizona,0.0
+2022,Arkansas,0.0
+2022,California,1.0
+2022,Colorado,0.0
+2022,Connecticut,1.0
+2022,Delaware,0.0
+2022,Florida,0.0
+2022,Georgia,0.0
+2022,Hawaii,1.0
+2022,Idaho,0.0
+2022,Illinois,1.0
+2022,Indiana,0.0
+2022,Iowa,1.0
+2022,Kansas,0.0
+2022,Kentucky,0.0
+2022,Louisiana,0.0
+2022,Maine,0.0
+2022,Maryland,1.0
+2022,Massachusetts,1.0
+2022,Michigan,1.0
+2022,Minnesota,0.0
+2022,Mississippi,0.0
+2022,Missouri,0.0
+2022,Montana,0.0
+2022,Nebraska,1.0
+2022,Nevada,0.0
+2022,New Hampshire,0.0
+2022,New Jersey,1.0
+2022,New Mexico,0.0
+2022,New York,1.0
+2022,North Carolina,1.0
+2022,North Dakota,0.0
+2022,Ohio,0.0
+2022,Oklahoma,0.0
+2022,Oregon,0.0
+2022,Pennsylvania,0.0
+2022,Rhode Island,1.0
+2022,South Carolina,0.0
+2022,South Dakota,0.0
+2022,Tennessee,0.0
+2022,Texas,0.0
+2022,Utah,0.0
+2022,Vermont,0.0
+2022,Virginia,0.0
+2022,Washington,0.0
+2022,West Virginia,0.0
+2022,Wisconsin,0.0
+2022,Wyoming,0.0
+2023,Alabama,0.0
+2023,Alaska,0.0
+2023,Arizona,0.0
+2023,Arkansas,0.0
+2023,California,1.0
+2023,Colorado,0.0
+2023,Connecticut,1.0
+2023,Delaware,0.0
+2023,Florida,0.0
+2023,Georgia,0.0
+2023,Hawaii,1.0
+2023,Idaho,0.0
+2023,Illinois,1.0
+2023,Indiana,0.0
+2023,Iowa,1.0
+2023,Kansas,0.0
+2023,Kentucky,0.0
+2023,Louisiana,0.0
+2023,Maine,0.0
+2023,Maryland,1.0
+2023,Massachusetts,1.0
+2023,Michigan,1.0
+2023,Minnesota,0.0
+2023,Mississippi,0.0
+2023,Missouri,0.0
+2023,Montana,0.0
+2023,Nebraska,1.0
+2023,Nevada,0.0
+2023,New Hampshire,0.0
+2023,New Jersey,1.0
+2023,New Mexico,0.0
+2023,New York,1.0
+2023,North Carolina,1.0
+2023,North Dakota,0.0
+2023,Ohio,0.0
+2023,Oklahoma,0.0
+2023,Oregon,0.0
+2023,Pennsylvania,0.0
+2023,Rhode Island,1.0
+2023,South Carolina,0.0
+2023,South Dakota,0.0
+2023,Tennessee,0.0
+2023,Texas,0.0
+2023,Utah,0.0
+2023,Vermont,0.0
+2023,Virginia,0.0
+2023,Washington,0.0
+2023,West Virginia,0.0
+2023,Wisconsin,0.0
+2023,Wyoming,0.0
+2024,Alabama,0.0
+2024,Alaska,0.0
+2024,Arizona,0.0
+2024,Arkansas,0.0
+2024,California,1.0
+2024,Colorado,0.0
+2024,Connecticut,1.0
+2024,Delaware,0.0
+2024,Florida,0.0
+2024,Georgia,0.0
+2024,Hawaii,1.0
+2024,Idaho,0.0
+2024,Illinois,1.0
+2024,Indiana,0.0
+2024,Iowa,1.0
+2024,Kansas,0.0
+2024,Kentucky,0.0
+2024,Louisiana,0.0
+2024,Maine,0.0
+2024,Maryland,1.0
+2024,Massachusetts,1.0
+2024,Michigan,1.0
+2024,Minnesota,0.0
+2024,Mississippi,0.0
+2024,Missouri,0.0
+2024,Montana,0.0
+2024,Nebraska,1.0
+2024,Nevada,0.0
+2024,New Hampshire,0.0
+2024,New Jersey,1.0
+2024,New Mexico,0.0
+2024,New York,1.0
+2024,North Carolina,1.0
+2024,North Dakota,0.0
+2024,Ohio,0.0
+2024,Oklahoma,0.0
+2024,Oregon,0.0
+2024,Pennsylvania,0.0
+2024,Rhode Island,1.0
+2024,South Carolina,0.0
+2024,South Dakota,0.0
+2024,Tennessee,0.0
+2024,Texas,0.0
+2024,Utah,0.0
+2024,Vermont,0.0
+2024,Virginia,0.0
+2024,Washington,0.0
+2024,West Virginia,0.0
+2024,Wisconsin,0.0
+2024,Wyoming,0.0

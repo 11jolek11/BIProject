@@ -17,9 +17,9 @@ def get_gun_ownership(to_csv=False):
 
     if to_csv:
         csv_name = 'gun_ownership_dim.csv'
-        gun_ownership.to_csv(f'../../data/dimensions/{csv_name}')
+        gun_ownership.to_csv(f'../../data/dimensions/{csv_name}', index=False)
 
     return gun_ownership
 
 
-# get_gun_ownership(to_csv=True)
+get_gun_ownership(to_csv=True)

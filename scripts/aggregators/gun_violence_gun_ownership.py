@@ -8,7 +8,8 @@ import pandas as pd
 gun_violence = pd.read_csv('../../data/dimensions/gun_violence_fact.csv')
 gun_ownership = pd.read_csv('../../data/dimensions/gun_ownership_dim.csv')
 
-gun_violence_gun_ownership = pd.merge(gun_violence, gun_ownership, left_on=['State', 'Incident_year'], right_on=['State', 'Year'], how="inner")
+gun_violence_gun_ownership = pd.merge(gun_violence, gun_ownership, left_on=['State', 'Incident_year'], right_on=['State', 'Year'], how="inner", suffixes=('', '_y'))
+gun_violence_gun_ownership.drop(gun_violence_gun_ownership.filter(regex='_y$').columns, axis=1, inplace=True)
 
-gun_violence_gun_ownership.to_csv('../../data/aggregators/gun_violence_gun_ownership.csv')
+gun_violence_gun_ownership.to_csv('../../data/aggregators/gun_violence_gun_ownership.csv', index=False)
 print(gun_violence_gun_ownership)

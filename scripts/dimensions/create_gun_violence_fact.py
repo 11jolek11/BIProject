@@ -21,6 +21,8 @@ def get_gun_violence(to_csv=False):
 
     if to_csv:
         csv_name = 'gun_violence_fact.csv'
-        gun_violence.to_csv(f'../../data/dimensions/{csv_name}')
+        gun_violence.to_csv(f'../../data/dimensions/{csv_name}', index=False)
 
     return gun_violence
+
+get_gun_violence(to_csv=True)
