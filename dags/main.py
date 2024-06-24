@@ -126,53 +126,35 @@ def extract_from_csv():
                     filter(re.compile(pattern).match,
                            os.listdir(str(path)))
                     )
-        # elif extensions:
-        #     scanned = os.scandir(path)
-        #     for extension in extensions:
-        #         for obj in scanned:
-        #             if obj.is_file() and extension in obj.name:
-        #                 file_paths.append(obj.path)
 
     for file in file_paths:
-        # print(file)
-        # raise RuntimeError("gg")
         if ".csv" in str(file):
             df = pd.read_csv("./data/" + file)
             df_list.append(df)
-            # pd.concat([return_df, df], ignore_index=True)
-            # print(len(return_df.index))
             continue
         if ".xlsx" in str(file):
             df = pd.read_excel("./data/" + file)
             df_list.append(df)
-            # pd.concat([return_df, df], ignore_index=True)
             continue
 
-    # return_df.drop(colums=drop_columns, in_place=True)
     return_df = pd.concat(df_list, ignore_index=True)
     global_run_id = str(uuid4())
     file_id = create_file_id(global_run_id)
     return_df.to_csv(f"{staging_area_path}//{file_id}.csv")
 
-    # print(f"{staging_area_path}//{run_id}.csv")
     return file_id
 
 
 def unify_date_format(id):
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
     print(extracted_data.columns)
-    # target_format = "%Y %m %d"
     for idx in extracted_data.index:
         target_format = "%Y-%m-%d %H:%M:%S"
         if str(extracted_data.loc[idx, "Incident Date"][0]).isupper() and str(extracted_data.loc[idx, "Incident Date"][0]).isalpha():
             target_format = "%B %d, %Y"
 
-        # print(f"{str(extracted_data.loc[idx, "Incident Date"][0])} -- {target_format}")
         extracted_data.loc[idx, "Incident Date"] = pd.to_datetime(extracted_data.loc[idx, "Incident Date"], format=target_format).strftime("%Y-%m-%d")
 
-        # extracted_data.loc[idx, "Incident Date"].strftime("%Y-%m-%d")
-        # print(extracted_data.loc[idx, "Incident Date"])
-    # extracted_data["Incident Date"] = extracted_data["Incident Date"].dt.strftime()
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     print(f"{staging_area_path}/{id}.csv")
     return id
@@ -221,19 +203,12 @@ def get_coordinates(id):
                 print(f"REQUEST ERROR: {resp} - {resp.text}")
 
         else:
-            # return 1
             print("get from cache")
             temp_location = google_requests_cache[str(google_payload)]
             coords_lat[location_idx] = [temp_location["latitude"]]
             coords_lon[location_idx] = [temp_location["longitude"]]
-            # return 1
     extracted_data["Lat"] = coords_lat
     extracted_data["Lon"] = coords_lon
-
-    # if not os.path.isfile(save_file_google):
-        # save = json.dumps(google_requests_cache)
-        # with open(save_file_google, "w") as file:
-        #     file.write(save)
 
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     return id
@@ -254,23 +229,17 @@ def extract_weather(id):
     for data_idx in extracted_data.index:
         print(f"Getting {data_idx} weather")
         target_date = extracted_data.loc[data_idx, "Incident Date"]
-        # print(target_date)
         weather_url = f'https://api.openweathermap.org/data/3.0/onecall/day_summary?lat={lats[data_idx]}&lon={lons[data_idx]}&date={target_date}&appid={openweather_api_key}'
         default_values = [lats[data_idx], lats[data_idx], extracted_data.loc[data_idx, "Incident Date"], 0, 0, 0, 0, 0.0, 0.0, 0]
         temp_weather = dict()
 
         for key, value in zip(expected_columns, default_values):
             temp_weather[key] = [value]
-        # temp_df = pd.DataFrame(columns=expected_columns)
         if lats[data_idx] != 0.0 and lons[data_idx] != 0.0:
             if weather_url not in weather_requests_cache.keys():
                 try:
                     resp = requests.get(url=weather_url)
                     if resp.status_code == 200 and resp.json():
-                        # temp_weather = resp.json()
-                        # temp_weather = dict(flatdict.FlatDict(temp_weather, delimiter="_"))
-                        # temp_weather = flatten(temp_weather)
-
                         temp_dict = resp.json().copy()
                         keys_collection = list(temp_dict.keys()).copy()
                         for key in keys_collection:
@@ -280,7 +249,6 @@ def extract_weather(id):
                         for key, value in flatten(temp_dict).items():
                             temp_weather[key] = [value]
 
-                        # print("{} @@ {}", extracted_data.loc[data_idx, "Incident Date"], temp_weather["date"])
                         if temp_weather["lat"] != lats[data_idx] or temp_weather["lon"] != lons[data_idx]:
                             print("Error {} -- {} || {} -- {} ".format(temp_weather["lat"], lats[data_idx], temp_weather["lon"], lons[data_idx]))
 
@@ -303,18 +271,9 @@ def extract_weather(id):
 
         print(temp_weather)
         if list(temp_weather.keys()) == expected_columns:
-            # FIXME(11jolek11):
             df_list.append(pd.DataFrame(temp_weather, columns=expected_columns))
         else:
-            # {'lat': 34.0055533, 'lon': -81.029541, 'date': '2020-12-26',
-            # 'cloud_cover_afternoon': 1.0, 'humidity_afternoon': 40.0, 'precipitation_total': 0.0, 'pressure_afternoon': 1025.0,
-            # 'wind_max_speed': 5.7, 'wind_max_direction': 270.0}
             print("Columns error")
-
-    # if not os.path.isfile(save_file_weather):
-        # save = json.dumps(weather_requests_cache)
-        # with open(save_file_weather, "w") as file:
-        #     file.write(save)
 
     weather_df = pd.concat([*df_list, weather_df], ignore_index=True)
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
