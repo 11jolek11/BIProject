@@ -229,11 +229,13 @@ def extract_weather(id):
     ttt = list(extracted_data.columns).copy()
     # TODO(11jolek11): Add checks,, if lat and lon in request == lat and lon in response
     expected_columns = ["lat", "lon", "date", "cloud_cover_afternoon", "humidity_afternoon",
-                                       "precipitation_total", "pressure_afternoon", "temperature_max", "wind_max_speed", "wind_max_direction"]
+                                       "precipitation_total", "pressure_afternoon", "temperature", "wind_max_speed", "wind_max_direction"]
     weather_df = pd.DataFrame(columns=expected_columns)
     lats = extracted_data["Lat"].values
     lons = extracted_data["Lon"].values
     df_list = []
+
+    tttt = 0
 
     for data_idx in extracted_data.index:
         # print(f"Getting {data_idx} weather")
@@ -250,19 +252,26 @@ def extract_weather(id):
                     resp = requests.get(url=weather_url)
                     if resp.status_code == 200 and resp.json():
                         temp_dict = resp.json().copy()
-                        # print(temp_dict["temperature"])
+                        with open("weather_raw_cache.json", "a") as file:
+                            file.write(json.dumps({weather_url: temp_dict}))
+                        print(temp_dict)
                         keys_collection = list(temp_dict.keys()).copy()
                         for key in keys_collection:
+                            if key.startswith("temperature_"):
+                                tttt = temp_dict[key]
+                                temp_dict["temperature"] = temp_dict[key]
+                                del temp_dict[key]
                             # print(f"{key}")
                             # FIXME(11jolek11): Fix this!
                             if key not in weather_df.columns:
-                                if key != "temperature":
-                                    del temp_dict[key]
+                                del temp_dict[key]
+                                # if key != "temperature":
+                                    # del temp_dict[key]
 
                         for key, value in flatten(temp_dict).items():
                             # FIXME(11jolek11): Fix this!
-                            if (key.startswith("temperature") and not key.endswith("max")) or key == "temperature":
-                                continue
+                            # if (key.startswith("temperature") and not key.endswith("max")) or key == "temperature":
+                            #     continue
                             temp_weather[key] = [value]
                         if temp_weather["lat"] != lats[data_idx] or temp_weather["lon"] != lons[data_idx]:
                             print("Error {} -- {} || {} -- {} ".format(temp_weather["lat"], lats[data_idx], temp_weather["lon"], lons[data_idx]))
@@ -286,13 +295,13 @@ def extract_weather(id):
                         # Adding value as [value]
                         temp_weather[key] = [value]
 
-        # print(temp_weather.keys())
+        print(f"{temp_weather["temperature"]} -- {tttt}")
         if list(temp_weather.keys()) == expected_columns:
             df_list.append(pd.DataFrame(temp_weather, columns=expected_columns))
         else:
             # pass
             print("Columns error")
-
+        return 1
     weather_df = pd.concat([*df_list, weather_df], ignore_index=True)
     # extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     weather_id = create_file_id(global_run_id)
