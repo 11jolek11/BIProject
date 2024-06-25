@@ -68,7 +68,8 @@ else:
 weather_raw = dict()
 if os.path.isfile(save_file_raw):
     with open(save_file_raw, "r") as file:
-        weather_raw = json.loads(file.read())
+        # weather_raw = json.loads(file.read())
+        weather_raw = dict()
 else:
     weather_raw = dict()
 
@@ -235,6 +236,8 @@ def extract_weather(id):
     # TODO(11jolek11): What to do when lon and lat values are missing (when lon and lat == 0.0 ) because of fail in prev node?
     # TODO(11jolek11): What to do when lon and lat values are missing because of lack data on OpenWeather portal?
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
+    print(extracted_data.columns)
+    # return 1
     # TODO(11jolek11): Add checks,, if lat and lon in request == lat and lon in response
     expected_columns = ["lat", "lon", "date", "cloud_cover_afternoon", "humidity_afternoon",
                                        "precipitation_total", "pressure_afternoon", "temperature", "wind_max_speed", "wind_max_direction"]
@@ -306,7 +309,7 @@ def extract_weather(id):
                 for key, value in weather_requests_cache[weather_url].items():
                     if key in expected_columns:
                         # Adding value as [value]
-                        temp_weather[key] = [value]
+                        temp_weather[key] = value
 
         # print(f"{temp_weather["temperature"]} -- {tttt}")
         # if list(temp_weather.keys()) == expected_columns:
@@ -318,6 +321,7 @@ def extract_weather(id):
         # print(f">> {temp}")
         df_list.append(temp)
     weather_df = pd.concat([*df_list, weather_df], ignore_index=True)
+    # weather_df["Incident ID"] = extracted_data["Incident ID"].to_numpy()
     # extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     weather_id = create_file_id(global_run_id)
     weather_df.to_csv(f"{staging_area_path}/{weather_id}.csv")
