@@ -97,7 +97,7 @@ def is_city(city):
 def extract_from_combined_csv():
     data_dict = Variable.get("data", deserialize_json=True)
 
-    file_path = data_dict["path"]
+    file_path = data_dict["path"][0] + "combined.csv"
     # TODO(11jolek11): Fill drop_columns param
     # drop_columns: List[str] = []
     return_df = pd.read_csv(str(file_path))
@@ -386,11 +386,12 @@ def add_temp_year_from_date(ids_dict):
 
 with DAG(
         dag_id="shootings_dag",
-        schedule_interval="@daily",
+        schedule_interval=None,
         catchup=False,
-        start_date=datetime.datetime(2023, 3, 5)
+        start_date=datetime.datetime(2024, 6, 25)
         ) as our_dag:
-    get_csv = extract_from_csv()
+    get_csv = extract_from_combined_csv()
+    # get_csv = extract_from_csv()
     dates = unify_date_format(get_csv)
     coords = get_coordinates(dates)
     wea = extract_weather(coords)
