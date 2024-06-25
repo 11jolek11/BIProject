@@ -74,6 +74,7 @@ greenlet==3.0.3
 grpcio==1.63.0
 gunicorn==22.0.0
 h11==0.14.0
+holidays==0.51
 httpcore==0.16.3
 httpx==0.23.3
 idna==3.7
