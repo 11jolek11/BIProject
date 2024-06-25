@@ -322,6 +322,7 @@ def extract_weather(id):
         df_list.append(temp)
     weather_df = pd.concat([*df_list, weather_df], ignore_index=True)
     weather_df["Address"] = extracted_data["Address"].to_numpy().copy()
+    weather_df["Incident ID"] = extracted_data["Incident ID"].to_numpy().copy()
     # weather_df["Incident ID"] = extracted_data["Incident ID"].to_numpy()
     # extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     weather_id = create_file_id(global_run_id)
