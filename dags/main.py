@@ -22,7 +22,8 @@ import requests
 import json
 from uuid import uuid4
 from random import randint
-
+from airflow.hooks.base import BaseHook
+from sqlalchemy import create_engine
 # AIRFLOW_VAR_PROJECT_HOME='$HOME/Projects/BIProjects'
 
 download_path = "https://github.com/11jolek11/BIProject/raw/main/data.zip" 
@@ -153,6 +154,7 @@ def extract_from_csv():
     file_id = create_file_id(global_run_id)
     return_df.to_csv(f"{staging_area_path}//{file_id}.csv")
 
+    Variable.set(key="row_no", value=len(return_df.index))
     return file_id
 
 @task()
@@ -369,6 +371,86 @@ def add_temp_year_from_date(ids_dict):
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     return ids_dict
 
+@task
+def add_time_dim(ids_dict):
+    gun_violence_dates = pd.read_csv(f"{staging_area_path}/{ids_dict["extracted"]}.csv")['Incident Date']
+    dates = []
+    for date in gun_violence_dates.iloc[[0, -1]]:
+        dates.append(date.split(" ")[0])
+
+    date_range = pd.date_range(start=dates[0], end=dates[1])
+
+    df = pd.DataFrame(date_range, columns=['Date'])
+
+    df['Year'] = df['Date'].dt.year
+    df['Month'] = df['Date'].dt.month
+    df['Day'] = df['Date'].dt.day
+    df['DayOfWeek'] = df['Date'].dt.dayofweek
+    df['Decade'] = (df['Year'] // 10) * 10
+    df['Quarter'] = df['Date'].dt.quarter
+    df['DayOfYear'] = df['Date'].dt.dayofyear
+    df['WeekOfYear'] = df['Date'].dt.isocalendar().week
+    df['DayName'] = df['Date'].dt.day_name()
+    df['MonthName'] = df['Date'].dt.month_name()
+    df['IsWeekend'] = df['Date'].dt.dayofweek >= 5
+
+    # us_holidays = holidays.US()
+    us_holidays = holidays.country_holidays("US")
+    df['IsHoliday'] = df['Date'].isin(us_holidays)
+
+    time_id = create_file_id(global_run_id)
+    df.to_csv(f"{staging_area_path}/{time_id}.csv")
+    ids_dict["time"] = time_id
+    print(ids_dict)
+    return ids_dict
+
+@task
+def add_ownership(ids_dict):
+    file_gun_ownership = '../data/ownership.xlsx'
+
+    gun_ownership = pd.read_excel(file_gun_ownership)
+    gun_ownership = gun_ownership[['Year', 'STATE', 'permit']]
+    gun_ownership = gun_ownership.rename(columns={"STATE": "State"})
+    gun_ownership['Year'] = gun_ownership['Year'].astype(int)
+
+    states = gun_ownership['State'].unique()
+    years = list(range(gun_ownership['Year'].min(), 2025))
+    all_combinations = pd.MultiIndex.from_product([years, states], names=['Year', 'State']).to_frame(index=False)
+    gun_ownership = all_combinations.merge(gun_ownership, on=['Year', 'State'], how='left')
+    gun_ownership['permit'] = gun_ownership.groupby('State')['permit'].ffill().bfill()
+
+    ownership_id = create_file_id(global_run_id)
+    gun_ownership.to_csv(f"{staging_area_path}/{ownership_id}.csv")
+    ids_dict["ownership"] = ownership_id
+    print(ids_dict)
+    return ids_dict
+
+def verify_row_number(ids_dict):
+    id = ids_dict["extracted"]
+    extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
+    should_be = Variable.get("row_no")
+    if should_be != len(extracted_data.index):
+        raise ValueError("BAD Size")
+    return ids_dict
+
+def load(ids_dict):
+    targets = list(ids_dict.keys())
+
+    conn = BaseHook.get_connection("sqlserver")
+    engine = create_engine(f"postgresql://{conn.login}:{conn.password}@{conn.host}/gunviolance")
+
+    for key in targets:
+        if key == "extracted":
+            continue
+        id = ids_dict[key]
+        data = pd.read_csv(f"{staging_area_path}/{id}.csv")
+        data.to_sql(name=f"{key}_dim", con=engine, if_exists="replace")
+
+    key = "extracted"
+    data = pd.read_csv(f"{staging_area_path}/{ids_dict[key]}.csv")
+    data.to_sql(name="shooting_dim", con=engine, if_exists="replace")
+
+
 # @task_group
 # def all_tasks():
 #     pass
@@ -397,8 +479,14 @@ with DAG(
     wea = extract_weather(coords)
     countryd = add_count_or_city(wea)
     ty = add_temp_year_from_date(countryd)
+    time = add_time_dim(ty)
+    ownership = add_ownership(time)
+    verify = verify_row_number(ownership)
+    push = load(verify)
 
-    get_csv >> dates >> coords >> wea >> countryd >> ty
+    get_csv >> dates >> coords >> wea >> countryd >> ty >> time >> ownership >> verify >> push
+
+    # We start DAG manually
 
     # create_table_postgres = PostgresOperator()
     # agregacje jako widoki
