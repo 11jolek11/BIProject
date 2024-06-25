@@ -18,6 +18,7 @@ import requests
 import json
 from uuid import uuid4
 from random import randint
+import holidays
 from time import sleep
 
 # AIRFLOW_VAR_PROJECT_HOME='$HOME/Projects/BIProjects'
@@ -211,7 +212,7 @@ def get_coordinates(id):
                 print(f"REQUEST ERROR: {resp} - {resp.text}")
 
         else:
-            print("get from cache")
+            print("got from cache")
             temp_location = google_requests_cache[str(google_payload)]
             coords_lat[location_idx] = [temp_location["latitude"]]
             coords_lon[location_idx] = [temp_location["longitude"]]
@@ -221,12 +222,13 @@ def get_coordinates(id):
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     return id
 
+# Test data
+# {'lat': 39.9067061, 'lon': -86.05705019999999, 'tz': '-05:00', 'date': '2020-12-31', 'units': 'standard', 'cloud_cover': {'afternoon': 75.0}, 'humidity': {'afternoon': 92.0}, 'precipitation': {'total': 0.0}, 'temperature': {'min': 269.14, 'max': 271.97, 'afternoon': 270.4, 'night': 271.97, 'evening': 270.68, 'morning': 269.14}, 'pressure': {'afternoon': 1026.0}, 'wind': {'max': {'speed': 5.1, 'direction': 310.0}}}
 
 def extract_weather(id):
     # TODO(11jolek11): What to do when lon and lat values are missing (when lon and lat == 0.0 ) because of fail in prev node?
     # TODO(11jolek11): What to do when lon and lat values are missing because of lack data on OpenWeather portal?
     extracted_data = pd.read_csv(f"{staging_area_path}/{id}.csv")
-    ttt = list(extracted_data.columns).copy()
     # TODO(11jolek11): Add checks,, if lat and lon in request == lat and lon in response
     expected_columns = ["lat", "lon", "date", "cloud_cover_afternoon", "humidity_afternoon",
                                        "precipitation_total", "pressure_afternoon", "temperature", "wind_max_speed", "wind_max_direction"]
@@ -235,10 +237,8 @@ def extract_weather(id):
     lons = extracted_data["Lon"].values
     df_list = []
 
-    tttt = 0
-
     for data_idx in extracted_data.index:
-        # print(f"Getting {data_idx} weather")
+        print(f"Getting {data_idx} weather")
         target_date = extracted_data.loc[data_idx, "Incident Date"]
         weather_url = f'https://api.openweathermap.org/data/3.0/onecall/day_summary?lat={lats[data_idx]}&lon={lons[data_idx]}&date={target_date}&appid={openweather_api_key}'
         default_values = [lats[data_idx], lats[data_idx], extracted_data.loc[data_idx, "Incident Date"], 0, 0, 0, 0, 0.0, 0.0, 0]
@@ -250,25 +250,42 @@ def extract_weather(id):
             if weather_url not in weather_requests_cache.keys():
                 try:
                     resp = requests.get(url=weather_url)
-                    if resp.status_code == 200 and resp.json():
-                        temp_dict = resp.json().copy()
+                    state = resp.status_code
+                    json_content = resp.json()
+
+                    # Mocks
+                    # state = 200
+                    # json_content = {'lat': 39.9067061, 'lon': -86.05705019999999, 'tz': '-05:00', 'date': '2020-12-31', 'units': 'standard', 'cloud_cover': {'afternoon': 75.0}, 'humidity': {'afternoon': 92.0}, 'precipitation': {'total': 0.0}, 'temperature': {'min': 269.14, 'max': 271.97, 'afternoon': 270.4, 'night': 271.97, 'evening': 270.68, 'morning': 269.14}, 'pressure': {'afternoon': 1026.0}, 'wind': {'max': {'speed': 5.1, 'direction': 310.0}}}
+
+                    if state == 200 and json_content:
+                        temp_dict = json_content.copy()
                         with open("weather_raw_cache.json", "a") as file:
                             file.write(json.dumps({weather_url: temp_dict}))
-                        print(temp_dict)
+                        # print(temp_dict)
                         keys_collection = list(temp_dict.keys()).copy()
                         for key in keys_collection:
-                            if key.startswith("temperature_"):
-                                tttt = temp_dict[key]
-                                temp_dict["temperature"] = temp_dict[key]
-                                del temp_dict[key]
-                            # print(f"{key}")
+                            # print(f">> {key}")
+                            pass
+                            # if key.startswith("temperature_"):
+                            #     temp_dict["temperature"] = temp_dict[key]
+                            #     print(f"Key removed: {key}")
+                            #     del temp_dict[key]
+
+                        for key in keys_collection:
                             # FIXME(11jolek11): Fix this!
-                            if key not in weather_df.columns:
+                            if key not in expected_columns:
                                 del temp_dict[key]
                                 # if key != "temperature":
-                                    # del temp_dict[key]
+                                #       del temp_dict[key]
 
                         for key, value in flatten(temp_dict).items():
+                            # ['temperature_min', 'temperature_max', 'temperature_afternoon', 'temperature_night', 'temperature_evening', 'temperature_morning']
+                            if key in ['temperature_min', 'temperature_max', 'temperature_night', 'temperature_evening', 'temperature_morning']:
+                                continue
+                            if key == 'temperature_afternoon':
+                                key = 'temperature'
+                                temp_weather[key] = [float(value) - 273.15]  # sub 273.15
+                                continue
                             # FIXME(11jolek11): Fix this!
                             # if (key.startswith("temperature") and not key.endswith("max")) or key == "temperature":
                             #     continue
@@ -289,25 +306,24 @@ def extract_weather(id):
                     print("No connection")
 
             else:
-                print("Get from cache")
+                print("Got from cache")
                 for key, value in weather_requests_cache[weather_url].items():
                     if key in expected_columns:
                         # Adding value as [value]
                         temp_weather[key] = [value]
 
-        print(f"{temp_weather["temperature"]} -- {tttt}")
-        if list(temp_weather.keys()) == expected_columns:
-            df_list.append(pd.DataFrame(temp_weather, columns=expected_columns))
-        else:
-            # pass
-            print("Columns error")
-        return 1
+        # print(f"{temp_weather["temperature"]} -- {tttt}")
+        # if list(temp_weather.keys()) == expected_columns:
+        #     df_list.append(pd.DataFrame(temp_weather, columns=expected_columns))
+        # else:
+        #     print("Columns error")
+
+        df_list.append(pd.DataFrame(temp_weather))
     weather_df = pd.concat([*df_list, weather_df], ignore_index=True)
     # extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     weather_id = create_file_id(global_run_id)
     weather_df.to_csv(f"{staging_area_path}/{weather_id}.csv")
 
-    print(f"Weather: reading {ttt}")
     print(f"Path: weather {staging_area_path}/{weather_id}.csv, Extracted {staging_area_path}/{id}.csv")
     return {"extracted": id, "weather": weather_id}
 
@@ -371,6 +387,57 @@ def add_temp_year_from_date(ids_dict):
     extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     return ids_dict
 
+def add_time_dim(ids_dict):
+    gun_violence_dates = pd.read_csv(f"{staging_area_path}/{ids_dict["extracted"]}.csv")['Incident Date']
+    dates = []
+    for date in gun_violence_dates.iloc[[0, -1]]:
+        dates.append(date.split(" ")[0])
+
+    date_range = pd.date_range(start=dates[0], end=dates[1])
+
+    df = pd.DataFrame(date_range, columns=['Date'])
+
+    df['Year'] = df['Date'].dt.year
+    df['Month'] = df['Date'].dt.month
+    df['Day'] = df['Date'].dt.day
+    df['DayOfWeek'] = df['Date'].dt.dayofweek
+    df['Decade'] = (df['Year'] // 10) * 10
+    df['Quarter'] = df['Date'].dt.quarter
+    df['DayOfYear'] = df['Date'].dt.dayofyear
+    df['WeekOfYear'] = df['Date'].dt.isocalendar().week
+    df['DayName'] = df['Date'].dt.day_name()
+    df['MonthName'] = df['Date'].dt.month_name()
+    df['IsWeekend'] = df['Date'].dt.dayofweek >= 5
+
+    # us_holidays = holidays.US()
+    us_holidays = holidays.country_holidays("US")
+    df['IsHoliday'] = df['Date'].isin(us_holidays)
+
+    time_id = create_file_id(global_run_id)
+    df.to_csv(f"{staging_area_path}/{time_id}.csv")
+    ids_dict["time"] = time_id
+    print(ids_dict)
+    return ids_dict
+
+def add_ownership(ids_dict):
+    file_gun_ownership = '../data/ownership.xlsx'
+
+    gun_ownership = pd.read_excel(file_gun_ownership)
+    gun_ownership = gun_ownership[['Year', 'STATE', 'permit']]
+    gun_ownership = gun_ownership.rename(columns={"STATE": "State"})
+    gun_ownership['Year'] = gun_ownership['Year'].astype(int)
+
+    states = gun_ownership['State'].unique()
+    years = list(range(gun_ownership['Year'].min(), 2025))
+    all_combinations = pd.MultiIndex.from_product([years, states], names=['Year', 'State']).to_frame(index=False)
+    gun_ownership = all_combinations.merge(gun_ownership, on=['Year', 'State'], how='left')
+    gun_ownership['permit'] = gun_ownership.groupby('State')['permit'].ffill().bfill()
+
+    ownership_id = create_file_id(global_run_id)
+    gun_ownership.to_csv(f"{staging_area_path}/{ownership_id}.csv")
+    ids_dict["ownership"] = ownership_id
+    print(ids_dict)
+    return ids_dict
 
 if __name__ == "__main__":
     extract_weather(get_coordinates(unify_date_format(extract_from_csv())))
