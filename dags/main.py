@@ -51,7 +51,7 @@ if not os.path.exists(staging_area_path):
 
 save_file_weather = "./weather_requests_cache.json"
 save_file_google = "./google_requests_cache.json"
-
+save_file_raw = "./weather_raw_cache.json"
 if os.path.isfile(save_file_google):
     with open(save_file_google, "r") as file:
        google_requests_cache = json.loads(file.read())
@@ -65,6 +65,12 @@ if os.path.isfile(save_file_weather):
 else:
     weather_requests_cache = dict()
 
+weather_raw = dict()
+if os.path.isfile(save_file_raw):
+    with open(save_file_raw, "r") as file:
+        weather_raw = json.loads(file.read())
+else:
+    weather_raw = dict()
 
 # urlretrieve("https://github.com/11jolek11/BIProject/raw/main/data.zip", "./data.zip")
 # with zipfile.ZipFile("./data.zip", 'r') as zip_ref:
@@ -252,7 +258,7 @@ def extract_weather(id):
                     resp = requests.get(url=weather_url)
                     state = resp.status_code
                     json_content = resp.json()
-
+                    #
                     # Mocks
                     # state = 200
                     # json_content = {'lat': 39.9067061, 'lon': -86.05705019999999, 'tz': '-05:00', 'date': '2020-12-31', 'units': 'standard', 'cloud_cover': {'afternoon': 75.0}, 'humidity': {'afternoon': 92.0}, 'precipitation': {'total': 0.0}, 'temperature': {'min': 269.14, 'max': 271.97, 'afternoon': 270.4, 'night': 271.97, 'evening': 270.68, 'morning': 269.14}, 'pressure': {'afternoon': 1026.0}, 'wind': {'max': {'speed': 5.1, 'direction': 310.0}}}
@@ -260,24 +266,10 @@ def extract_weather(id):
                     if state == 200 and json_content:
                         temp_dict = json_content.copy()
                         with open("weather_raw_cache.json", "a") as file:
-                            file.write(json.dumps({weather_url: temp_dict}))
-                        # print(temp_dict)
-                        keys_collection = list(temp_dict.keys()).copy()
-                        for key in keys_collection:
-                            # print(f">> {key}")
-                            pass
-                            # if key.startswith("temperature_"):
-                            #     temp_dict["temperature"] = temp_dict[key]
-                            #     print(f"Key removed: {key}")
-                            #     del temp_dict[key]
+                            weather_raw[weather_url] = temp_dict
+                            file.write(json.dumps(weather_raw))
 
-                        for key in keys_collection:
-                            # FIXME(11jolek11): Fix this!
-                            if key not in expected_columns:
-                                del temp_dict[key]
-                                # if key != "temperature":
-                                #       del temp_dict[key]
-
+                        # print(f">> {list(flatten(temp_dict).keys())}")
                         for key, value in flatten(temp_dict).items():
                             # ['temperature_min', 'temperature_max', 'temperature_afternoon', 'temperature_night', 'temperature_evening', 'temperature_morning']
                             if key in ['temperature_min', 'temperature_max', 'temperature_night', 'temperature_evening', 'temperature_morning']:
@@ -286,9 +278,13 @@ def extract_weather(id):
                                 key = 'temperature'
                                 temp_weather[key] = [float(value) - 273.15]  # sub 273.15
                                 continue
+                            if key not in expected_columns:
+                                print(f"Throw {key}")
+                                continue
                             # FIXME(11jolek11): Fix this!
                             # if (key.startswith("temperature") and not key.endswith("max")) or key == "temperature":
                             #     continue
+                            # print(f"Inser {key}")
                             temp_weather[key] = [value]
                         if temp_weather["lat"] != lats[data_idx] or temp_weather["lon"] != lons[data_idx]:
                             print("Error {} -- {} || {} -- {} ".format(temp_weather["lat"], lats[data_idx], temp_weather["lon"], lons[data_idx]))
@@ -318,7 +314,9 @@ def extract_weather(id):
         # else:
         #     print("Columns error")
 
-        df_list.append(pd.DataFrame(temp_weather))
+        temp = pd.DataFrame(temp_weather)
+        # print(f">> {temp}")
+        df_list.append(temp)
     weather_df = pd.concat([*df_list, weather_df], ignore_index=True)
     # extracted_data.to_csv(f"{staging_area_path}/{id}.csv")
     weather_id = create_file_id(global_run_id)
@@ -444,3 +442,5 @@ if __name__ == "__main__":
     # add_temp_year_from_date(add_count_or_city(extract_weather(get_coordinates(unify_date_format(extract_from_csv())))))
     # get_coordinates(unify_date_format(extract_from_csv()))
 
+    # test = {'lat': 39.9067061, 'lon': -86.05705019999999, 'tz': '-05:00', 'date': '2020-12-31', 'units': 'standard', 'cloud_cover': {'afternoon': 75.0}, 'humidity': {'afternoon': 92.0}, 'precipitation': {'total': 0.0}, 'temperature': {'min': 269.14, 'max': 271.97, 'afternoon': 270.4, 'night': 271.97, 'evening': 270.68, 'morning': 269.14}, 'pressure': {'afternoon': 1026.0}, 'wind': {'max': {'speed': 5.1, 'direction': 310.0}}}
+    # print(flatten(test))
